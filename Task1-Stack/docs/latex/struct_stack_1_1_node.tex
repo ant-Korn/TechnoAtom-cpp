@@ -1,0 +1,86 @@
+\hypertarget{struct_stack_1_1_node}{}\section{Структура Stack$<$ T $>$\+:\+:Node}
+\label{struct_stack_1_1_node}\index{Stack$<$ T $>$\+::\+Node@{Stack$<$ T $>$\+::\+Node}}
+
+
+Структура узла стека.  
+
+
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_stack_1_1_node_a4445b3cf66e0fa32593297de69bff358}{Node} (const T \&, \hyperlink{struct_stack_1_1_node}{Node} $\ast$=nullptr)
+\item 
+\hyperlink{struct_stack_1_1_node_a8cccb15f2be544e90527524677286ba3}{$\sim$\+Node} ()
+\end{DoxyCompactItemize}
+\subsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+T \hyperlink{struct_stack_1_1_node_aad1bf4e68aae74727c28fa543573ef6b}{data\+\_\+}
+\begin{DoxyCompactList}\small\item\em Хранит элемент, переданый в стек. \end{DoxyCompactList}\item 
+\hyperlink{struct_stack_1_1_node}{Node} $\ast$ \hyperlink{struct_stack_1_1_node_a9d4f0632f74c398b88f3026649383394}{link\+\_\+}
+\begin{DoxyCompactList}\small\item\em Указатель на следующий узел стека. Если данный узел последний, то равна nullptr. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+\subsubsection*{template$<$class T$>$struct Stack$<$ T $>$\+::\+Node}
+
+Структура узла стека. 
+
+Каждый из узлов хранит занесёную в стек информацию, а также указатель на следующий узел. 
+
+\subsection{Конструктор(ы)}
+\hypertarget{struct_stack_1_1_node_a4445b3cf66e0fa32593297de69bff358}{}\index{Stack\+::\+Node@{Stack\+::\+Node}!Node@{Node}}
+\index{Node@{Node}!Stack\+::\+Node@{Stack\+::\+Node}}
+\subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Stack}$<$ T $>$\+::Node\+::\+Node (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{new\+\_\+data, }
+\item[{{\bf Node} $\ast$}]{next\+\_\+node = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)}\label{struct_stack_1_1_node_a4445b3cf66e0fa32593297de69bff358}
+Конструктор узла стека. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em new\+\_\+data} & Хранимая узлом информация. \\
+\hline
+\mbox{\tt in}  & {\em next\+\_\+node} & Указатель на следующий узел. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+75 : \hyperlink{struct_stack_1_1_node_aad1bf4e68aae74727c28fa543573ef6b}{data\_}(new\_data), \hyperlink{struct_stack_1_1_node_a9d4f0632f74c398b88f3026649383394}{link\_}(next\_node) \{\}
+\end{DoxyCode}
+\hypertarget{struct_stack_1_1_node_a8cccb15f2be544e90527524677286ba3}{}\index{Stack\+::\+Node@{Stack\+::\+Node}!````~Node@{$\sim$\+Node}}
+\index{````~Node@{$\sim$\+Node}!Stack\+::\+Node@{Stack\+::\+Node}}
+\subsubsection[{$\sim$\+Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Stack}$<$ T $>$\+::Node\+::$\sim$\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{struct_stack_1_1_node_a8cccb15f2be544e90527524677286ba3}
+Деструктор узла стека 
+\begin{DoxyCode}
+80                    \{
+81     \textcolor{comment}{//std::cout << "delete " << data\_ << std::endl;}
+82     \hyperlink{struct_stack_1_1_node_a9d4f0632f74c398b88f3026649383394}{link\_} = \textcolor{keyword}{nullptr};
+83 \}
+\end{DoxyCode}
+
+
+\subsection{Данные класса}
+\hypertarget{struct_stack_1_1_node_aad1bf4e68aae74727c28fa543573ef6b}{}\index{Stack\+::\+Node@{Stack\+::\+Node}!data\+\_\+@{data\+\_\+}}
+\index{data\+\_\+@{data\+\_\+}!Stack\+::\+Node@{Stack\+::\+Node}}
+\subsubsection[{data\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T {\bf Stack}$<$ T $>$\+::Node\+::data\+\_\+}\label{struct_stack_1_1_node_aad1bf4e68aae74727c28fa543573ef6b}
+
+
+Хранит элемент, переданый в стек. 
+
+\hypertarget{struct_stack_1_1_node_a9d4f0632f74c398b88f3026649383394}{}\index{Stack\+::\+Node@{Stack\+::\+Node}!link\+\_\+@{link\+\_\+}}
+\index{link\+\_\+@{link\+\_\+}!Stack\+::\+Node@{Stack\+::\+Node}}
+\subsubsection[{link\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Node}$\ast$ {\bf Stack}$<$ T $>$\+::Node\+::link\+\_\+}\label{struct_stack_1_1_node_a9d4f0632f74c398b88f3026649383394}
+
+
+Указатель на следующий узел стека. Если данный узел последний, то равна nullptr. 
+
+
+
+Объявления и описания членов структуры находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Stack\+\_\+\+Linked\+List/\+Stack\+\_\+\+Linked\+List\+\_\+try1/\hyperlink{stk__linked__list_8h}{stk\+\_\+linked\+\_\+list.\+h}\end{DoxyCompactItemize}
