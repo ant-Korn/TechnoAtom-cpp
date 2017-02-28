@@ -10,24 +10,25 @@
 \item 
  \hyperlink{namespacestk__test}{stk\+\_\+test}
 \begin{DoxyCompactList}\small\item\em В данном пространстве имён представлены средства тестирования класса Stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Перечисления}
-\begin{DoxyCompactItemize}
-\item 
-enum \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78}{stk\+\_\+test\+::tests} \{ \\*
-\hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78a16992c4d9ecd605ea8503740aee9df96}{stk\+\_\+test\+::\+Push\+Single\+Number}, 
-\hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78a6e2bd84a1d3046f2c01c930a1d52be64}{stk\+\_\+test\+::\+Cannot\+Push\+More}, 
-\hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78ae9c603d2f7d582fd4fdd5db8140ceecf}{stk\+\_\+test\+::\+Pop\+From\+Empty}, 
-\hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78acd574f7057fc049aa4da1da5f4b7fd3a}{stk\+\_\+test\+::\+Top\+From\+Empty}, 
-\\*
-\hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78aef89859ac32f020e99414e3d3e559713}{stk\+\_\+test\+::\+Copy\+Stack}, 
-\hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78adc3b2cd62978794a43af9212cd2c6be7}{stk\+\_\+test\+::\+Assignment\+Operator\+Of\+Stack}
- \}
-\begin{DoxyCompactList}\small\item\em Доступные тесты. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Функции}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$template$<$ class Type\+\_\+of\+\_\+stack $>$ class T$>$ }\\void \hyperlink{namespacestk__test_a6e5c68f4363af9e5204334b3c875d641}{stk\+\_\+test\+::\+T\+E\+S\+T} (int test\+\_\+case)
-\item 
+void \hyperlink{namespacestk__test_a38a19eb652f1ac8ca90dfa8236b187ff}{stk\+\_\+test\+::\+Pushing\+Single\+Number} ()
+\begin{DoxyCompactList}\small\item\em Тестирование на верное добавление одного элемента в стек переменных int. \end{DoxyCompactList}\item 
+void \hyperlink{namespacestk__test_a8c0697020af071c235acd621eb93a83b}{stk\+\_\+test\+::\+Pop\+From\+Empty} ()
+\begin{DoxyCompactList}\small\item\em Тестирование на удаление узла из пустого стека. \end{DoxyCompactList}\item 
+void \hyperlink{namespacestk__test_a263e5f6322755d69d17e5cd0f139a0da}{stk\+\_\+test\+::\+Try\+Take\+Tope\+From\+Empty} ()
+\begin{DoxyCompactList}\small\item\em Тестирование на получение ссылки на верхний элемент пустого стека. \end{DoxyCompactList}\item 
+void \hyperlink{namespacestk__test_acef2e62a5fc6f13e8de2fb4d4bfb5162}{stk\+\_\+test\+::\+Copy\+Stack} ()
+\begin{DoxyCompactList}\small\item\em Тестирование на правильную работу конструктора копирования. \end{DoxyCompactList}\item 
+void \hyperlink{namespacestk__test_a216906bc10bd75cc160aeb2cd29c531f}{stk\+\_\+test\+::\+Assignment\+Stacks} ()
+\begin{DoxyCompactList}\small\item\em Тестирование на правильную работу операции присваивания. \end{DoxyCompactList}\item 
+void \hyperlink{namespacestk__test_a8799bc067463b4ac0f8136ebd9c0f587}{stk\+\_\+test\+::\+Check\+Emptiness} ()
+\begin{DoxyCompactList}\small\item\em Тестирование проверки стека на пустоту. \end{DoxyCompactList}\item 
+void \hyperlink{namespacestk__test_a6a1e992225350cf59f367d70b00bb6d1}{stk\+\_\+test\+::\+Get\+Size} ()
+\begin{DoxyCompactList}\small\item\em Тестирование получения размера стека. \end{DoxyCompactList}\item 
+void \hyperlink{namespacestk__test_a776f181b0a4495c9dff164b51bfb4d1e}{stk\+\_\+test\+::\+Try\+Of\+Swapping} ()
+\begin{DoxyCompactList}\small\item\em Тестирование обмена содержимым стеков. \end{DoxyCompactList}\item 
 int \hyperlink{main__file_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 \end{DoxyCompactItemize}
 
@@ -53,22 +54,27 @@ int \hyperlink{main__file_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 )}\label{main__file_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
 Инициализация отслеживания утечек памяти.
 
-Проведение одного из тестов. Доступные варианты\+: Push\+Single\+Number, Cannot\+Push\+More, Pop\+From\+Empty, Top\+From\+Empty, Copy\+Stack, Assignment\+Operator\+Of\+Stack. 
+Проведение тестов\+: Pushing\+Single\+Number, Pop\+From\+Empty, Try\+Take\+Tope\+From\+Empty, Copy\+Stack, Assignment\+Operator\+Of\+Stack, Check\+Emptiness, Get\+Size , Try\+Of\+Swapping.
+
+Вывод в консоль отчёта об утечках памяти. 
 \begin{DoxyCode}
-193           \{
-195     INIT\_CRT\_MEM\_CHECK();
-196 
-199     \textcolor{keywordflow}{try}\{
-200         stk\_test::TEST<stk\_as\_list::Stack>(\hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78a16992c4d9ecd605ea8503740aee9df96}{stk\_test::PushSingleNumber});
-201     \}
-202     \textcolor{keywordflow}{catch}(...)\{
-203         std::cout<<\textcolor{stringliteral}{"Bad testing"};
-204     \}
-205 
-206     
-207     CRT\_SET\_REPORT();
-208 
-209     system(\textcolor{stringliteral}{"PAUSE"});
-210     \textcolor{keywordflow}{return} 0;
-211 \}
+249           \{
+251     INIT\_CRT\_MEM\_CHECK();
+252 
+255     void (* tests[])() = \{\hyperlink{namespacestk__test_a38a19eb652f1ac8ca90dfa8236b187ff}{stk\_test::PushingSingleNumber}, 
+      \hyperlink{namespacestk__test_a8c0697020af071c235acd621eb93a83b}{stk\_test::PopFromEmpty}, \hyperlink{namespacestk__test_a263e5f6322755d69d17e5cd0f139a0da}{stk\_test::TryTakeTopeFromEmpty}, 
+      \hyperlink{namespacestk__test_acef2e62a5fc6f13e8de2fb4d4bfb5162}{\(\backslash\)}
+256 \hyperlink{namespacestk__test_acef2e62a5fc6f13e8de2fb4d4bfb5162}{        stk\_test::CopyStack}, \hyperlink{namespacestk__test_a216906bc10bd75cc160aeb2cd29c531f}{stk\_test::AssignmentStacks}, 
+      \hyperlink{namespacestk__test_a8799bc067463b4ac0f8136ebd9c0f587}{stk\_test::CheckEmptiness}, \hyperlink{namespacestk__test_a6a1e992225350cf59f367d70b00bb6d1}{stk\_test::GetSize}, 
+      \hyperlink{namespacestk__test_a776f181b0a4495c9dff164b51bfb4d1e}{stk\_test::TryOfSwapping}\};
+257 
+258     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} test: tests)\{
+259         (*test)();
+260     \}
+261 
+263     CRT\_SET\_REPORT();
+264 
+265     system(\textcolor{stringliteral}{"PAUSE"});
+266     \textcolor{keywordflow}{return} 0;
+267 \}
 \end{DoxyCode}

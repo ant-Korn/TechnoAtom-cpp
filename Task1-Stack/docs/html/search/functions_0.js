@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['clean',['clean',['../classstk__as__list_1_1_stack.html#ad96efdeb39952c4914d4e9eb578936c4',1,'stk_as_list::Stack']]]
+  ['assignmentstacks',['AssignmentStacks',['../namespacestk__test.html#a216906bc10bd75cc160aeb2cd29c531f',1,'stk_test']]]
 ];

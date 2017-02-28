@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['next_5f',['next_',['../structstk__as__list_1_1_stack_1_1_node.html#a69f6ea733b172f044b13d1f2018565a0',1,'stk_as_list::Stack::Node']]],
-  ['node',['Node',['../structstk__as__list_1_1_stack_1_1_node.html',1,'stk_as_list::Stack']]],
-  ['node',['Node',['../structstk__as__list_1_1_stack_1_1_node.html#a252875375c36553e0ced6331a731c19e',1,'stk_as_list::Stack::Node']]],
-  ['num_5fitems_5f',['num_items_',['../classstk__as__list_1_1_stack.html#aa19d82f1efcce9c75207b8036b9ba9eb',1,'stk_as_list::Stack']]]
+  ['main',['main',['../main__file_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main_file.cpp']]],
+  ['main_5ffile_2ecpp',['main_file.cpp',['../main__file_8cpp.html',1,'']]]
 ];

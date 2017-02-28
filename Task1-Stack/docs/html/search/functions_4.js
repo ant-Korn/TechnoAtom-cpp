@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['node',['Node',['../structstk__as__list_1_1_stack_1_1_node.html#a252875375c36553e0ced6331a731c19e',1,'stk_as_list::Stack::Node']]]
+  ['getsize',['GetSize',['../namespacestk__test.html#a6a1e992225350cf59f367d70b00bb6d1',1,'stk_test']]]
 ];
