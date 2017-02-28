@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>Реализация стека: Исходный файл Stack_LinkedList/Stack_LinkedList_try1/stk_linked_list.h</title>
+<title>Реализация стека: Исходный файл stk_linked_list.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Элементы перечислений</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Макросы</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Перечисления</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Элементы перечислений</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_abab7554b129c709b1d7aeb0db77b461.html">Stack_LinkedList</a></li><li class="navelem"><a class="el" href="dir_373ab4173ad9711c9213bb7e93be1521.html">Stack_LinkedList_try1</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_ebaf227da311181dbf462f3e9d6f7103.html">GitHub_repr</a></li><li class="navelem"><a class="el" href="dir_9c51c48bb16cd40bfe580a125881f6b9.html">TechnoAtom-cpp</a></li><li class="navelem"><a class="el" href="dir_ad94f232f2b5474a09d694d32296c46f.html">Task1-Stack</a></li><li class="navelem"><a class="el" href="dir_7601da3f2b604a7fc7021f6cb888807d.html">Stack_LinkedList</a></li><li class="navelem"><a class="el" href="dir_a06226a1326f923108beff988a03d229.html">Stack_LinkedList_try1</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -90,221 +90,84 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 </div><!--header-->
 <div class="contents">
 <a href="stk__linked__list_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef STK_LINKED_LIST_H</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define STK_LINKED_LIST_H</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="stk__linked__list_8h.html#a1ac41480eb2e4aadd52252ee550b630a">   14</a></span>&#160;<span class="preprocessor">#define new new( _NORMAL_BLOCK, __FILE__, __LINE__) </span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;iomanip&gt;</span> </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifdef _MSC_VER</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">    #define FUNKNAME __FUNCTION__ </span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="stk__linked__list_8h.html#a05f17f99b4eab4df4b50c0c5b57242d8">   22</a></span>&#160;<span class="preprocessor">    #define FUNKNAME __func__ </span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif //_MSC_VER</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="stk__linked__list_8h.html#ae1ee3197387e0e6a61b1e4d5441ad2f5">   26</a></span>&#160;<span class="preprocessor">#define ASSERT_OK() \</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">    if (!ok()){     \</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">        dump();     \</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">        throw std::length_error(&quot;Error: Length of stack doesnt match for size variable in: &quot;FUNKNAME); \</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">    }       </span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define ASSERT_EMPTY() \</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">    if (empty()){     \</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">        dump();     \</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">        throw std::length_error(&quot;Error: Try to work with empty stack in: &quot;FUNKNAME); \</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">    }   </span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_stack.html">   40</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_stack.html">Stack</a>{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_stack.html#a7cbf14cdf70cd7a8f525590420a408e2">dump</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_stack.html#aefee698059467258bbd79045aca62a63">Stack</a>();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="class_stack.html#aefee698059467258bbd79045aca62a63">Stack</a>(<span class="keyword">const</span> <a class="code" href="class_stack.html">Stack</a> &amp;);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="class_stack.html">Stack</a> &amp; <a class="code" href="class_stack.html#a2993b44c0df1836c42ce73d0082595a7">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_stack.html">Stack</a> &amp;);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="class_stack.html#a9e7a00875aefbdac560ab189b7bc61d1">~Stack</a>();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_stack.html#acd2dede1b88b54124c480fb333ca5e8c">empty</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="class_stack.html#adb03e9be26b612af1e255856c84210f5">size</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_stack.html#a8e2823465d165f2cac1e6d732b856076">push</a>(<span class="keyword">const</span> T&amp;);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_stack.html#a2723aec5c7e2611b97fcffeb7709de33">pop</a>();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    T&amp; <a class="code" href="class_stack.html#a8e99bab8b8f969fe5e029934ac14408a">top</a>();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_stack.html#aeb9eeb4131e61a7e267e5efce79bddfc">ok</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">//size_t max_size() const;</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="struct_stack_1_1_node.html">   57</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_stack_1_1_node.html">Node</a>{</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="struct_stack_1_1_node.html#aad1bf4e68aae74727c28fa543573ef6b">   58</a></span>&#160;        T <a class="code" href="struct_stack_1_1_node.html#aad1bf4e68aae74727c28fa543573ef6b">data_</a>; </div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="struct_stack_1_1_node.html#a9d4f0632f74c398b88f3026649383394">   59</a></span>&#160;        <a class="code" href="struct_stack_1_1_node.html">Node</a> * <a class="code" href="struct_stack_1_1_node.html#a9d4f0632f74c398b88f3026649383394">link_</a>; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="struct_stack_1_1_node.html#a4445b3cf66e0fa32593297de69bff358">Node</a>(<span class="keyword">const</span> T&amp;, <a class="code" href="struct_stack_1_1_node.html">Node</a> * = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="struct_stack_1_1_node.html#a8cccb15f2be544e90527524677286ba3">~Node</a>();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    } * <a class="code" href="class_stack.html#a4fa8fe1a2a6ff42f954d6a3c0d29d6e0">top_</a>; </div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_stack.html#a96988dc68a1b439d26b8782ea63bd7b8">   63</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="class_stack.html#a96988dc68a1b439d26b8782ea63bd7b8">num_items_</a>; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_stack.html#abc666f64e68c132007ba8203afe0dbe6">clean_obj</a>(); </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">//--------------------------------------------</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="struct_stack_1_1_node.html#a4445b3cf66e0fa32593297de69bff358">   75</a></span>&#160;<a class="code" href="struct_stack_1_1_node.html#a4445b3cf66e0fa32593297de69bff358">Stack&lt;T&gt;::Node::Node</a>(<span class="keyword">const</span> T&amp; new_data, <a class="code" href="struct_stack_1_1_node.html">Node</a> * next_node = <span class="keyword">nullptr</span>) : data_(new_data), link_(next_node) {}</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="struct_stack_1_1_node.html#a8cccb15f2be544e90527524677286ba3">   80</a></span>&#160;<a class="code" href="struct_stack_1_1_node.html#a8cccb15f2be544e90527524677286ba3">Stack&lt;T&gt;::Node::~Node</a>(){</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">//std::cout &lt;&lt; &quot;delete &quot; &lt;&lt; data_ &lt;&lt; std::endl;</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    link_ = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">//--------------------------------------------</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_stack.html#a7cbf14cdf70cd7a8f525590420a408e2">   89</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_stack.html#a7cbf14cdf70cd7a8f525590420a408e2">Stack&lt;T&gt;::dump</a>()<span class="keyword"> const</span>{</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    std::cout &lt;&lt; std::setfill(<span class="charliteral">&#39;-&#39;</span>) &lt;&lt; std::setw(50) &lt;&lt; <span class="stringliteral">&quot;&quot;</span> &lt;&lt; std::setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;   Stack:\n\tnum. of items:&quot;</span> &lt;&lt; std::setw(11) &lt;&lt; <a class="code" href="class_stack.html#a96988dc68a1b439d26b8782ea63bd7b8">num_items_</a> &lt;&lt; <span class="stringliteral">&quot;\n\ttop:&quot;</span> &lt;&lt; std::setw(21);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_stack.html#a4fa8fe1a2a6ff42f954d6a3c0d29d6e0">top_</a>==<span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;nullptr&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">else</span> std::cout &lt;&lt; std::hex &lt;&lt; <a class="code" href="class_stack.html#a4fa8fe1a2a6ff42f954d6a3c0d29d6e0">top_</a> &lt;&lt; std::dec &lt;&lt; <span class="stringliteral">&quot; value: &quot;</span> &lt;&lt; <a class="code" href="class_stack.html#a4fa8fe1a2a6ff42f954d6a3c0d29d6e0">top_</a>-&gt;<a class="code" href="struct_stack_1_1_node.html#aad1bf4e68aae74727c28fa543573ef6b">data_</a> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;    All nodes:&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="struct_stack_1_1_node.html">Node</a> * node_iter = <a class="code" href="class_stack.html#a4fa8fe1a2a6ff42f954d6a3c0d29d6e0">top_</a>;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">size_t</span> i = 0;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">while</span> (node_iter != <span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;\t[&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;] &quot;</span> &lt;&lt; std::hex &lt;&lt; node_iter &lt;&lt; <span class="stringliteral">&quot; link to: &quot;</span> &lt;&lt; std::setw(8);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">if</span> (node_iter-&gt;<a class="code" href="struct_stack_1_1_node.html#a9d4f0632f74c398b88f3026649383394">link_</a> == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;nullptr&quot;</span>;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">else</span> std::cout &lt;&lt; node_iter-&gt;<a class="code" href="struct_stack_1_1_node.html#a9d4f0632f74c398b88f3026649383394">link_</a>;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        std::cout &lt;&lt; std::dec &lt;&lt; <span class="stringliteral">&quot; value: &quot;</span> &lt;&lt; node_iter-&gt;<a class="code" href="struct_stack_1_1_node.html#aad1bf4e68aae74727c28fa543573ef6b">data_</a> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        node_iter = node_iter-&gt;<a class="code" href="struct_stack_1_1_node.html#a9d4f0632f74c398b88f3026649383394">link_</a>;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        ++i;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    std::cout &lt;&lt; std::setfill(<span class="charliteral">&#39;-&#39;</span>) &lt;&lt; std::setw(50) &lt;&lt; <span class="stringliteral">&quot;&quot;</span> &lt;&lt; std::setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="class_stack.html#aefee698059467258bbd79045aca62a63">  114</a></span>&#160;<a class="code" href="class_stack.html#aefee698059467258bbd79045aca62a63">Stack&lt;T&gt;::Stack</a>() : <a class="code" href="class_stack.html#a4fa8fe1a2a6ff42f954d6a3c0d29d6e0">top_</a>(nullptr), <a class="code" href="class_stack.html#a96988dc68a1b439d26b8782ea63bd7b8">num_items_</a>(0) {}</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="class_stack.html#a3befb74de707bc1b4ccdb97320d4d29e">  120</a></span>&#160;<a class="code" href="class_stack.html#aefee698059467258bbd79045aca62a63">Stack&lt;T&gt;::Stack</a>(<span class="keyword">const</span> <a class="code" href="class_stack.html">Stack</a> &amp; other_stack) : num_items_(other_stack.size()), top_(nullptr){</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <a class="code" href="struct_stack_1_1_node.html">Node</a> * node_iter = other_stack.<a class="code" href="class_stack.html#a4fa8fe1a2a6ff42f954d6a3c0d29d6e0">top_</a>, * tmp_top = <span class="keyword">nullptr</span>;    </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">if</span> (node_iter != <span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <a class="code" href="class_stack.html#a4fa8fe1a2a6ff42f954d6a3c0d29d6e0">top_</a> = <span class="keyword">new</span> <a class="code" href="struct_stack_1_1_node.html">Node</a>(node_iter-&gt;<a class="code" href="struct_stack_1_1_node.html#aad1bf4e68aae74727c28fa543573ef6b">data_</a>);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        tmp_top = <a class="code" href="class_stack.html#a4fa8fe1a2a6ff42f954d6a3c0d29d6e0">top_</a>;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        node_iter = node_iter-&gt;<a class="code" href="struct_stack_1_1_node.html#a9d4f0632f74c398b88f3026649383394">link_</a>;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">while</span> (node_iter != <span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        tmp_top-&gt;<a class="code" href="struct_stack_1_1_node.html#a9d4f0632f74c398b88f3026649383394">link_</a> = <span class="keyword">new</span> <a class="code" href="struct_stack_1_1_node.html">Node</a>(node_iter-&gt;<a class="code" href="struct_stack_1_1_node.html#aad1bf4e68aae74727c28fa543573ef6b">data_</a>);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        node_iter = node_iter-&gt;<a class="code" href="struct_stack_1_1_node.html#a9d4f0632f74c398b88f3026649383394">link_</a>;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        tmp_top = tmp_top-&gt;<a class="code" href="struct_stack_1_1_node.html#a9d4f0632f74c398b88f3026649383394">link_</a>;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="class_stack.html#abc666f64e68c132007ba8203afe0dbe6">  137</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_stack.html#abc666f64e68c132007ba8203afe0dbe6">Stack&lt;T&gt;::clean_obj</a>(){</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <a class="code" href="struct_stack_1_1_node.html">Node</a> * next_node;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    num_items_ = 0;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">while</span> (top_ != <span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        next_node = top_-&gt;<a class="code" href="struct_stack_1_1_node.html#a9d4f0632f74c398b88f3026649383394">link_</a>;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keyword">delete</span> top_;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        top_ = next_node;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    }</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="class_stack.html#a2993b44c0df1836c42ce73d0082595a7">  152</a></span>&#160;<a class="code" href="class_stack.html">Stack&lt;T&gt;</a> &amp; <a class="code" href="class_stack.html#a2993b44c0df1836c42ce73d0082595a7">Stack&lt;T&gt;::operator=</a>(<span class="keyword">const</span> <a class="code" href="class_stack.html">Stack</a> &amp; other_stack){</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">this</span> != &amp;other_stack){ </div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        clean_obj(); </div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        num_items_ = other_stack.<a class="code" href="class_stack.html#adb03e9be26b612af1e255856c84210f5">size</a>();  </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <a class="code" href="struct_stack_1_1_node.html">Node</a> * node_iter = other_stack.<a class="code" href="class_stack.html#a4fa8fe1a2a6ff42f954d6a3c0d29d6e0">top_</a>, * next_node = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">if</span> (node_iter != <span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            top_ = <span class="keyword">new</span> <a class="code" href="struct_stack_1_1_node.html">Node</a>(node_iter-&gt;<a class="code" href="struct_stack_1_1_node.html#aad1bf4e68aae74727c28fa543573ef6b">data_</a>);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            next_node = top_;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            node_iter = node_iter-&gt;<a class="code" href="struct_stack_1_1_node.html#a9d4f0632f74c398b88f3026649383394">link_</a>;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        }</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">while</span> (node_iter != <span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            next_node-&gt;<a class="code" href="struct_stack_1_1_node.html#a9d4f0632f74c398b88f3026649383394">link_</a> = <span class="keyword">new</span> <a class="code" href="struct_stack_1_1_node.html">Node</a>(node_iter-&gt;<a class="code" href="struct_stack_1_1_node.html#aad1bf4e68aae74727c28fa543573ef6b">data_</a>);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            node_iter = node_iter-&gt;<a class="code" href="struct_stack_1_1_node.html#a9d4f0632f74c398b88f3026649383394">link_</a>;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            next_node = next_node-&gt;<a class="code" href="struct_stack_1_1_node.html#a9d4f0632f74c398b88f3026649383394">link_</a>;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        }</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    }</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;}</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="class_stack.html#a9e7a00875aefbdac560ab189b7bc61d1">  174</a></span>&#160;<a class="code" href="class_stack.html#a9e7a00875aefbdac560ab189b7bc61d1">Stack&lt;T&gt;::~Stack</a>(){</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    clean_obj();</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;}</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="class_stack.html#a8e2823465d165f2cac1e6d732b856076">  183</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_stack.html#a8e2823465d165f2cac1e6d732b856076">Stack&lt;T&gt;::push</a>(<span class="keyword">const</span> T&amp; element){</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <a class="code" href="stk__linked__list_8h.html#ae1ee3197387e0e6a61b1e4d5441ad2f5">ASSERT_OK</a>();</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <a class="code" href="struct_stack_1_1_node.html">Node</a> * new_top = <span class="keyword">new</span> <a class="code" href="struct_stack_1_1_node.html">Node</a>(element, top_);</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    top_ = new_top;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    ++num_items_;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;}</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="class_stack.html#acd2dede1b88b54124c480fb333ca5e8c">  195</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_stack.html#acd2dede1b88b54124c480fb333ca5e8c">Stack&lt;T&gt;::empty</a>()<span class="keyword"> const</span>{</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <a class="code" href="stk__linked__list_8h.html#ae1ee3197387e0e6a61b1e4d5441ad2f5">ASSERT_OK</a>();</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">return</span> top_ == <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;}</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="class_stack.html#adb03e9be26b612af1e255856c84210f5">  205</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="class_stack.html#adb03e9be26b612af1e255856c84210f5">Stack&lt;T&gt;::size</a>()<span class="keyword"> const</span>{</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <a class="code" href="stk__linked__list_8h.html#ae1ee3197387e0e6a61b1e4d5441ad2f5">ASSERT_OK</a>();</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">return</span> num_items_;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;}</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="class_stack.html#a2723aec5c7e2611b97fcffeb7709de33">  214</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_stack.html#a2723aec5c7e2611b97fcffeb7709de33">Stack&lt;T&gt;::pop</a>(){</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <a class="code" href="stk__linked__list_8h.html#adffd371ec37f054fc84502ec6fb5c170">ASSERT_EMPTY</a>();</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <a class="code" href="struct_stack_1_1_node.html">Node</a> * prev_top = top_;      </div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    top_ = top_-&gt;<a class="code" href="struct_stack_1_1_node.html#a9d4f0632f74c398b88f3026649383394">link_</a>;          </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    prev_top-&gt;<a class="code" href="struct_stack_1_1_node.html#a9d4f0632f74c398b88f3026649383394">link_</a> = <span class="keyword">nullptr</span>;   </div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keyword">delete</span> prev_top;             </div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    --num_items_;                </div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;}</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00228"></a><span class="lineno"><a class="line" href="class_stack.html#a8e99bab8b8f969fe5e029934ac14408a">  228</a></span>&#160;T&amp; <a class="code" href="class_stack.html#a8e99bab8b8f969fe5e029934ac14408a">Stack&lt;T&gt;::top</a>(){</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <a class="code" href="stk__linked__list_8h.html#adffd371ec37f054fc84502ec6fb5c170">ASSERT_EMPTY</a>();</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordflow">return</span> top_-&gt;data_;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;}</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00237"></a><span class="lineno"><a class="line" href="class_stack.html#aeb9eeb4131e61a7e267e5efce79bddfc">  237</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_stack.html#aeb9eeb4131e61a7e267e5efce79bddfc">Stack&lt;T&gt;::ok</a>()<span class="keyword"> const</span>{</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <a class="code" href="struct_stack_1_1_node.html">Node</a> * node_iter = top_;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordtype">size_t</span> i = 0;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordflow">while</span> (node_iter != <span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        node_iter = node_iter-&gt;<a class="code" href="struct_stack_1_1_node.html#a9d4f0632f74c398b88f3026649383394">link_</a>;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        ++i;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    }</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordflow">return</span> num_items_ == i;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;}</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="preprocessor">#endif //STK_LINKED_LIST_H</span></div>
-<div class="ttc" id="stk__linked__list_8h_html_adffd371ec37f054fc84502ec6fb5c170"><div class="ttname"><a href="stk__linked__list_8h.html#adffd371ec37f054fc84502ec6fb5c170">ASSERT_EMPTY</a></div><div class="ttdeci">#define ASSERT_EMPTY()</div><div class="ttdoc">Макрос проверки на пустоту стека. Если он не пуст, то кидается исключение с именем функции...</div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:32</div></div>
-<div class="ttc" id="class_stack_html_a2993b44c0df1836c42ce73d0082595a7"><div class="ttname"><a href="class_stack.html#a2993b44c0df1836c42ce73d0082595a7">Stack::operator=</a></div><div class="ttdeci">Stack &amp; operator=(const Stack &amp;)</div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:152</div></div>
-<div class="ttc" id="class_stack_html"><div class="ttname"><a href="class_stack.html">Stack</a></div><div class="ttdoc">Класс стека, реализованный на основе связного списка. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:40</div></div>
-<div class="ttc" id="struct_stack_1_1_node_html_aad1bf4e68aae74727c28fa543573ef6b"><div class="ttname"><a href="struct_stack_1_1_node.html#aad1bf4e68aae74727c28fa543573ef6b">Stack::Node::data_</a></div><div class="ttdeci">T data_</div><div class="ttdoc">Хранит элемент, переданый в стек. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:58</div></div>
-<div class="ttc" id="struct_stack_1_1_node_html_a9d4f0632f74c398b88f3026649383394"><div class="ttname"><a href="struct_stack_1_1_node.html#a9d4f0632f74c398b88f3026649383394">Stack::Node::link_</a></div><div class="ttdeci">Node * link_</div><div class="ttdoc">Указатель на следующий узел стека. Если данный узел последний, то равна nullptr. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:59</div></div>
-<div class="ttc" id="class_stack_html_a8e99bab8b8f969fe5e029934ac14408a"><div class="ttname"><a href="class_stack.html#a8e99bab8b8f969fe5e029934ac14408a">Stack::top</a></div><div class="ttdeci">T &amp; top()</div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:228</div></div>
-<div class="ttc" id="struct_stack_1_1_node_html_a4445b3cf66e0fa32593297de69bff358"><div class="ttname"><a href="struct_stack_1_1_node.html#a4445b3cf66e0fa32593297de69bff358">Stack::Node::Node</a></div><div class="ttdeci">Node(const T &amp;, Node *=nullptr)</div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:75</div></div>
-<div class="ttc" id="class_stack_html_adb03e9be26b612af1e255856c84210f5"><div class="ttname"><a href="class_stack.html#adb03e9be26b612af1e255856c84210f5">Stack::size</a></div><div class="ttdeci">size_t size() const </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:205</div></div>
-<div class="ttc" id="class_stack_html_aeb9eeb4131e61a7e267e5efce79bddfc"><div class="ttname"><a href="class_stack.html#aeb9eeb4131e61a7e267e5efce79bddfc">Stack::ok</a></div><div class="ttdeci">bool ok() const </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:237</div></div>
-<div class="ttc" id="class_stack_html_aefee698059467258bbd79045aca62a63"><div class="ttname"><a href="class_stack.html#aefee698059467258bbd79045aca62a63">Stack::Stack</a></div><div class="ttdeci">Stack()</div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:114</div></div>
-<div class="ttc" id="class_stack_html_acd2dede1b88b54124c480fb333ca5e8c"><div class="ttname"><a href="class_stack.html#acd2dede1b88b54124c480fb333ca5e8c">Stack::empty</a></div><div class="ttdeci">bool empty() const </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:195</div></div>
-<div class="ttc" id="struct_stack_1_1_node_html"><div class="ttname"><a href="struct_stack_1_1_node.html">Stack::Node</a></div><div class="ttdoc">Структура узла стека. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:57</div></div>
-<div class="ttc" id="class_stack_html_a96988dc68a1b439d26b8782ea63bd7b8"><div class="ttname"><a href="class_stack.html#a96988dc68a1b439d26b8782ea63bd7b8">Stack::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Хранит текущее количество узлов в стеке. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:63</div></div>
-<div class="ttc" id="class_stack_html_a2723aec5c7e2611b97fcffeb7709de33"><div class="ttname"><a href="class_stack.html#a2723aec5c7e2611b97fcffeb7709de33">Stack::pop</a></div><div class="ttdeci">void pop()</div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:214</div></div>
-<div class="ttc" id="stk__linked__list_8h_html_ae1ee3197387e0e6a61b1e4d5441ad2f5"><div class="ttname"><a href="stk__linked__list_8h.html#ae1ee3197387e0e6a61b1e4d5441ad2f5">ASSERT_OK</a></div><div class="ttdeci">#define ASSERT_OK()</div><div class="ttdoc">Макрос верификации стека. Если он не проходит верификацию, то кидается исключение с именем функции...</div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:26</div></div>
-<div class="ttc" id="class_stack_html_a7cbf14cdf70cd7a8f525590420a408e2"><div class="ttname"><a href="class_stack.html#a7cbf14cdf70cd7a8f525590420a408e2">Stack::dump</a></div><div class="ttdeci">void dump() const </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:89</div></div>
-<div class="ttc" id="class_stack_html_abc666f64e68c132007ba8203afe0dbe6"><div class="ttname"><a href="class_stack.html#abc666f64e68c132007ba8203afe0dbe6">Stack::clean_obj</a></div><div class="ttdeci">void clean_obj()</div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:137</div></div>
-<div class="ttc" id="class_stack_html_a9e7a00875aefbdac560ab189b7bc61d1"><div class="ttname"><a href="class_stack.html#a9e7a00875aefbdac560ab189b7bc61d1">Stack::~Stack</a></div><div class="ttdeci">~Stack()</div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:174</div></div>
-<div class="ttc" id="class_stack_html_a8e2823465d165f2cac1e6d732b856076"><div class="ttname"><a href="class_stack.html#a8e2823465d165f2cac1e6d732b856076">Stack::push</a></div><div class="ttdeci">void push(const T &amp;)</div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:183</div></div>
-<div class="ttc" id="class_stack_html_a4fa8fe1a2a6ff42f954d6a3c0d29d6e0"><div class="ttname"><a href="class_stack.html#a4fa8fe1a2a6ff42f954d6a3c0d29d6e0">Stack::top_</a></div><div class="ttdeci">struct Stack::Node * top_</div><div class="ttdoc">Хранит указатель на текущий элемент на вершине стека. Если элементов нет, то он равен nullptr...</div></div>
-<div class="ttc" id="struct_stack_1_1_node_html_a8cccb15f2be544e90527524677286ba3"><div class="ttname"><a href="struct_stack_1_1_node.html#a8cccb15f2be544e90527524677286ba3">Stack::Node::~Node</a></div><div class="ttdeci">~Node()</div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:80</div></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef STK_LINKED_LIST_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define STK_LINKED_LIST_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define new new( _NORMAL_BLOCK, __FILE__, __LINE__) </span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifdef _MSC_VER</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">    #define FUNKNAME __FUNCTION__ </span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">    #define FUNKNAME __func__ </span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif //_MSC_VER</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define ASSERT_NOT_EMPTY() \</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">    if (empty()){     \</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">        dump();     \</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">        throw std::length_error(&quot;Error: Try to work with empty stack in: &quot;FUNKNAME); \</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">    }   </span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacestk__as__list.html">stk_as_list</a>{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classstk__as__list_1_1_stack.html">   35</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classstk__as__list_1_1_stack.html">Stack</a>{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classstk__as__list_1_1_stack.html#aa556423ef52feaa947b2683440f2860c">dump</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="classstk__as__list_1_1_stack.html#a14cd1cba325bead4ff0a91bc6eb0f6f5">Stack</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="classstk__as__list_1_1_stack.html#a14cd1cba325bead4ff0a91bc6eb0f6f5">Stack</a>(<span class="keyword">const</span> <a class="code" href="classstk__as__list_1_1_stack.html">Stack</a> &amp; other_stack);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="classstk__as__list_1_1_stack.html">Stack</a> &amp; <a class="code" href="classstk__as__list_1_1_stack.html#ae4e6aa8be8e4c25b878e4f3e1674c16a">operator=</a>(<a class="code" href="classstk__as__list_1_1_stack.html">Stack</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="classstk__as__list_1_1_stack.html#a40bd5dff912f0e5290777c4b46d17809">~Stack</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classstk__as__list_1_1_stack.html#a2bd88c7b8faf901f4830ed616bf6478f">empty</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classstk__as__list_1_1_stack.html#a3f3772679c16de93eae9eb92e2b85955">size</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classstk__as__list_1_1_stack.html#ad31b678390ac3f2076e9b757c95600be">push</a>(<span class="keyword">const</span> T&amp;);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classstk__as__list_1_1_stack.html#a09e820f3c3531cf3f401af3b3ca5d56f">pop</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        T&amp; <a class="code" href="classstk__as__list_1_1_stack.html#a20e64b09239efa6340b33546115424b6">top</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classstk__as__list_1_1_stack.html#a873d054824f9029f80df0fe8101eeda3">swap</a>(<a class="code" href="classstk__as__list_1_1_stack.html">Stack</a> &amp;);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structstk__as__list_1_1_stack_1_1_node.html">   51</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="structstk__as__list_1_1_stack_1_1_node.html">Node</a>{</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="structstk__as__list_1_1_stack_1_1_node.html#a98a491bef8f5531040d0ccca743d33d4">   52</a></span>&#160;            T <a class="code" href="structstk__as__list_1_1_stack_1_1_node.html#a98a491bef8f5531040d0ccca743d33d4">data_</a>;      </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structstk__as__list_1_1_stack_1_1_node.html#a69f6ea733b172f044b13d1f2018565a0">   53</a></span>&#160;            <a class="code" href="structstk__as__list_1_1_stack_1_1_node.html">Node</a> * <a class="code" href="structstk__as__list_1_1_stack_1_1_node.html#a69f6ea733b172f044b13d1f2018565a0">next_</a>; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <a class="code" href="structstk__as__list_1_1_stack_1_1_node.html#a252875375c36553e0ced6331a731c19e">Node</a>(<span class="keyword">const</span> T&amp;, <a class="code" href="structstk__as__list_1_1_stack_1_1_node.html">Node</a> * = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <a class="code" href="structstk__as__list_1_1_stack_1_1_node.html#a04e480b19d2c55a2a551be7acd56d809">~Node</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        };</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classstk__as__list_1_1_stack.html#a9d4ea95bc7425e321ee82a2e9a05a6b2">   57</a></span>&#160;        <a class="code" href="structstk__as__list_1_1_stack_1_1_node.html">Node</a> * <a class="code" href="classstk__as__list_1_1_stack.html#a9d4ea95bc7425e321ee82a2e9a05a6b2">top_</a>;        </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classstk__as__list_1_1_stack.html#aa19d82f1efcce9c75207b8036b9ba9eb">   58</a></span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classstk__as__list_1_1_stack.html#aa19d82f1efcce9c75207b8036b9ba9eb">num_items_</a>;  </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classstk__as__list_1_1_stack.html#ad96efdeb39952c4914d4e9eb578936c4">clean</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    };</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stk__linked__list__realization_8h.html">stk_linked_list_realization.h</a>&quot;</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif //STK_LINKED_LIST_H</span></div>
+<div class="ttc" id="structstk__as__list_1_1_stack_1_1_node_html"><div class="ttname"><a href="structstk__as__list_1_1_stack_1_1_node.html">stk_as_list::Stack::Node</a></div><div class="ttdoc">Структура узла стека. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:51</div></div>
+<div class="ttc" id="classstk__as__list_1_1_stack_html_a14cd1cba325bead4ff0a91bc6eb0f6f5"><div class="ttname"><a href="classstk__as__list_1_1_stack.html#a14cd1cba325bead4ff0a91bc6eb0f6f5">stk_as_list::Stack::Stack</a></div><div class="ttdeci">Stack()</div><div class="ttdef"><b>Definition:</b> stk_linked_list_realization.h:58</div></div>
+<div class="ttc" id="namespacestk__as__list_html"><div class="ttname"><a href="namespacestk__as__list.html">stk_as_list</a></div><div class="ttdoc">В данном пространстве имён представлена реализация класса стека на основе связанного списка...</div></div>
+<div class="ttc" id="structstk__as__list_1_1_stack_1_1_node_html_a69f6ea733b172f044b13d1f2018565a0"><div class="ttname"><a href="structstk__as__list_1_1_stack_1_1_node.html#a69f6ea733b172f044b13d1f2018565a0">stk_as_list::Stack::Node::next_</a></div><div class="ttdeci">Node * next_</div><div class="ttdoc">Указатель на следующий узел стека. Если данный узел последний, то равна nullptr. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:53</div></div>
+<div class="ttc" id="classstk__as__list_1_1_stack_html_a2bd88c7b8faf901f4830ed616bf6478f"><div class="ttname"><a href="classstk__as__list_1_1_stack.html#a2bd88c7b8faf901f4830ed616bf6478f">stk_as_list::Stack::empty</a></div><div class="ttdeci">bool empty() const </div><div class="ttdef"><b>Definition:</b> stk_linked_list_realization.h:138</div></div>
+<div class="ttc" id="classstk__as__list_1_1_stack_html_a873d054824f9029f80df0fe8101eeda3"><div class="ttname"><a href="classstk__as__list_1_1_stack.html#a873d054824f9029f80df0fe8101eeda3">stk_as_list::Stack::swap</a></div><div class="ttdeci">void swap(Stack &amp;)</div><div class="ttdef"><b>Definition:</b> stk_linked_list_realization.h:79</div></div>
+<div class="ttc" id="structstk__as__list_1_1_stack_1_1_node_html_a04e480b19d2c55a2a551be7acd56d809"><div class="ttname"><a href="structstk__as__list_1_1_stack_1_1_node.html#a04e480b19d2c55a2a551be7acd56d809">stk_as_list::Stack::Node::~Node</a></div><div class="ttdeci">~Node()</div><div class="ttdef"><b>Definition:</b> stk_linked_list_realization.h:21</div></div>
+<div class="ttc" id="structstk__as__list_1_1_stack_1_1_node_html_a98a491bef8f5531040d0ccca743d33d4"><div class="ttname"><a href="structstk__as__list_1_1_stack_1_1_node.html#a98a491bef8f5531040d0ccca743d33d4">stk_as_list::Stack::Node::data_</a></div><div class="ttdeci">T data_</div><div class="ttdoc">Хранит элемент, переданый в стек. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:52</div></div>
+<div class="ttc" id="classstk__as__list_1_1_stack_html_a3f3772679c16de93eae9eb92e2b85955"><div class="ttname"><a href="classstk__as__list_1_1_stack.html#a3f3772679c16de93eae9eb92e2b85955">stk_as_list::Stack::size</a></div><div class="ttdeci">size_t size() const </div><div class="ttdef"><b>Definition:</b> stk_linked_list_realization.h:147</div></div>
+<div class="ttc" id="classstk__as__list_1_1_stack_html_aa19d82f1efcce9c75207b8036b9ba9eb"><div class="ttname"><a href="classstk__as__list_1_1_stack.html#aa19d82f1efcce9c75207b8036b9ba9eb">stk_as_list::Stack::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Хранит текущее количество узлов в стеке. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:58</div></div>
+<div class="ttc" id="classstk__as__list_1_1_stack_html_ad96efdeb39952c4914d4e9eb578936c4"><div class="ttname"><a href="classstk__as__list_1_1_stack.html#ad96efdeb39952c4914d4e9eb578936c4">stk_as_list::Stack::clean</a></div><div class="ttdeci">void clean()</div><div class="ttdef"><b>Definition:</b> stk_linked_list_realization.h:64</div></div>
+<div class="ttc" id="classstk__as__list_1_1_stack_html_a09e820f3c3531cf3f401af3b3ca5d56f"><div class="ttname"><a href="classstk__as__list_1_1_stack.html#a09e820f3c3531cf3f401af3b3ca5d56f">stk_as_list::Stack::pop</a></div><div class="ttdeci">void pop()</div><div class="ttdef"><b>Definition:</b> stk_linked_list_realization.h:156</div></div>
+<div class="ttc" id="structstk__as__list_1_1_stack_1_1_node_html_a252875375c36553e0ced6331a731c19e"><div class="ttname"><a href="structstk__as__list_1_1_stack_1_1_node.html#a252875375c36553e0ced6331a731c19e">stk_as_list::Stack::Node::Node</a></div><div class="ttdeci">Node(const T &amp;, Node *=nullptr)</div><div class="ttdef"><b>Definition:</b> stk_linked_list_realization.h:15</div></div>
+<div class="ttc" id="classstk__as__list_1_1_stack_html"><div class="ttname"><a href="classstk__as__list_1_1_stack.html">stk_as_list::Stack</a></div><div class="ttdoc">Класс стека, реализованный на основе связного списка. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:35</div></div>
+<div class="ttc" id="stk__linked__list__realization_8h_html"><div class="ttname"><a href="stk__linked__list__realization_8h.html">stk_linked_list_realization.h</a></div><div class="ttdoc">Реализация класса стека на основе связанного списка в отдельном файле. </div></div>
+<div class="ttc" id="classstk__as__list_1_1_stack_html_ad31b678390ac3f2076e9b757c95600be"><div class="ttname"><a href="classstk__as__list_1_1_stack.html#ad31b678390ac3f2076e9b757c95600be">stk_as_list::Stack::push</a></div><div class="ttdeci">void push(const T &amp;)</div><div class="ttdef"><b>Definition:</b> stk_linked_list_realization.h:127</div></div>
+<div class="ttc" id="classstk__as__list_1_1_stack_html_a9d4ea95bc7425e321ee82a2e9a05a6b2"><div class="ttname"><a href="classstk__as__list_1_1_stack.html#a9d4ea95bc7425e321ee82a2e9a05a6b2">stk_as_list::Stack::top_</a></div><div class="ttdeci">Node * top_</div><div class="ttdoc">Хранит указатель на текущий элемент на вершине стека. Если элементов нет, то он равен nullptr...</div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:57</div></div>
+<div class="ttc" id="classstk__as__list_1_1_stack_html_ae4e6aa8be8e4c25b878e4f3e1674c16a"><div class="ttname"><a href="classstk__as__list_1_1_stack.html#ae4e6aa8be8e4c25b878e4f3e1674c16a">stk_as_list::Stack::operator=</a></div><div class="ttdeci">Stack &amp; operator=(Stack)</div><div class="ttdef"><b>Definition:</b> stk_linked_list_realization.h:109</div></div>
+<div class="ttc" id="classstk__as__list_1_1_stack_html_a20e64b09239efa6340b33546115424b6"><div class="ttname"><a href="classstk__as__list_1_1_stack.html#a20e64b09239efa6340b33546115424b6">stk_as_list::Stack::top</a></div><div class="ttdeci">T &amp; top()</div><div class="ttdef"><b>Definition:</b> stk_linked_list_realization.h:171</div></div>
+<div class="ttc" id="classstk__as__list_1_1_stack_html_aa556423ef52feaa947b2683440f2860c"><div class="ttname"><a href="classstk__as__list_1_1_stack.html#aa556423ef52feaa947b2683440f2860c">stk_as_list::Stack::dump</a></div><div class="ttdeci">void dump() const </div><div class="ttdef"><b>Definition:</b> stk_linked_list_realization.h:31</div></div>
+<div class="ttc" id="classstk__as__list_1_1_stack_html_a40bd5dff912f0e5290777c4b46d17809"><div class="ttname"><a href="classstk__as__list_1_1_stack.html#a40bd5dff912f0e5290777c4b46d17809">stk_as_list::Stack::~Stack</a></div><div class="ttdeci">~Stack()</div><div class="ttdef"><b>Definition:</b> stk_linked_list_realization.h:118</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документация по Реализация стека. Последние изменения: Пн 27 Фев 2017 03:18:07. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+Документация по Реализация стека. Последние изменения: Вт 28 Фев 2017 19:51:29. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

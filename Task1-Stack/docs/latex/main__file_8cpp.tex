@@ -1,26 +1,15 @@
-\hypertarget{main__file_8cpp}{}\section{Файл Stack\+\_\+\+Linked\+List/\+Stack\+\_\+\+Linked\+List\+\_\+try1/main\+\_\+file.cpp}
-\label{main__file_8cpp}\index{Stack\+\_\+\+Linked\+List/\+Stack\+\_\+\+Linked\+List\+\_\+try1/main\+\_\+file.\+cpp@{Stack\+\_\+\+Linked\+List/\+Stack\+\_\+\+Linked\+List\+\_\+try1/main\+\_\+file.\+cpp}}
+\hypertarget{main__file_8cpp}{}\section{Файл main\+\_\+file.\+cpp}
+\label{main__file_8cpp}\index{main\+\_\+file.\+cpp@{main\+\_\+file.\+cpp}}
 
 
-Тестирование стека, реализованного в файле \hyperlink{stk__linked__list_8h}{stk\+\_\+linked\+\_\+list.\+h}.  
+Тестирование стека, описанного в файле \hyperlink{stk__linked__list_8h}{stk\+\_\+linked\+\_\+list.\+h}.  
 
 
-{\ttfamily \#include $<$iostream$>$}\\*
-{\ttfamily \#include \char`\"{}stk\+\_\+linked\+\_\+list.\+h\char`\"{}}\\*
 \subsection*{Пространства имен}
 \begin{DoxyCompactItemize}
 \item 
  \hyperlink{namespacestk__test}{stk\+\_\+test}
-\begin{DoxyCompactList}\small\item\em В данном пространстве имён представлены средства тестирования класса \hyperlink{class_stack}{Stack}. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Макросы}
-\begin{DoxyCompactItemize}
-\item 
-\#define \hyperlink{main__file_8cpp_a7acbe5c16be083cdca8edb87a3ca9e3f}{I\+N\+I\+T\+\_\+\+C\+R\+T\+\_\+\+M\+E\+M\+\_\+\+C\+H\+E\+C\+K}()~;
-\item 
-\#define \hyperlink{main__file_8cpp_a9e96b2db035a324ed33363930bd61790}{C\+R\+T\+\_\+\+S\+E\+T\+\_\+\+R\+E\+P\+O\+R\+T}()~;
-\item 
-\#define \hyperlink{main__file_8cpp_a12d9e096a8640ee0477e1cb3505c21b3}{A\+S\+S\+E\+R\+T\+\_\+\+E\+Q}(condition)
-\begin{DoxyCompactList}\small\item\em Макрос проверки условия. Если оно не верно, то бросается исключение. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em В данном пространстве имён представлены средства тестирования класса Stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Перечисления}
 \begin{DoxyCompactItemize}
 \item 
@@ -44,7 +33,7 @@ int \hyperlink{main__file_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 
 
 \subsection{Подробное описание}
-Тестирование стека, реализованного в файле \hyperlink{stk__linked__list_8h}{stk\+\_\+linked\+\_\+list.\+h}. 
+Тестирование стека, описанного в файле \hyperlink{stk__linked__list_8h}{stk\+\_\+linked\+\_\+list.\+h}. 
 
 \begin{DoxyAuthor}{Автор}
 Корнилов Антон, 2017 
@@ -52,39 +41,6 @@ int \hyperlink{main__file_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 \begin{DoxyDate}{Дата}
 24.\+02.\+2017 
 \end{DoxyDate}
-
-
-\subsection{Макросы}
-\hypertarget{main__file_8cpp_a12d9e096a8640ee0477e1cb3505c21b3}{}\index{main\+\_\+file.\+cpp@{main\+\_\+file.\+cpp}!A\+S\+S\+E\+R\+T\+\_\+\+E\+Q@{A\+S\+S\+E\+R\+T\+\_\+\+E\+Q}}
-\index{A\+S\+S\+E\+R\+T\+\_\+\+E\+Q@{A\+S\+S\+E\+R\+T\+\_\+\+E\+Q}!main\+\_\+file.\+cpp@{main\+\_\+file.\+cpp}}
-\subsubsection[{A\+S\+S\+E\+R\+T\+\_\+\+E\+Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+S\+S\+E\+R\+T\+\_\+\+E\+Q(
-\begin{DoxyParamCaption}
-\item[{}]{condition}
-\end{DoxyParamCaption}
-)}\label{main__file_8cpp_a12d9e096a8640ee0477e1cb3505c21b3}
-{\bfseries Макроопределение\+:}
-\begin{DoxyCode}
-\textcolor{keywordflow}{if} (! (condition) )        \(\backslash\)
-            throw std::exception(\textcolor{stringliteral}{"Test failed: "}#condition);
-\end{DoxyCode}
-
-
-Макрос проверки условия. Если оно не верно, то бросается исключение. 
-
-\hypertarget{main__file_8cpp_a9e96b2db035a324ed33363930bd61790}{}\index{main\+\_\+file.\+cpp@{main\+\_\+file.\+cpp}!C\+R\+T\+\_\+\+S\+E\+T\+\_\+\+R\+E\+P\+O\+R\+T@{C\+R\+T\+\_\+\+S\+E\+T\+\_\+\+R\+E\+P\+O\+R\+T}}
-\index{C\+R\+T\+\_\+\+S\+E\+T\+\_\+\+R\+E\+P\+O\+R\+T@{C\+R\+T\+\_\+\+S\+E\+T\+\_\+\+R\+E\+P\+O\+R\+T}!main\+\_\+file.\+cpp@{main\+\_\+file.\+cpp}}
-\subsubsection[{C\+R\+T\+\_\+\+S\+E\+T\+\_\+\+R\+E\+P\+O\+R\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R\+T\+\_\+\+S\+E\+T\+\_\+\+R\+E\+P\+O\+R\+T(
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)~;}\label{main__file_8cpp_a9e96b2db035a324ed33363930bd61790}
-\hypertarget{main__file_8cpp_a7acbe5c16be083cdca8edb87a3ca9e3f}{}\index{main\+\_\+file.\+cpp@{main\+\_\+file.\+cpp}!I\+N\+I\+T\+\_\+\+C\+R\+T\+\_\+\+M\+E\+M\+\_\+\+C\+H\+E\+C\+K@{I\+N\+I\+T\+\_\+\+C\+R\+T\+\_\+\+M\+E\+M\+\_\+\+C\+H\+E\+C\+K}}
-\index{I\+N\+I\+T\+\_\+\+C\+R\+T\+\_\+\+M\+E\+M\+\_\+\+C\+H\+E\+C\+K@{I\+N\+I\+T\+\_\+\+C\+R\+T\+\_\+\+M\+E\+M\+\_\+\+C\+H\+E\+C\+K}!main\+\_\+file.\+cpp@{main\+\_\+file.\+cpp}}
-\subsubsection[{I\+N\+I\+T\+\_\+\+C\+R\+T\+\_\+\+M\+E\+M\+\_\+\+C\+H\+E\+C\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+I\+T\+\_\+\+C\+R\+T\+\_\+\+M\+E\+M\+\_\+\+C\+H\+E\+C\+K(
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)~;}\label{main__file_8cpp_a7acbe5c16be083cdca8edb87a3ca9e3f}
 
 
 \subsection{Функции}
@@ -99,20 +55,20 @@ int \hyperlink{main__file_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 
 Проведение одного из тестов. Доступные варианты\+: Push\+Single\+Number, Cannot\+Push\+More, Pop\+From\+Empty, Top\+From\+Empty, Copy\+Stack, Assignment\+Operator\+Of\+Stack. 
 \begin{DoxyCode}
-191           \{
-193     \hyperlink{main__file_8cpp_a7acbe5c16be083cdca8edb87a3ca9e3f}{INIT\_CRT\_MEM\_CHECK}();
-194 
-197     \textcolor{keywordflow}{try}\{
-198         stk\_test::TEST<Stack>(\hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78a16992c4d9ecd605ea8503740aee9df96}{stk\_test::PushSingleNumber});
-199     \}
-200     \textcolor{keywordflow}{catch}(...)\{
-201         std::cout<<\textcolor{stringliteral}{"Bad testing"};
-202     \}
-203 
-204     
-205     \hyperlink{main__file_8cpp_a9e96b2db035a324ed33363930bd61790}{CRT\_SET\_REPORT}();
-206 
-207     system(\textcolor{stringliteral}{"PAUSE"});
-208     \textcolor{keywordflow}{return} 0;
-209 \}
+193           \{
+195     INIT\_CRT\_MEM\_CHECK();
+196 
+199     \textcolor{keywordflow}{try}\{
+200         stk\_test::TEST<stk\_as\_list::Stack>(\hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78a16992c4d9ecd605ea8503740aee9df96}{stk\_test::PushSingleNumber});
+201     \}
+202     \textcolor{keywordflow}{catch}(...)\{
+203         std::cout<<\textcolor{stringliteral}{"Bad testing"};
+204     \}
+205 
+206     
+207     CRT\_SET\_REPORT();
+208 
+209     system(\textcolor{stringliteral}{"PAUSE"});
+210     \textcolor{keywordflow}{return} 0;
+211 \}
 \end{DoxyCode}

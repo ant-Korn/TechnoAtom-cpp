@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['_7enode',['~Node',['../struct_stack_1_1_node.html#a8cccb15f2be544e90527524677286ba3',1,'Stack::Node']]],
-  ['_7estack',['~Stack',['../class_stack.html#a9e7a00875aefbdac560ab189b7bc61d1',1,'Stack']]]
+  ['_7enode',['~Node',['../structstk__as__list_1_1_stack_1_1_node.html#a04e480b19d2c55a2a551be7acd56d809',1,'stk_as_list::Stack::Node']]],
+  ['_7estack',['~Stack',['../classstk__as__list_1_1_stack.html#a40bd5dff912f0e5290777c4b46d17809',1,'stk_as_list::Stack']]]
 ];

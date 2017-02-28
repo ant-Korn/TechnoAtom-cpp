@@ -1,0 +1,87 @@
+\hypertarget{structstk__as__list_1_1_stack_1_1_node}{}\section{Структура stk\+\_\+as\+\_\+list\+:\+:Stack$<$ T $>$\+:\+:Node}
+\label{structstk__as__list_1_1_stack_1_1_node}\index{stk\+\_\+as\+\_\+list\+::\+Stack$<$ T $>$\+::\+Node@{stk\+\_\+as\+\_\+list\+::\+Stack$<$ T $>$\+::\+Node}}
+
+
+Структура узла стека.  
+
+
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structstk__as__list_1_1_stack_1_1_node_a252875375c36553e0ced6331a731c19e}{Node} (const T \&, \hyperlink{structstk__as__list_1_1_stack_1_1_node}{Node} $\ast$=nullptr)
+\item 
+\hyperlink{structstk__as__list_1_1_stack_1_1_node_a04e480b19d2c55a2a551be7acd56d809}{$\sim$\+Node} ()
+\end{DoxyCompactItemize}
+\subsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+T \hyperlink{structstk__as__list_1_1_stack_1_1_node_a98a491bef8f5531040d0ccca743d33d4}{data\+\_\+}
+\begin{DoxyCompactList}\small\item\em Хранит элемент, переданый в стек. \end{DoxyCompactList}\item 
+\hyperlink{structstk__as__list_1_1_stack_1_1_node}{Node} $\ast$ \hyperlink{structstk__as__list_1_1_stack_1_1_node_a69f6ea733b172f044b13d1f2018565a0}{next\+\_\+}
+\begin{DoxyCompactList}\small\item\em Указатель на следующий узел стека. Если данный узел последний, то равна nullptr. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+\subsubsection*{template$<$class T$>$struct stk\+\_\+as\+\_\+list\+::\+Stack$<$ T $>$\+::\+Node}
+
+Структура узла стека. 
+
+Каждый из узлов хранит занесёную в стек информацию, а также указатель на следующий узел. 
+
+\subsection{Конструктор(ы)}
+\hypertarget{structstk__as__list_1_1_stack_1_1_node_a252875375c36553e0ced6331a731c19e}{}\index{stk\+\_\+as\+\_\+list\+::\+Stack\+::\+Node@{stk\+\_\+as\+\_\+list\+::\+Stack\+::\+Node}!Node@{Node}}
+\index{Node@{Node}!stk\+\_\+as\+\_\+list\+::\+Stack\+::\+Node@{stk\+\_\+as\+\_\+list\+::\+Stack\+::\+Node}}
+\subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ Stack\+::\+Node\+::\+Node (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{new\+\_\+data, }
+\item[{{\bf Node} $\ast$}]{next\+\_\+node = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)}\label{structstk__as__list_1_1_stack_1_1_node_a252875375c36553e0ced6331a731c19e}
+Конструктор узла стека. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em new\+\_\+data} & Хранимая узлом информация. \\
+\hline
+\mbox{\tt in}  & {\em next\+\_\+node} & Указатель на следующий узел. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+15 : \hyperlink{structstk__as__list_1_1_stack_1_1_node_a98a491bef8f5531040d0ccca743d33d4}{data\_}(new\_data), \hyperlink{structstk__as__list_1_1_stack_1_1_node_a69f6ea733b172f044b13d1f2018565a0}{next\_}(next\_node) \{\}
+\end{DoxyCode}
+\hypertarget{structstk__as__list_1_1_stack_1_1_node_a04e480b19d2c55a2a551be7acd56d809}{}\index{stk\+\_\+as\+\_\+list\+::\+Stack\+::\+Node@{stk\+\_\+as\+\_\+list\+::\+Stack\+::\+Node}!````~Node@{$\sim$\+Node}}
+\index{````~Node@{$\sim$\+Node}!stk\+\_\+as\+\_\+list\+::\+Stack\+::\+Node@{stk\+\_\+as\+\_\+list\+::\+Stack\+::\+Node}}
+\subsubsection[{$\sim$\+Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ Stack\+::\+Node\+::$\sim$\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{structstk__as__list_1_1_stack_1_1_node_a04e480b19d2c55a2a551be7acd56d809}
+Деструктор узла стека 
+\begin{DoxyCode}
+21                        \{
+22         \textcolor{comment}{//std::cout << "delete " << data\_ << std::endl;}
+23         \hyperlink{structstk__as__list_1_1_stack_1_1_node_a69f6ea733b172f044b13d1f2018565a0}{next\_} = \textcolor{keyword}{nullptr};
+24     \}
+\end{DoxyCode}
+
+
+\subsection{Данные класса}
+\hypertarget{structstk__as__list_1_1_stack_1_1_node_a98a491bef8f5531040d0ccca743d33d4}{}\index{stk\+\_\+as\+\_\+list\+::\+Stack\+::\+Node@{stk\+\_\+as\+\_\+list\+::\+Stack\+::\+Node}!data\+\_\+@{data\+\_\+}}
+\index{data\+\_\+@{data\+\_\+}!stk\+\_\+as\+\_\+list\+::\+Stack\+::\+Node@{stk\+\_\+as\+\_\+list\+::\+Stack\+::\+Node}}
+\subsubsection[{data\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T {\bf stk\+\_\+as\+\_\+list\+::\+Stack}$<$ T $>$\+::Node\+::data\+\_\+}\label{structstk__as__list_1_1_stack_1_1_node_a98a491bef8f5531040d0ccca743d33d4}
+
+
+Хранит элемент, переданый в стек. 
+
+\hypertarget{structstk__as__list_1_1_stack_1_1_node_a69f6ea733b172f044b13d1f2018565a0}{}\index{stk\+\_\+as\+\_\+list\+::\+Stack\+::\+Node@{stk\+\_\+as\+\_\+list\+::\+Stack\+::\+Node}!next\+\_\+@{next\+\_\+}}
+\index{next\+\_\+@{next\+\_\+}!stk\+\_\+as\+\_\+list\+::\+Stack\+::\+Node@{stk\+\_\+as\+\_\+list\+::\+Stack\+::\+Node}}
+\subsubsection[{next\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Node}$\ast$ {\bf stk\+\_\+as\+\_\+list\+::\+Stack}$<$ T $>$\+::Node\+::next\+\_\+}\label{structstk__as__list_1_1_stack_1_1_node_a69f6ea733b172f044b13d1f2018565a0}
+
+
+Указатель на следующий узел стека. Если данный узел последний, то равна nullptr. 
+
+
+
+Объявления и описания членов структур находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{stk__linked__list_8h}{stk\+\_\+linked\+\_\+list.\+h}\item 
+\hyperlink{stk__linked__list__realization_8h}{stk\+\_\+linked\+\_\+list\+\_\+realization.\+h}\end{DoxyCompactItemize}

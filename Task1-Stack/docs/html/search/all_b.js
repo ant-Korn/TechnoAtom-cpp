@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['size',['size',['../class_stack.html#adb03e9be26b612af1e255856c84210f5',1,'Stack']]],
-  ['stack',['Stack',['../class_stack.html',1,'Stack&lt; T &gt;'],['../class_stack.html#aefee698059467258bbd79045aca62a63',1,'Stack::Stack()'],['../class_stack.html#a3befb74de707bc1b4ccdb97320d4d29e',1,'Stack::Stack(const Stack &amp;)']]],
-  ['stk_5flinked_5flist_2eh',['stk_linked_list.h',['../stk__linked__list_8h.html',1,'']]],
-  ['stk_5ftest',['stk_test',['../namespacestk__test.html',1,'']]]
+  ['test',['TEST',['../namespacestk__test.html#a6e5c68f4363af9e5204334b3c875d641',1,'stk_test']]],
+  ['tests',['tests',['../namespacestk__test.html#aee7ec7a767abf7b0b65ce9a2afb7de78',1,'stk_test']]],
+  ['top',['top',['../classstk__as__list_1_1_stack.html#a20e64b09239efa6340b33546115424b6',1,'stk_as_list::Stack']]],
+  ['top_5f',['top_',['../classstk__as__list_1_1_stack.html#a9d4ea95bc7425e321ee82a2e9a05a6b2',1,'stk_as_list::Stack']]],
+  ['topfromempty',['TopFromEmpty',['../namespacestk__test.html#aee7ec7a767abf7b0b65ce9a2afb7de78acd574f7057fc049aa4da1da5f4b7fd3a',1,'stk_test']]]
 ];

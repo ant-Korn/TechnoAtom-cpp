@@ -1,0 +1,13 @@
+digraph "C:/GitHub_repr/TechnoAtom-cpp/Task1-Stack" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_9c51c48bb16cd40bfe580a125881f6b9 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="TechnoAtom-cpp" fontname="Helvetica", fontsize="10", URL="dir_9c51c48bb16cd40bfe580a125881f6b9.html"]
+  subgraph clusterdir_ad94f232f2b5474a09d694d32296c46f {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_ad94f232f2b5474a09d694d32296c46f.html"];
+    dir_ad94f232f2b5474a09d694d32296c46f [shape=plaintext label="Task1-Stack"];
+    dir_7601da3f2b604a7fc7021f6cb888807d [shape=box label="Stack_LinkedList" color="red" fillcolor="white" style="filled" URL="dir_7601da3f2b604a7fc7021f6cb888807d.html"];
+  }
+  }
+}

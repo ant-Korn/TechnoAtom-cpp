@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['pop',['pop',['../class_stack.html#a2723aec5c7e2611b97fcffeb7709de33',1,'Stack']]],
-  ['push',['push',['../class_stack.html#a8e2823465d165f2cac1e6d732b856076',1,'Stack']]]
+  ['pop',['pop',['../classstk__as__list_1_1_stack.html#a09e820f3c3531cf3f401af3b3ca5d56f',1,'stk_as_list::Stack']]],
+  ['push',['push',['../classstk__as__list_1_1_stack.html#ad31b678390ac3f2076e9b757c95600be',1,'stk_as_list::Stack']]]
 ];

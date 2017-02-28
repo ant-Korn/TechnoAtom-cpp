@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['init_5fcrt_5fmem_5fcheck',['INIT_CRT_MEM_CHECK',['../main__file_8cpp.html#a7acbe5c16be083cdca8edb87a3ca9e3f',1,'main_file.cpp']]]
+  ['next_5f',['next_',['../structstk__as__list_1_1_stack_1_1_node.html#a69f6ea733b172f044b13d1f2018565a0',1,'stk_as_list::Stack::Node']]],
+  ['node',['Node',['../structstk__as__list_1_1_stack_1_1_node.html',1,'stk_as_list::Stack']]],
+  ['node',['Node',['../structstk__as__list_1_1_stack_1_1_node.html#a252875375c36553e0ced6331a731c19e',1,'stk_as_list::Stack::Node']]],
+  ['num_5fitems_5f',['num_items_',['../classstk__as__list_1_1_stack.html#aa19d82f1efcce9c75207b8036b9ba9eb',1,'stk_as_list::Stack']]]
 ];

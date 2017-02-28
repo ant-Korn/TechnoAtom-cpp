@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['pop',['pop',['../class_stack.html#a2723aec5c7e2611b97fcffeb7709de33',1,'Stack']]],
-  ['popfromempty',['PopFromEmpty',['../namespacestk__test.html#aee7ec7a767abf7b0b65ce9a2afb7de78ae9c603d2f7d582fd4fdd5db8140ceecf',1,'stk_test']]],
-  ['push',['push',['../class_stack.html#a8e2823465d165f2cac1e6d732b856076',1,'Stack']]],
-  ['pushsinglenumber',['PushSingleNumber',['../namespacestk__test.html#aee7ec7a767abf7b0b65ce9a2afb7de78a16992c4d9ecd605ea8503740aee9df96',1,'stk_test']]]
+  ['_7enode',['~Node',['../structstk__as__list_1_1_stack_1_1_node.html#a04e480b19d2c55a2a551be7acd56d809',1,'stk_as_list::Stack::Node']]],
+  ['_7estack',['~Stack',['../classstk__as__list_1_1_stack.html#a40bd5dff912f0e5290777c4b46d17809',1,'stk_as_list::Stack']]]
 ];

@@ -23,5 +23,8 @@
     <ClInclude Include="stk_linked_list.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="stk_linked_list_realization.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

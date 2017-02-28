@@ -1,0 +1,10 @@
+digraph "C:/GitHub_repr" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_ebaf227da311181dbf462f3e9d6f7103 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_ebaf227da311181dbf462f3e9d6f7103.html"];
+    dir_ebaf227da311181dbf462f3e9d6f7103 [shape=plaintext label="GitHub_repr"];
+    dir_9c51c48bb16cd40bfe580a125881f6b9 [shape=box label="TechnoAtom-cpp" color="red" fillcolor="white" style="filled" URL="dir_9c51c48bb16cd40bfe580a125881f6b9.html"];
+  }
+}

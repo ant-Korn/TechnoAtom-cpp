@@ -1,5 +1,5 @@
 //!@file main_file.cpp
-//!Тестирование стека, реализованного в файле stk_linked_list.h.
+//!Тестирование стека, описанного в файле stk_linked_list.h.
 //!
 //!@author Корнилов Антон, 2017
 //!@date 24.02.2017
@@ -13,12 +13,14 @@
 	_CrtMemCheckpoint(&_ms);
 
 //! Вывод в консоль отчёта об утечках памяти. */
-#define CRT_SET_REPORT()																	\
-	std::cout << std::endl;																	\
-	std::cout << std::setfill('-') << std::setw(50) << "" << std::setfill(' ') << std::endl;\
-	_CrtSetReportMode( _CRT_WARN, _CRTDBG_MODE_FILE );										\
-	_CrtSetReportFile( _CRT_WARN, _CRTDBG_FILE_STDOUT );									\
-	_CrtMemDumpAllObjectsSince(&_ms);	
+#define CRT_SET_REPORT() {																			\
+	std::cout << std::endl;																			\
+	const unsigned num_dashes = 50;																	\
+	std::cout << std::setfill('-') << std::setw(num_dashes) << "" << std::setfill(' ') << std::endl;\
+	_CrtSetReportMode( _CRT_WARN, _CRTDBG_MODE_FILE );												\
+	_CrtSetReportFile( _CRT_WARN, _CRTDBG_FILE_STDOUT );											\
+	_CrtMemDumpAllObjectsSince(&_ms);																\
+}
 
 #ifdef _DEBUG
 	#include <crtdbg.h>
@@ -195,7 +197,7 @@ int main(){
 	/*! Проведение одного из тестов.
 	    Доступные варианты: PushSingleNumber, CannotPushMore, PopFromEmpty, TopFromEmpty, CopyStack, AssignmentOperatorOfStack.*/
 	try{
-		stk_test::TEST<Stack>(stk_test::PushSingleNumber);
+		stk_test::TEST<stk_as_list::Stack>(stk_test::PushSingleNumber);
 	}
 	catch(...){
 		std::cout<<"Bad testing";

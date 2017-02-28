@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['clean_5fobj',['clean_obj',['../class_stack.html#abc666f64e68c132007ba8203afe0dbe6',1,'Stack']]]
+  ['clean',['clean',['../classstk__as__list_1_1_stack.html#ad96efdeb39952c4914d4e9eb578936c4',1,'stk_as_list::Stack']]]
 ];

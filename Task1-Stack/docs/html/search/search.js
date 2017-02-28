@@ -7,15 +7,14 @@
 
 var indexSectionsWithContent =
 {
-  0: "acdefilmnopst~",
+  0: "acdemnopst~",
   1: "ns",
   2: "s",
   3: "ms",
   4: "cdemnopst~",
-  5: "dlnt",
+  5: "dnt",
   6: "t",
-  7: "acpt",
-  8: "acfin"
+  7: "acpt"
 };
 
 var indexSectionNames =
@@ -27,8 +26,7 @@ var indexSectionNames =
   4: "functions",
   5: "variables",
   6: "enums",
-  7: "enumvalues",
-  8: "defines"
+  7: "enumvalues"
 };
 
 function convertToId(search)

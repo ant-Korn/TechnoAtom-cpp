@@ -2,7 +2,7 @@
 \label{namespacestk__test}\index{stk\+\_\+test@{stk\+\_\+test}}
 
 
-В данном пространстве имён представлены средства тестирования класса \hyperlink{class_stack}{Stack}.  
+В данном пространстве имён представлены средства тестирования класса Stack.  
 
 
 \subsection*{Перечисления}
@@ -26,7 +26,7 @@ enum \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78}{tests} \{ 
 
 
 \subsection{Подробное описание}
-В данном пространстве имён представлены средства тестирования класса \hyperlink{class_stack}{Stack}. 
+В данном пространстве имён представлены средства тестирования класса Stack. 
 
 \subsection{Перечисления}
 \hypertarget{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78}{}\index{stk\+\_\+test@{stk\+\_\+test}!tests@{tests}}
@@ -55,13 +55,13 @@ enum \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78}{tests} \{ 
 \end{Desc}
 
 \begin{DoxyCode}
-40                \{ \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78a16992c4d9ecd605ea8503740aee9df96}{PushSingleNumber},
-41         \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78a6e2bd84a1d3046f2c01c930a1d52be64}{CannotPushMore},
-42         \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78ae9c603d2f7d582fd4fdd5db8140ceecf}{PopFromEmpty},
-43         \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78acd574f7057fc049aa4da1da5f4b7fd3a}{TopFromEmpty},
-44         \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78aef89859ac32f020e99414e3d3e559713}{CopyStack},
-45         \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78adc3b2cd62978794a43af9212cd2c6be7}{AssignmentOperatorOfStack}
-46     \};
+42                \{ \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78a16992c4d9ecd605ea8503740aee9df96}{PushSingleNumber},
+43         \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78a6e2bd84a1d3046f2c01c930a1d52be64}{CannotPushMore},
+44         \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78ae9c603d2f7d582fd4fdd5db8140ceecf}{PopFromEmpty},
+45         \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78acd574f7057fc049aa4da1da5f4b7fd3a}{TopFromEmpty},
+46         \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78aef89859ac32f020e99414e3d3e559713}{CopyStack},
+47         \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78adc3b2cd62978794a43af9212cd2c6be7}{AssignmentOperatorOfStack}
+48     \};
 \end{DoxyCode}
 
 
@@ -80,139 +80,139 @@ enum \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78}{tests} \{ 
 \end{DoxyParams}
 
 \begin{DoxyCode}
-56                             \{
-57         \textcolor{keywordflow}{switch}(test\_case)\{                                                    
-58             \textcolor{keywordflow}{case} \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78a16992c4d9ecd605ea8503740aee9df96}{PushSingleNumber}:  \{                                        
-59                 T<int> s\_i;                                                 
-60                 \textcolor{keywordflow}{try}\{                                                                                                
-61                     s\_i.push(3802);                                         
-62                     \hyperlink{main__file_8cpp_a12d9e096a8640ee0477e1cb3505c21b3}{ASSERT\_EQ}(s\_i.top() == 0xEDA);
-63                     s\_i.pop();
-64                     \hyperlink{main__file_8cpp_a12d9e096a8640ee0477e1cb3505c21b3}{ASSERT\_EQ}(s\_i.size() == 0);
-65                     \hyperlink{main__file_8cpp_a12d9e096a8640ee0477e1cb3505c21b3}{ASSERT\_EQ}(s\_i.empty());
-66                     std::cout << \textcolor{stringliteral}{"Test is successfully completed!"} << std::endl;
-67                 \}                                                               
-68                 \textcolor{keywordflow}{catch}(std::exception & ex)\{                                                
-69                     std::cout << ex.what() << std::endl;
-70                     s\_i.dump();
-71                 \} 
-72                                     \}                                                           
-73                 \textcolor{keywordflow}{break}; 
-74             \textcolor{keywordflow}{case} \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78a6e2bd84a1d3046f2c01c930a1d52be64}{CannotPushMore}:\{ \textcolor{comment}{/*< При проведении данного теста программа даёт "runtime
+58                             \{
+59         \textcolor{keywordflow}{switch}(test\_case)\{                                                    
+60             \textcolor{keywordflow}{case} \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78a16992c4d9ecd605ea8503740aee9df96}{PushSingleNumber}:  \{                                        
+61                 T<int> s\_i;                                                 
+62                 \textcolor{keywordflow}{try}\{                                                                                                
+63                     s\_i.push(3802);                                         
+64                     ASSERT\_EQ(s\_i.top() == 0xEDA);
+65                     s\_i.pop();
+66                     ASSERT\_EQ(s\_i.size() == 0);
+67                     ASSERT\_EQ(s\_i.empty());
+68                     std::cout << \textcolor{stringliteral}{"Test is successfully completed!"} << std::endl;
+69                 \}                                                               
+70                 \textcolor{keywordflow}{catch}(std::exception & ex)\{                                                
+71                     std::cout << ex.what() << std::endl;
+72                     s\_i.dump();
+73                 \} 
+74                                     \}                                                           
+75                 \textcolor{keywordflow}{break}; 
+76             \textcolor{keywordflow}{case} \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78a6e2bd84a1d3046f2c01c930a1d52be64}{CannotPushMore}:\{ \textcolor{comment}{/*< При проведении данного теста программа даёт "runtime
        error", так как пытается выделить под стек больше памяти, чем позволено 32-битному процессу,}
-75 \textcolor{comment}{                                   ввиду ограничения размера стека только доступной памятью                                                                                     
+77 \textcolor{comment}{                                   ввиду ограничения размера стека только доступной памятью                                                                                     
        }
-76 \textcolor{comment}{                                   Для ускорения теста требуется отключить проверку ASSERT\_OK() в методе
+78 \textcolor{comment}{                                   Для ускорения теста требуется отключить проверку ASSERT\_OK() в методе
        push.*/}
-77                 T<int> s\_i; 
-78                 \textcolor{keywordtype}{int} value = 1;
-79                 \textcolor{keywordflow}{try}\{
-80                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < SIZE\_MAX; ++i)\{
-81                         s\_i.push(value);
-82                     \}
-83                 \}
-84                 \textcolor{keywordflow}{catch}(std::bad\_alloc & ex)\{
-85                     std::cout << \textcolor{stringliteral}{"Error: bad alloc caught!"}<< ex.what() << std::endl;
-86                     s\_i.dump(); 
-87                 \}
-88                 \textcolor{keywordflow}{catch}(std::exception & ex)\{
-89                     std::cout << ex.what() << std::endl;
-90                 \}
-91                                 \}
-92                 \textcolor{keywordflow}{break};
-93             \textcolor{keywordflow}{case} \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78ae9c603d2f7d582fd4fdd5db8140ceecf}{PopFromEmpty}:\{
-94                 T<int> s\_i;
-95                 \textcolor{keywordflow}{try}\{
-96                     \hyperlink{main__file_8cpp_a12d9e096a8640ee0477e1cb3505c21b3}{ASSERT\_EQ}(s\_i.size() == 0);
-97                     s\_i.pop();
-98                 \}
-99                 \textcolor{keywordflow}{catch}(std::exception & ex)\{
-100                     std::cout << ex.what() << std::endl;
-101                     std::cout << \textcolor{stringliteral}{"Test is successfully completed!"} << std::endl;
-102                 \}
-103                               \}
-104                 \textcolor{keywordflow}{break};
-105             \textcolor{keywordflow}{case} \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78acd574f7057fc049aa4da1da5f4b7fd3a}{TopFromEmpty}:\{
-106                 T<int> s\_i;
-107                 \textcolor{keywordflow}{try}\{
-108                     \hyperlink{main__file_8cpp_a12d9e096a8640ee0477e1cb3505c21b3}{ASSERT\_EQ}(s\_i.size() == 0);
-109                     \textcolor{keywordtype}{int} var = s\_i.top();
-110                     std::cout << \textcolor{stringliteral}{"Top variable = "} << var << std::endl;
-111                 \}
-112                 \textcolor{keywordflow}{catch}(std::exception & ex)\{
-113                     std::cout << ex.what() << std::endl;
-114                     std::cout << \textcolor{stringliteral}{"Test is successfully completed!"} << std::endl;
-115                 \}
-116                               \}
-117                 \textcolor{keywordflow}{break};
-118             \textcolor{keywordflow}{case} \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78aef89859ac32f020e99414e3d3e559713}{CopyStack}:\{
-119                 \textcolor{keyword}{auto} num\_of\_elements = 5;
-120                 T<int> s\_i1;
-121                 \textcolor{keywordflow}{try}\{
-122                     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0;i<num\_of\_elements;++i)\{
-123                         s\_i1.push(i);
-124                     \}
-125                 \}
-126                 \textcolor{keywordflow}{catch}(std::exception & ex)\{
-127                     std::cout << ex.what() << std::endl;
-128                     s\_i1.dump();
-129                 \}
-130                 T<int> s\_i2(s\_i1);
-131                 \textcolor{keywordflow}{try}\{
-132                     \hyperlink{main__file_8cpp_a12d9e096a8640ee0477e1cb3505c21b3}{ASSERT\_EQ}(s\_i1.size() == s\_i2.size());
-133                     \textcolor{keywordflow}{while}(s\_i2.size())\{
-134                         \hyperlink{main__file_8cpp_a12d9e096a8640ee0477e1cb3505c21b3}{ASSERT\_EQ}(s\_i1.top() == s\_i2.top());   \textcolor{comment}{//Сравнение значений в узлах стеков}
-135                         \hyperlink{main__file_8cpp_a12d9e096a8640ee0477e1cb3505c21b3}{ASSERT\_EQ}(&s\_i1.top() != &s\_i2.top()); \textcolor{comment}{//Сравнение адресов узлов стека}
-136                         s\_i1.pop();
-137                         s\_i2.pop();
-138                     \}
-139                     \hyperlink{main__file_8cpp_a12d9e096a8640ee0477e1cb3505c21b3}{ASSERT\_EQ}(s\_i1.empty());
-140                     std::cout << \textcolor{stringliteral}{"Test is successfully completed!"} << std::endl;
-141                 \}
-142                 \textcolor{keywordflow}{catch}(std::exception & ex)\{
-143                     std::cout << ex.what() << std::endl;
-144                     s\_i1.dump();
-145                     s\_i2.dump();
-146                 \}
-147                               \}
-148                 \textcolor{keywordflow}{break};
-149             \textcolor{keywordflow}{case} \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78adc3b2cd62978794a43af9212cd2c6be7}{AssignmentOperatorOfStack}:\{
-150                 \textcolor{keyword}{auto} num\_of\_elements1 = 5;
-151                 \textcolor{keyword}{auto} num\_of\_elements2 = 3;
-152                 T<int> s\_i1;
-153                 \textcolor{keywordflow}{try}\{
-154                     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0;i<num\_of\_elements1;++i)\{
-155                         s\_i1.push(i);
-156                     \}
-157                 \}
-158                 \textcolor{keywordflow}{catch}(std::exception & ex)\{
-159                     std::cout << ex.what() << std::endl;
-160                     s\_i1.dump();
-161                 \}
-162                 T<int> s\_i2;
-163                 \textcolor{keywordflow}{try}\{
-164                     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0;i<num\_of\_elements2;++i)\{
-165                         s\_i2.push(i);
-166                     \}
-167                     s\_i2 = s\_i1;                               \textcolor{comment}{//Операция присваивания}
-168                     \hyperlink{main__file_8cpp_a12d9e096a8640ee0477e1cb3505c21b3}{ASSERT\_EQ}(s\_i1.size() == s\_i2.size());
-169                     \textcolor{keywordflow}{while}(s\_i2.size())\{
-170                         \hyperlink{main__file_8cpp_a12d9e096a8640ee0477e1cb3505c21b3}{ASSERT\_EQ}(s\_i1.top() == s\_i2.top());   \textcolor{comment}{//Сравнение значений стеков}
-171                         \hyperlink{main__file_8cpp_a12d9e096a8640ee0477e1cb3505c21b3}{ASSERT\_EQ}(&s\_i1.top() != &s\_i2.top()); \textcolor{comment}{//Сравнение адресов узлов стека}
-172                         s\_i1.pop();
-173                         s\_i2.pop();
-174                     \}
-175                     \hyperlink{main__file_8cpp_a12d9e096a8640ee0477e1cb3505c21b3}{ASSERT\_EQ}(s\_i1.empty());
-176                     std::cout << \textcolor{stringliteral}{"Test is successfully completed!"} << std::endl;
-177                 \}
-178                 \textcolor{keywordflow}{catch}(std::exception & ex)\{
-179                     std::cout << ex.what() << std::endl;
-180                     s\_i1.dump();
-181                     s\_i2.dump();
-182                 \}
-183                                            \}
-184                 \textcolor{keywordflow}{break};
-185             \textcolor{keywordflow}{default}: std::cout << \textcolor{stringliteral}{"Error: Don't have such test!"} << std::endl; \textcolor{keywordflow}{break}; 
-186         \}
-187     \}
+79                 T<int> s\_i; 
+80                 \textcolor{keywordtype}{int} value = 1;
+81                 \textcolor{keywordflow}{try}\{
+82                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < SIZE\_MAX; ++i)\{
+83                         s\_i.push(value);
+84                     \}
+85                 \}
+86                 \textcolor{keywordflow}{catch}(std::bad\_alloc & ex)\{
+87                     std::cout << \textcolor{stringliteral}{"Error: bad alloc caught!"}<< ex.what() << std::endl;
+88                     s\_i.dump(); 
+89                 \}
+90                 \textcolor{keywordflow}{catch}(std::exception & ex)\{
+91                     std::cout << ex.what() << std::endl;
+92                 \}
+93                                 \}
+94                 \textcolor{keywordflow}{break};
+95             \textcolor{keywordflow}{case} \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78ae9c603d2f7d582fd4fdd5db8140ceecf}{PopFromEmpty}:\{
+96                 T<int> s\_i;
+97                 \textcolor{keywordflow}{try}\{
+98                     ASSERT\_EQ(s\_i.size() == 0);
+99                     s\_i.pop();
+100                 \}
+101                 \textcolor{keywordflow}{catch}(std::exception & ex)\{
+102                     std::cout << ex.what() << std::endl;
+103                     std::cout << \textcolor{stringliteral}{"Test is successfully completed!"} << std::endl;
+104                 \}
+105                               \}
+106                 \textcolor{keywordflow}{break};
+107             \textcolor{keywordflow}{case} \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78acd574f7057fc049aa4da1da5f4b7fd3a}{TopFromEmpty}:\{
+108                 T<int> s\_i;
+109                 \textcolor{keywordflow}{try}\{
+110                     ASSERT\_EQ(s\_i.size() == 0);
+111                     \textcolor{keywordtype}{int} var = s\_i.top();
+112                     std::cout << \textcolor{stringliteral}{"Top variable = "} << var << std::endl;
+113                 \}
+114                 \textcolor{keywordflow}{catch}(std::exception & ex)\{
+115                     std::cout << ex.what() << std::endl;
+116                     std::cout << \textcolor{stringliteral}{"Test is successfully completed!"} << std::endl;
+117                 \}
+118                               \}
+119                 \textcolor{keywordflow}{break};
+120             \textcolor{keywordflow}{case} \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78aef89859ac32f020e99414e3d3e559713}{CopyStack}:\{
+121                 \textcolor{keyword}{auto} num\_of\_elements = 5;
+122                 T<int> s\_i1;
+123                 \textcolor{keywordflow}{try}\{
+124                     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0;i<num\_of\_elements;++i)\{
+125                         s\_i1.push(i);
+126                     \}
+127                 \}
+128                 \textcolor{keywordflow}{catch}(std::exception & ex)\{
+129                     std::cout << ex.what() << std::endl;
+130                     s\_i1.dump();
+131                 \}
+132                 T<int> s\_i2(s\_i1);
+133                 \textcolor{keywordflow}{try}\{
+134                     ASSERT\_EQ(s\_i1.size() == s\_i2.size());
+135                     \textcolor{keywordflow}{while}(s\_i2.size())\{
+136                         ASSERT\_EQ(s\_i1.top() == s\_i2.top());   \textcolor{comment}{//Сравнение значений в узлах стеков}
+137                         ASSERT\_EQ(&s\_i1.top() != &s\_i2.top()); \textcolor{comment}{//Сравнение адресов узлов стека}
+138                         s\_i1.pop();
+139                         s\_i2.pop();
+140                     \}
+141                     ASSERT\_EQ(s\_i1.empty());
+142                     std::cout << \textcolor{stringliteral}{"Test is successfully completed!"} << std::endl;
+143                 \}
+144                 \textcolor{keywordflow}{catch}(std::exception & ex)\{
+145                     std::cout << ex.what() << std::endl;
+146                     s\_i1.dump();
+147                     s\_i2.dump();
+148                 \}
+149                               \}
+150                 \textcolor{keywordflow}{break};
+151             \textcolor{keywordflow}{case} \hyperlink{namespacestk__test_aee7ec7a767abf7b0b65ce9a2afb7de78adc3b2cd62978794a43af9212cd2c6be7}{AssignmentOperatorOfStack}:\{
+152                 \textcolor{keyword}{auto} num\_of\_elements1 = 5;
+153                 \textcolor{keyword}{auto} num\_of\_elements2 = 3;
+154                 T<int> s\_i1;
+155                 \textcolor{keywordflow}{try}\{
+156                     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0;i<num\_of\_elements1;++i)\{
+157                         s\_i1.push(i);
+158                     \}
+159                 \}
+160                 \textcolor{keywordflow}{catch}(std::exception & ex)\{
+161                     std::cout << ex.what() << std::endl;
+162                     s\_i1.dump();
+163                 \}
+164                 T<int> s\_i2;
+165                 \textcolor{keywordflow}{try}\{
+166                     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0;i<num\_of\_elements2;++i)\{
+167                         s\_i2.push(i);
+168                     \}
+169                     s\_i2 = s\_i1;                               \textcolor{comment}{//Операция присваивания}
+170                     ASSERT\_EQ(s\_i1.size() == s\_i2.size());
+171                     \textcolor{keywordflow}{while}(s\_i2.size())\{
+172                         ASSERT\_EQ(s\_i1.top() == s\_i2.top());   \textcolor{comment}{//Сравнение значений стеков}
+173                         ASSERT\_EQ(&s\_i1.top() != &s\_i2.top()); \textcolor{comment}{//Сравнение адресов узлов стека}
+174                         s\_i1.pop();
+175                         s\_i2.pop();
+176                     \}
+177                     ASSERT\_EQ(s\_i1.empty());
+178                     std::cout << \textcolor{stringliteral}{"Test is successfully completed!"} << std::endl;
+179                 \}
+180                 \textcolor{keywordflow}{catch}(std::exception & ex)\{
+181                     std::cout << ex.what() << std::endl;
+182                     s\_i1.dump();
+183                     s\_i2.dump();
+184                 \}
+185                                            \}
+186                 \textcolor{keywordflow}{break};
+187             \textcolor{keywordflow}{default}: std::cout << \textcolor{stringliteral}{"Error: Don't have such test!"} << std::endl; \textcolor{keywordflow}{break}; 
+188         \}
+189     \}
 \end{DoxyCode}

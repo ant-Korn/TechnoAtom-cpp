@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['ok',['ok',['../class_stack.html#aeb9eeb4131e61a7e267e5efce79bddfc',1,'Stack']]],
-  ['operator_3d',['operator=',['../class_stack.html#a2993b44c0df1836c42ce73d0082595a7',1,'Stack']]]
+  ['operator_3d',['operator=',['../classstk__as__list_1_1_stack.html#ae4e6aa8be8e4c25b878e4f3e1674c16a',1,'stk_as_list::Stack']]]
 ];

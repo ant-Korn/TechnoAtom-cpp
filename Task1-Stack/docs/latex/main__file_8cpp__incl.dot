@@ -1,0 +1,15 @@
+digraph "C:/GitHub_repr/TechnoAtom-cpp/Task1-Stack/Stack_LinkedList/Stack_LinkedList_try1/main_file.cpp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="C:/GitHub_repr/TechnoAtom\l-cpp/Task1-Stack/Stack\l_LinkedList/Stack_LinkedList\l_try1/main_file.cpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="iostream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="stk_linked_list.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$stk__linked__list_8h.html",tooltip="Заголовочный файл с описанием класса стека на основе связанного списка. "];
+  Node3 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="iomanip",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="stk_linked_list_realization.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$stk__linked__list__realization_8h.html"];
+}
