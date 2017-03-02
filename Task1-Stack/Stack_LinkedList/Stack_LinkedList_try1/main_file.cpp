@@ -51,7 +51,7 @@ namespace stk_test{
 		std::cout << "When trying to " FUNKNAME " failed!" << std::endl << std::endl;
 
 
-	//!Тестирование на верное добавление одного элемента в стек переменных int.
+	//!Тестирование на верное добавление одного элемента в стек.
 	template <template <class T> class StackType>
 	void TestPush(){
 		StackType<int> s_i;													
@@ -70,7 +70,7 @@ namespace stk_test{
 		} 
 	}
 
-	//!Тестирование на удаление узла из пустого стека.
+	//!Тестирование на удаление элемента с вершины стека.
 	template <template <class T> class StackType>
 	void TestPop(){
 		StackType<int> s_i;
@@ -89,7 +89,7 @@ namespace stk_test{
 		}
 	}
 
-	//!Тестирование на получение ссылки на верхний элемент пустого стека.
+	//!Тестирование на получение ссылки на верхний элемент.
 	template <template <class T> class StackType>
 	void TestTop(){
 		StackType<int> s_i;
