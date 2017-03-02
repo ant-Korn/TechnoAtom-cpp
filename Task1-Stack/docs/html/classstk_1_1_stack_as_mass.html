@@ -1,0 +1,662 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Реализация стека: Шаблон класса stk::StackAsMass&lt; T &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Реализация стека
+   </div>
+   <div id="projectbrief">Структура данных с методом доступа к элементам LIFO</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="classes.html"><span>Алфавитный&#160;указатель&#160;классов</span></a></li>
+      <li><a href="hierarchy.html"><span>Иерархия&#160;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&#160;классов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Переменные</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacestk.html">stk</a></li><li class="navelem"><a class="el" href="classstk_1_1_stack_as_mass.html">StackAsMass</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="classstk_1_1_stack_as_mass-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса stk::StackAsMass&lt; T &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс стека, реализованный на основе динамического массива.  
+ <a href="classstk_1_1_stack_as_mass.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="stk_8h_source.html">stk.h</a>&gt;</code></p>
+
+<p>Базовые классы:<a class="el" href="classstk_1_1_stack___interface.html">stk::Stack_Interface&lt; T &gt;</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aa5dca4927f4cf652cacd3741a45eb2ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstk_1_1_stack_as_mass.html#aa5dca4927f4cf652cacd3741a45eb2ad">StackAsMass</a> ()</td></tr>
+<tr class="separator:aa5dca4927f4cf652cacd3741a45eb2ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b85fdd4e6f15092e1fa96bf35398985"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstk_1_1_stack_as_mass.html#a2b85fdd4e6f15092e1fa96bf35398985">StackAsMass</a> (size_t capacity)</td></tr>
+<tr class="separator:a2b85fdd4e6f15092e1fa96bf35398985"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab347dc6a6b317fb438d865ee854b9293"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstk_1_1_stack_as_mass.html#ab347dc6a6b317fb438d865ee854b9293">swap</a> (<a class="el" href="classstk_1_1_stack_as_mass.html">StackAsMass</a> &amp;other_stack)</td></tr>
+<tr class="separator:ab347dc6a6b317fb438d865ee854b9293"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5096a618f3822ca8ebc7c60a2218c24"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstk_1_1_stack_as_mass.html#ab5096a618f3822ca8ebc7c60a2218c24">StackAsMass</a> (const <a class="el" href="classstk_1_1_stack_as_mass.html">StackAsMass</a> &amp;other_stack)</td></tr>
+<tr class="separator:ab5096a618f3822ca8ebc7c60a2218c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f5a454382082b41a6b57c4862491568"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classstk_1_1_stack_as_mass.html">StackAsMass</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstk_1_1_stack_as_mass.html#a3f5a454382082b41a6b57c4862491568">operator=</a> (<a class="el" href="classstk_1_1_stack_as_mass.html">StackAsMass</a> other_stack)</td></tr>
+<tr class="separator:a3f5a454382082b41a6b57c4862491568"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83bdc71146620e82a676ae572a6756b6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstk_1_1_stack_as_mass.html#a83bdc71146620e82a676ae572a6756b6">~StackAsMass</a> ()</td></tr>
+<tr class="separator:a83bdc71146620e82a676ae572a6756b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4893c23d722d514f79a8e8fd10b9f0eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstk_1_1_stack_as_mass.html#a4893c23d722d514f79a8e8fd10b9f0eb">dump</a> () const </td></tr>
+<tr class="separator:a4893c23d722d514f79a8e8fd10b9f0eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e8e793c3f09ebe95679a4a588f7973d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstk_1_1_stack_as_mass.html#a0e8e793c3f09ebe95679a4a588f7973d">empty</a> () const </td></tr>
+<tr class="separator:a0e8e793c3f09ebe95679a4a588f7973d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8859a0ecb70f45282bc9b5c8b9ade0fc"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstk_1_1_stack_as_mass.html#a8859a0ecb70f45282bc9b5c8b9ade0fc">size</a> () const </td></tr>
+<tr class="separator:a8859a0ecb70f45282bc9b5c8b9ade0fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a543d8f8b0b88bf906da28af2a39d61d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstk_1_1_stack_as_mass.html#a543d8f8b0b88bf906da28af2a39d61d5">push</a> (const T &amp;)</td></tr>
+<tr class="separator:a543d8f8b0b88bf906da28af2a39d61d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85fe3d75069a6304ab95e8715c5b3cb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstk_1_1_stack_as_mass.html#a85fe3d75069a6304ab95e8715c5b3cb6">pop</a> ()</td></tr>
+<tr class="separator:a85fe3d75069a6304ab95e8715c5b3cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b1b18b02db67e82ed6abbcfdc8ede1e"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstk_1_1_stack_as_mass.html#a6b1b18b02db67e82ed6abbcfdc8ede1e">top</a> ()</td></tr>
+<tr class="separator:a6b1b18b02db67e82ed6abbcfdc8ede1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:aa03eca24b4a73e040690da8a14ffef8b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b">capacity_</a></td></tr>
+<tr class="memdesc:aa03eca24b4a73e040690da8a14ffef8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Размер массива, в котором хранятся данные стека.  <a href="#aa03eca24b4a73e040690da8a14ffef8b">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa03eca24b4a73e040690da8a14ffef8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e9451aac734a824c73b3d7054093fef"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">num_items_</a></td></tr>
+<tr class="memdesc:a5e9451aac734a824c73b3d7054093fef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Количество хранимых элементов в стеке.  <a href="#a5e9451aac734a824c73b3d7054093fef">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5e9451aac734a824c73b3d7054093fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15bf94917c32ed7f450f22de28d14467"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">data_</a></td></tr>
+<tr class="memdesc:a15bf94917c32ed7f450f22de28d14467"><td class="mdescLeft">&#160;</td><td class="mdescRight">Указатель на массив хранящий данные стека в динамической памяти.  <a href="#a15bf94917c32ed7f450f22de28d14467">Подробнее...</a><br /></td></tr>
+<tr class="separator:a15bf94917c32ed7f450f22de28d14467"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><h3>template&lt;class T&gt;<br />
+class stk::StackAsMass&lt; T &gt;</h3>
+
+<p>Класс стека, реализованный на основе динамического массива. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a class="anchor" id="aa5dca4927f4cf652cacd3741a45eb2ad"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">StackAsMass::StackAsMass </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Конструктор стека на основе массива по умолчанию. </p>
+<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;: <a class="code" href="classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b">capacity_</a>(0), <a class="code" href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">num_items_</a>(0), <a class="code" href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">data_</a>(<span class="keyword">nullptr</span>) {}</div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_aa03eca24b4a73e040690da8a14ffef8b"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b">stk::StackAsMass::capacity_</a></div><div class="ttdeci">size_t capacity_</div><div class="ttdoc">Размер массива, в котором хранятся данные стека. </div><div class="ttdef"><b>Definition:</b> stk.h:166</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a15bf94917c32ed7f450f22de28d14467"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">stk::StackAsMass::data_</a></div><div class="ttdeci">T * data_</div><div class="ttdoc">Указатель на массив хранящий данные стека в динамической памяти. </div><div class="ttdef"><b>Definition:</b> stk.h:168</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a5e9451aac734a824c73b3d7054093fef"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">stk::StackAsMass::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Количество хранимых элементов в стеке. </div><div class="ttdef"><b>Definition:</b> stk.h:167</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a2b85fdd4e6f15092e1fa96bf35398985"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">StackAsMass::StackAsMass </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>capacity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Конструктор стека на основе массива с заданием начального размера динамического массива. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">capacity</td><td>Начальный размер динамического массива. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;: <a class="code" href="classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b">capacity_</a>(capacity), <a class="code" href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">num_items_</a>(0), <a class="code" href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">data_</a>(<span class="keyword">new</span> T [capacity]) {}</div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_aa03eca24b4a73e040690da8a14ffef8b"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b">stk::StackAsMass::capacity_</a></div><div class="ttdeci">size_t capacity_</div><div class="ttdoc">Размер массива, в котором хранятся данные стека. </div><div class="ttdef"><b>Definition:</b> stk.h:166</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a15bf94917c32ed7f450f22de28d14467"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">stk::StackAsMass::data_</a></div><div class="ttdeci">T * data_</div><div class="ttdoc">Указатель на массив хранящий данные стека в динамической памяти. </div><div class="ttdef"><b>Definition:</b> stk.h:168</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a5e9451aac734a824c73b3d7054093fef"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">stk::StackAsMass::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Количество хранимых элементов в стеке. </div><div class="ttdef"><b>Definition:</b> stk.h:167</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ab5096a618f3822ca8ebc7c60a2218c24"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">StackAsMass::StackAsMass </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classstk_1_1_stack_as_mass.html">StackAsMass</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other_stack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Конструктор копирования стека на основе массива. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other_stack</td><td>Стек, всю информацию из которого необходимо перенести в создаваемый. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                                                               : <a class="code" href="classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b">capacity_</a>(other_stack.capacity_), <a class="code" href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">num_items_</a>(other_stack.num_items_), <a class="code" href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">data_</a>(<span class="keyword">new</span> T [other_stack.capacity_]){</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i=0; i&lt;<a class="code" href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">num_items_</a>; ++i){</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <a class="code" href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">data_</a>[i] = other_stack.data_[i];</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_aa03eca24b4a73e040690da8a14ffef8b"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b">stk::StackAsMass::capacity_</a></div><div class="ttdeci">size_t capacity_</div><div class="ttdoc">Размер массива, в котором хранятся данные стека. </div><div class="ttdef"><b>Definition:</b> stk.h:166</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a15bf94917c32ed7f450f22de28d14467"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">stk::StackAsMass::data_</a></div><div class="ttdeci">T * data_</div><div class="ttdoc">Указатель на массив хранящий данные стека в динамической памяти. </div><div class="ttdef"><b>Definition:</b> stk.h:168</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a5e9451aac734a824c73b3d7054093fef"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">stk::StackAsMass::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Количество хранимых элементов в стеке. </div><div class="ttdef"><b>Definition:</b> stk.h:167</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a83bdc71146620e82a676ae572a6756b6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">StackAsMass::~StackAsMass </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Деструктор стека на основе массива. </p>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                                {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">delete</span> [] <a class="code" href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">data_</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a15bf94917c32ed7f450f22de28d14467"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">stk::StackAsMass::data_</a></div><div class="ttdeci">T * data_</div><div class="ttdoc">Указатель на массив хранящий данные стека в динамической памяти. </div><div class="ttdef"><b>Definition:</b> stk.h:168</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a class="anchor" id="a4893c23d722d514f79a8e8fd10b9f0eb"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StackAsMass::dump </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Вывод полной информации о стеке. </p>
+
+<p>Замещает <a class="el" href="classstk_1_1_stack___interface.html#af00db15e47ba67823e4c8a48b02696cf">stk::Stack_Interface&lt; T &gt;</a>.</p>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                   {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">unsigned</span> num_dashes = 50, num_chars1 = 11, num_chars2 = 7, num_chars3 = 21;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        std::cout &lt;&lt; std::setfill(<span class="charliteral">&#39;-&#39;</span>) &lt;&lt; std::setw(num_dashes) &lt;&lt; <span class="stringliteral">&quot;&quot;</span> &lt;&lt; std::setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;   StackAsMass:\n\tnum. of items:&quot;</span> &lt;&lt; std::setw(num_chars1) &lt;&lt; <a class="code" href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">num_items_</a> &lt;&lt; <span class="stringliteral">&quot; capacity:&quot;</span> &lt;&lt; std::setw(num_chars2) \</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            &lt;&lt; <a class="code" href="classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b">capacity_</a> &lt;&lt; <span class="stringliteral">&quot;\n\tdata pointer:&quot;</span> &lt;&lt; std::setw(num_chars3);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">data_</a>==<span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;nullptr&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            std::cout &lt;&lt; std::hex &lt;&lt; <a class="code" href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">data_</a> &lt;&lt; std::dec &lt;&lt; <span class="stringliteral">&quot; top value: &quot;</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">num_items_</a>){</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                std::cout &lt;&lt; <a class="code" href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">data_</a>[<a class="code" href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">num_items_</a>-1] &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;no item&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;    All nodes:&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i=0; i&lt;<a class="code" href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">num_items_</a>; ++i){</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;\t[&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;] &quot;</span> &lt;&lt; std::hex &lt;&lt; (<a class="code" href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">data_</a>+i) &lt;&lt; <span class="stringliteral">&quot; value: &quot;</span> &lt;&lt; std::dec &lt;&lt; <a class="code" href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">data_</a>[i] &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        std::cout &lt;&lt; std::setfill(<span class="charliteral">&#39;-&#39;</span>) &lt;&lt; std::setw(num_dashes) &lt;&lt; <span class="stringliteral">&quot;&quot;</span> &lt;&lt; std::setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_aa03eca24b4a73e040690da8a14ffef8b"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b">stk::StackAsMass::capacity_</a></div><div class="ttdeci">size_t capacity_</div><div class="ttdoc">Размер массива, в котором хранятся данные стека. </div><div class="ttdef"><b>Definition:</b> stk.h:166</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a15bf94917c32ed7f450f22de28d14467"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">stk::StackAsMass::data_</a></div><div class="ttdeci">T * data_</div><div class="ttdoc">Указатель на массив хранящий данные стека в динамической памяти. </div><div class="ttdef"><b>Definition:</b> stk.h:168</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a5e9451aac734a824c73b3d7054093fef"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">stk::StackAsMass::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Количество хранимых элементов в стеке. </div><div class="ttdef"><b>Definition:</b> stk.h:167</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a0e8e793c3f09ebe95679a4a588f7973d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StackAsMass::empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Проверка на пустоту стека. </p><dl class="section return"><dt>Возвращает</dt><dd>Логическую переменную, которая говорит о том, является ли стек пустым или нет. </dd></dl>
+
+<p>Замещает <a class="el" href="classstk_1_1_stack___interface.html#a110be2e10971d665a46febee3606d353">stk::Stack_Interface&lt; T &gt;</a>.</p>
+<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                                    {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">num_items_</a> == 0;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a5e9451aac734a824c73b3d7054093fef"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">stk::StackAsMass::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Количество хранимых элементов в стеке. </div><div class="ttdef"><b>Definition:</b> stk.h:167</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a3f5a454382082b41a6b57c4862491568"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classstk_1_1_stack_as_mass.html">StackAsMass</a>&lt; T &gt; &amp; StackAsMass::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classstk_1_1_stack_as_mass.html">StackAsMass</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>other_stack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Операция присваивания стека на основе массива. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other_stack</td><td>Стек, всю информацию из которого необходимо перенести в текущий. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Ссылку на текущий стек с перенесённой информацией. </dd></dl>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                                                     {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="classstk_1_1_stack_as_mass.html#ab347dc6a6b317fb438d865ee854b9293">swap</a>(other_stack);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_ab347dc6a6b317fb438d865ee854b9293"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#ab347dc6a6b317fb438d865ee854b9293">stk::StackAsMass::swap</a></div><div class="ttdeci">void swap(StackAsMass &amp;other_stack)</div><div class="ttdef"><b>Definition:</b> stk_as_mass_realization.h:17</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a85fe3d75069a6304ab95e8715c5b3cb6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StackAsMass::pop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Удаление узла с вершины стека. </p><dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">length_error</td><td>В случае, если стек оказался пустым. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="classstk_1_1_stack___interface.html#a1b575af9649d9ce6285183469a466f9f">stk::Stack_Interface&lt; T &gt;</a>.</p>
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                            {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        ASSERT_NOT_EMPTY();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        --<a class="code" href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">num_items_</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a5e9451aac734a824c73b3d7054093fef"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">stk::StackAsMass::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Количество хранимых элементов в стеке. </div><div class="ttdef"><b>Definition:</b> stk.h:167</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a543d8f8b0b88bf906da28af2a39d61d5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StackAsMass::push </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Добавление элемента. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">element</td><td>Ссылка на элемент, информацию из которого необходимо хранить в стеке. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="classstk_1_1_stack___interface.html#a530e980f187732215e15b51e9b895ffc">stk::Stack_Interface&lt; T &gt;</a>.</p>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                                             {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">num_items_</a> == <a class="code" href="classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b">capacity_</a>){</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> capacity_multiplier = 2;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b">capacity_</a> == 0){</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                ++<a class="code" href="classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b">capacity_</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <a class="code" href="classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b">capacity_</a> *= capacity_multiplier;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            T * new_data = <span class="keyword">new</span> T [<a class="code" href="classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b">capacity_</a>];</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i=0; i&lt;<a class="code" href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">num_items_</a>; ++i){</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                new_data[i] = <a class="code" href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">data_</a>[i];</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keyword">delete</span> [] <a class="code" href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">data_</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <a class="code" href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">data_</a> = new_data;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">data_</a>[<a class="code" href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">num_items_</a>++] = element;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_aa03eca24b4a73e040690da8a14ffef8b"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b">stk::StackAsMass::capacity_</a></div><div class="ttdeci">size_t capacity_</div><div class="ttdoc">Размер массива, в котором хранятся данные стека. </div><div class="ttdef"><b>Definition:</b> stk.h:166</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a15bf94917c32ed7f450f22de28d14467"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">stk::StackAsMass::data_</a></div><div class="ttdeci">T * data_</div><div class="ttdoc">Указатель на массив хранящий данные стека в динамической памяти. </div><div class="ttdef"><b>Definition:</b> stk.h:168</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a5e9451aac734a824c73b3d7054093fef"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">stk::StackAsMass::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Количество хранимых элементов в стеке. </div><div class="ttdef"><b>Definition:</b> stk.h:167</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a8859a0ecb70f45282bc9b5c8b9ade0fc"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t StackAsMass::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Метод определения размера стека. </p><dl class="section return"><dt>Возвращает</dt><dd>Размер стека. </dd></dl>
+
+<p>Замещает <a class="el" href="classstk_1_1_stack___interface.html#a3a0b1b8863b419f37662252285954258">stk::Stack_Interface&lt; T &gt;</a>.</p>
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                                     {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">num_items_</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a5e9451aac734a824c73b3d7054093fef"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">stk::StackAsMass::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Количество хранимых элементов в стеке. </div><div class="ttdef"><b>Definition:</b> stk.h:167</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ab347dc6a6b317fb438d865ee854b9293"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void StackAsMass::swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classstk_1_1_stack_as_mass.html">StackAsMass</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other_stack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Метод обмена содержимым стеков на основе массива. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other_stack</td><td>Стек, информацией с которым необходимо поменяться. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                                                      {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        std::swap(<a class="code" href="classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b">capacity_</a>, other_stack.capacity_);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        std::swap(<a class="code" href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">num_items_</a>, other_stack.num_items_);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        std::swap(<a class="code" href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">data_</a>, other_stack.data_);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_aa03eca24b4a73e040690da8a14ffef8b"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b">stk::StackAsMass::capacity_</a></div><div class="ttdeci">size_t capacity_</div><div class="ttdoc">Размер массива, в котором хранятся данные стека. </div><div class="ttdef"><b>Definition:</b> stk.h:166</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a15bf94917c32ed7f450f22de28d14467"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">stk::StackAsMass::data_</a></div><div class="ttdeci">T * data_</div><div class="ttdoc">Указатель на массив хранящий данные стека в динамической памяти. </div><div class="ttdef"><b>Definition:</b> stk.h:168</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a5e9451aac734a824c73b3d7054093fef"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">stk::StackAsMass::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Количество хранимых элементов в стеке. </div><div class="ttdef"><b>Definition:</b> stk.h:167</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a6b1b18b02db67e82ed6abbcfdc8ede1e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T &amp; StackAsMass::top </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Доступ к верхнему элементу стека. </p><dl class="section return"><dt>Возвращает</dt><dd>Ссылку на хранимую информацию на вершине стека. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">length_error</td><td>В случае, если стек оказался пустым. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="classstk_1_1_stack___interface.html#a72962a23863f45a8b2b6905144689681">stk::Stack_Interface&lt; T &gt;</a>.</p>
+<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                          {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        ASSERT_NOT_EMPTY();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">data_</a>[<a class="code" href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">num_items_</a>-1];</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a15bf94917c32ed7f450f22de28d14467"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">stk::StackAsMass::data_</a></div><div class="ttdeci">T * data_</div><div class="ttdoc">Указатель на массив хранящий данные стека в динамической памяти. </div><div class="ttdef"><b>Definition:</b> stk.h:168</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a5e9451aac734a824c73b3d7054093fef"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">stk::StackAsMass::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Количество хранимых элементов в стеке. </div><div class="ttdef"><b>Definition:</b> stk.h:167</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a class="anchor" id="aa03eca24b4a73e040690da8a14ffef8b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="classstk_1_1_stack_as_mass.html">stk::StackAsMass</a>&lt; T &gt;::capacity_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Размер массива, в котором хранятся данные стека. </p>
+
+</div>
+</div>
+<a class="anchor" id="a15bf94917c32ed7f450f22de28d14467"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* <a class="el" href="classstk_1_1_stack_as_mass.html">stk::StackAsMass</a>&lt; T &gt;::data_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Указатель на массив хранящий данные стека в динамической памяти. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5e9451aac734a824c73b3d7054093fef"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="classstk_1_1_stack_as_mass.html">stk::StackAsMass</a>&lt; T &gt;::num_items_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Количество хранимых элементов в стеке. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="stk_8h_source.html">stk.h</a></li>
+<li><a class="el" href="stk__as__mass__realization_8h_source.html">stk_as_mass_realization.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по Реализация стека. Последние изменения: Чт 2 Мар 2017 06:02:50. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

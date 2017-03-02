@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['next_5f',['next_',['../structstk__as__list_1_1_stack_1_1_node.html#a69f6ea733b172f044b13d1f2018565a0',1,'stk_as_list::Stack::Node']]],
-  ['num_5fitems_5f',['num_items_',['../classstk__as__list_1_1_stack.html#aa19d82f1efcce9c75207b8036b9ba9eb',1,'stk_as_list::Stack']]]
+  ['data_5f',['data_',['../structstk_1_1_stack_as_list_1_1_node.html#a7a634b5814175d7bcdee465da07ca3d4',1,'stk::StackAsList::Node::data_()'],['../classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467',1,'stk::StackAsMass::data_()']]]
 ];

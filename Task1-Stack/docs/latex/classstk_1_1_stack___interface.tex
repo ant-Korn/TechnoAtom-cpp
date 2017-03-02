@@ -1,0 +1,133 @@
+\hypertarget{classstk_1_1_stack___interface}{}\section{Шаблон класса stk\+:\+:Stack\+\_\+\+Interface$<$ T $>$}
+\label{classstk_1_1_stack___interface}\index{stk\+::\+Stack\+\_\+\+Interface$<$ T $>$@{stk\+::\+Stack\+\_\+\+Interface$<$ T $>$}}
+
+
+Класс, представляющий интерфейс для классов стеков.  
+
+
+
+
+{\ttfamily \#include $<$stk.\+h$>$}
+
+
+
+Производные классы\+:\hyperlink{classstk_1_1_stack_as_list}{stk\+::\+Stack\+As\+List$<$ T $>$} и \hyperlink{classstk_1_1_stack_as_mass}{stk\+::\+Stack\+As\+Mass$<$ T $>$}.
+
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classstk_1_1_stack___interface_af00db15e47ba67823e4c8a48b02696cf}{dump} () const =0
+\item 
+virtual bool \hyperlink{classstk_1_1_stack___interface_a110be2e10971d665a46febee3606d353}{empty} () const =0
+\item 
+virtual size\+\_\+t \hyperlink{classstk_1_1_stack___interface_a3a0b1b8863b419f37662252285954258}{size} () const =0
+\item 
+virtual void \hyperlink{classstk_1_1_stack___interface_a530e980f187732215e15b51e9b895ffc}{push} (const T \&element)=0
+\item 
+virtual void \hyperlink{classstk_1_1_stack___interface_a1b575af9649d9ce6285183469a466f9f}{pop} ()=0
+\item 
+virtual T \& \hyperlink{classstk_1_1_stack___interface_a72962a23863f45a8b2b6905144689681}{top} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+\subsubsection*{template$<$class T$>$class stk\+::\+Stack\+\_\+\+Interface$<$ T $>$}
+
+Класс, представляющий интерфейс для классов стеков. 
+
+\subsection{Методы}
+\hypertarget{classstk_1_1_stack___interface_af00db15e47ba67823e4c8a48b02696cf}{}\index{stk\+::\+Stack\+\_\+\+Interface@{stk\+::\+Stack\+\_\+\+Interface}!dump@{dump}}
+\index{dump@{dump}!stk\+::\+Stack\+\_\+\+Interface@{stk\+::\+Stack\+\_\+\+Interface}}
+\subsubsection[{dump}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ virtual void {\bf stk\+::\+Stack\+\_\+\+Interface}$<$ T $>$\+::dump (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classstk_1_1_stack___interface_af00db15e47ba67823e4c8a48b02696cf}
+Вывод полной информации о стеке. 
+
+Замещается в \hyperlink{classstk_1_1_stack_as_mass_a4893c23d722d514f79a8e8fd10b9f0eb}{stk\+::\+Stack\+As\+Mass$<$ T $>$} и \hyperlink{classstk_1_1_stack_as_list_aa1da18d566ab35554f4d3005d345ee5e}{stk\+::\+Stack\+As\+List$<$ T $>$}.
+
+\hypertarget{classstk_1_1_stack___interface_a110be2e10971d665a46febee3606d353}{}\index{stk\+::\+Stack\+\_\+\+Interface@{stk\+::\+Stack\+\_\+\+Interface}!empty@{empty}}
+\index{empty@{empty}!stk\+::\+Stack\+\_\+\+Interface@{stk\+::\+Stack\+\_\+\+Interface}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ virtual bool {\bf stk\+::\+Stack\+\_\+\+Interface}$<$ T $>$\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classstk_1_1_stack___interface_a110be2e10971d665a46febee3606d353}
+Проверка на пустоту стека. \begin{DoxyReturn}{Возвращает}
+Логическую переменную, которая говорит о том, является ли стек пустым или нет. 
+\end{DoxyReturn}
+
+
+Замещается в \hyperlink{classstk_1_1_stack_as_mass_a0e8e793c3f09ebe95679a4a588f7973d}{stk\+::\+Stack\+As\+Mass$<$ T $>$} и \hyperlink{classstk_1_1_stack_as_list_a56147e51e4a0c2fef70e6d40a7a0b63d}{stk\+::\+Stack\+As\+List$<$ T $>$}.
+
+\hypertarget{classstk_1_1_stack___interface_a1b575af9649d9ce6285183469a466f9f}{}\index{stk\+::\+Stack\+\_\+\+Interface@{stk\+::\+Stack\+\_\+\+Interface}!pop@{pop}}
+\index{pop@{pop}!stk\+::\+Stack\+\_\+\+Interface@{stk\+::\+Stack\+\_\+\+Interface}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ virtual void {\bf stk\+::\+Stack\+\_\+\+Interface}$<$ T $>$\+::pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classstk_1_1_stack___interface_a1b575af9649d9ce6285183469a466f9f}
+Удаление узла с вершины стека. 
+\begin{DoxyExceptions}{Исключения}
+{\em length\+\_\+error} & В случае, если стек оказался пустым. \\
+\hline
+\end{DoxyExceptions}
+
+
+Замещается в \hyperlink{classstk_1_1_stack_as_mass_a85fe3d75069a6304ab95e8715c5b3cb6}{stk\+::\+Stack\+As\+Mass$<$ T $>$} и \hyperlink{classstk_1_1_stack_as_list_a2f2b3319a9d76a9feb84b1855c84c55b}{stk\+::\+Stack\+As\+List$<$ T $>$}.
+
+\hypertarget{classstk_1_1_stack___interface_a530e980f187732215e15b51e9b895ffc}{}\index{stk\+::\+Stack\+\_\+\+Interface@{stk\+::\+Stack\+\_\+\+Interface}!push@{push}}
+\index{push@{push}!stk\+::\+Stack\+\_\+\+Interface@{stk\+::\+Stack\+\_\+\+Interface}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ virtual void {\bf stk\+::\+Stack\+\_\+\+Interface}$<$ T $>$\+::push (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classstk_1_1_stack___interface_a530e980f187732215e15b51e9b895ffc}
+Добавление элемента. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em element} & Ссылка на элемент, информацию из которого необходимо хранить в стеке. \\
+\hline
+\end{DoxyParams}
+
+
+Замещается в \hyperlink{classstk_1_1_stack_as_mass_a543d8f8b0b88bf906da28af2a39d61d5}{stk\+::\+Stack\+As\+Mass$<$ T $>$} и \hyperlink{classstk_1_1_stack_as_list_abb8422958e3e7605f040550ab4400ccb}{stk\+::\+Stack\+As\+List$<$ T $>$}.
+
+\hypertarget{classstk_1_1_stack___interface_a3a0b1b8863b419f37662252285954258}{}\index{stk\+::\+Stack\+\_\+\+Interface@{stk\+::\+Stack\+\_\+\+Interface}!size@{size}}
+\index{size@{size}!stk\+::\+Stack\+\_\+\+Interface@{stk\+::\+Stack\+\_\+\+Interface}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ virtual size\+\_\+t {\bf stk\+::\+Stack\+\_\+\+Interface}$<$ T $>$\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classstk_1_1_stack___interface_a3a0b1b8863b419f37662252285954258}
+Метод определения размера стека. \begin{DoxyReturn}{Возвращает}
+Размер стека. 
+\end{DoxyReturn}
+
+
+Замещается в \hyperlink{classstk_1_1_stack_as_mass_a8859a0ecb70f45282bc9b5c8b9ade0fc}{stk\+::\+Stack\+As\+Mass$<$ T $>$} и \hyperlink{classstk_1_1_stack_as_list_abd769ed3547312e16f9d8a1eff362cf0}{stk\+::\+Stack\+As\+List$<$ T $>$}.
+
+\hypertarget{classstk_1_1_stack___interface_a72962a23863f45a8b2b6905144689681}{}\index{stk\+::\+Stack\+\_\+\+Interface@{stk\+::\+Stack\+\_\+\+Interface}!top@{top}}
+\index{top@{top}!stk\+::\+Stack\+\_\+\+Interface@{stk\+::\+Stack\+\_\+\+Interface}}
+\subsubsection[{top}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ virtual T\& {\bf stk\+::\+Stack\+\_\+\+Interface}$<$ T $>$\+::top (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classstk_1_1_stack___interface_a72962a23863f45a8b2b6905144689681}
+Доступ к верхнему элементу стека. \begin{DoxyReturn}{Возвращает}
+Ссылку на хранимую информацию на вершине стека. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em length\+\_\+error} & В случае, если стек оказался пустым. \\
+\hline
+\end{DoxyExceptions}
+
+
+Замещается в \hyperlink{classstk_1_1_stack_as_mass_a6b1b18b02db67e82ed6abbcfdc8ede1e}{stk\+::\+Stack\+As\+Mass$<$ T $>$} и \hyperlink{classstk_1_1_stack_as_list_a12cfaa9a9a137c07258aec159779cd1e}{stk\+::\+Stack\+As\+List$<$ T $>$}.
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{stk_8h}{stk.\+h}\end{DoxyCompactItemize}

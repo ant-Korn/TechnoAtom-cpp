@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Реализация стека: Исходный файл stk_as_mass_realization.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Реализация стека
+   </div>
+   <div id="projectbrief">Структура данных с методом доступа к элементам LIFO</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Переменные</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ebaf227da311181dbf462f3e9d6f7103.html">GitHub_repr</a></li><li class="navelem"><a class="el" href="dir_9c51c48bb16cd40bfe580a125881f6b9.html">TechnoAtom-cpp</a></li><li class="navelem"><a class="el" href="dir_ad94f232f2b5474a09d694d32296c46f.html">Task1-Stack</a></li><li class="navelem"><a class="el" href="dir_7601da3f2b604a7fc7021f6cb888807d.html">Stack_LinkedList</a></li><li class="navelem"><a class="el" href="dir_a06226a1326f923108beff988a03d229.html">Stack_LinkedList_try1</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">stk_as_mass_realization.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="stk__as__mass__realization_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef STK_AS_MASS_REALIZATION_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define STK_AS_MASS_REALIZATION_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classstk_1_1_stack_as_mass.html#aa5dca4927f4cf652cacd3741a45eb2ad">   11</a></span>&#160;    <a class="code" href="classstk_1_1_stack_as_mass.html">StackAsMass&lt;T&gt;::StackAsMass</a>() : capacity_(0), num_items_(0), data_(nullptr) {}</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classstk_1_1_stack_as_mass.html#a2b85fdd4e6f15092e1fa96bf35398985">   14</a></span>&#160;    <a class="code" href="classstk_1_1_stack_as_mass.html#aa5dca4927f4cf652cacd3741a45eb2ad">StackAsMass&lt;T&gt;::StackAsMass</a>(<span class="keywordtype">size_t</span> capacity) : capacity_(capacity), num_items_(0), data_(new T [capacity]) {}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classstk_1_1_stack_as_mass.html#ab347dc6a6b317fb438d865ee854b9293">   17</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classstk_1_1_stack_as_mass.html#ab347dc6a6b317fb438d865ee854b9293">StackAsMass&lt;T&gt;::swap</a>(<a class="code" href="classstk_1_1_stack_as_mass.html">StackAsMass</a> &amp; other_stack){</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        std::swap(capacity_, other_stack.<a class="code" href="classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b">capacity_</a>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        std::swap(num_items_, other_stack.<a class="code" href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">num_items_</a>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        std::swap(data_, other_stack.<a class="code" href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">data_</a>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classstk_1_1_stack_as_mass.html#ab5096a618f3822ca8ebc7c60a2218c24">   24</a></span>&#160;    <a class="code" href="classstk_1_1_stack_as_mass.html#aa5dca4927f4cf652cacd3741a45eb2ad">StackAsMass&lt;T&gt;::StackAsMass</a>(<span class="keyword">const</span> <a class="code" href="classstk_1_1_stack_as_mass.html">StackAsMass</a> &amp; other_stack) : capacity_(other_stack.capacity_), num_items_(other_stack.num_items_), data_(new T [other_stack.capacity_]){</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i=0; i&lt;<a class="code" href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">num_items_</a>; ++i){</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <a class="code" href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">data_</a>[i] = other_stack.<a class="code" href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">data_</a>[i];</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classstk_1_1_stack_as_mass.html#a3f5a454382082b41a6b57c4862491568">   31</a></span>&#160;    <a class="code" href="classstk_1_1_stack_as_mass.html">StackAsMass&lt;T&gt;</a> &amp; <a class="code" href="classstk_1_1_stack_as_mass.html#a3f5a454382082b41a6b57c4862491568">StackAsMass&lt;T&gt;::operator=</a>(<a class="code" href="classstk_1_1_stack_as_mass.html">StackAsMass</a> other_stack){</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        swap(other_stack);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classstk_1_1_stack_as_mass.html#a83bdc71146620e82a676ae572a6756b6">   37</a></span>&#160;    <a class="code" href="classstk_1_1_stack_as_mass.html#a83bdc71146620e82a676ae572a6756b6">StackAsMass&lt;T&gt;::~StackAsMass</a>(){</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">delete</span> [] data_;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classstk_1_1_stack_as_mass.html#a4893c23d722d514f79a8e8fd10b9f0eb">   42</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classstk_1_1_stack_as_mass.html#a4893c23d722d514f79a8e8fd10b9f0eb">StackAsMass&lt;T&gt;::dump</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">unsigned</span> num_dashes = 50, num_chars1 = 11, num_chars2 = 7, num_chars3 = 21;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        std::cout &lt;&lt; std::setfill(<span class="charliteral">&#39;-&#39;</span>) &lt;&lt; std::setw(num_dashes) &lt;&lt; <span class="stringliteral">&quot;&quot;</span> &lt;&lt; std::setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;   StackAsMass:\n\tnum. of items:&quot;</span> &lt;&lt; std::setw(num_chars1) &lt;&lt; num_items_ &lt;&lt; <span class="stringliteral">&quot; capacity:&quot;</span> &lt;&lt; std::setw(num_chars2) \</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            &lt;&lt; capacity_ &lt;&lt; <span class="stringliteral">&quot;\n\tdata pointer:&quot;</span> &lt;&lt; std::setw(num_chars3);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">if</span> (data_==<span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;nullptr&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            std::cout &lt;&lt; std::hex &lt;&lt; data_ &lt;&lt; std::dec &lt;&lt; <span class="stringliteral">&quot; top value: &quot;</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">if</span>(num_items_){</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                std::cout &lt;&lt; data_[num_items_-1] &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;no item&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;    All nodes:&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i=0; i&lt;num_items_; ++i){</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;\t[&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;] &quot;</span> &lt;&lt; std::hex &lt;&lt; (data_+i) &lt;&lt; <span class="stringliteral">&quot; value: &quot;</span> &lt;&lt; std::dec &lt;&lt; data_[i] &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        std::cout &lt;&lt; std::setfill(<span class="charliteral">&#39;-&#39;</span>) &lt;&lt; std::setw(num_dashes) &lt;&lt; <span class="stringliteral">&quot;&quot;</span> &lt;&lt; std::setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classstk_1_1_stack_as_mass.html#a0e8e793c3f09ebe95679a4a588f7973d">   67</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classstk_1_1_stack_as_mass.html#a0e8e793c3f09ebe95679a4a588f7973d">StackAsMass&lt;T&gt;::empty</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">return</span> num_items_ == 0;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classstk_1_1_stack_as_mass.html#a8859a0ecb70f45282bc9b5c8b9ade0fc">   72</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="classstk_1_1_stack_as_mass.html#a8859a0ecb70f45282bc9b5c8b9ade0fc">StackAsMass&lt;T&gt;::size</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">return</span> num_items_;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classstk_1_1_stack_as_mass.html#a543d8f8b0b88bf906da28af2a39d61d5">   77</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classstk_1_1_stack_as_mass.html#a543d8f8b0b88bf906da28af2a39d61d5">StackAsMass&lt;T&gt;::push</a>(<span class="keyword">const</span> T&amp; element){</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">if</span> (num_items_ == capacity_){</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> capacity_multiplier = 2;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">if</span> (capacity_ == 0){</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                ++capacity_;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                capacity_ *= capacity_multiplier;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            T * new_data = <span class="keyword">new</span> T [capacity_];</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i=0; i&lt;num_items_; ++i){</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                new_data[i] = data_[i];</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keyword">delete</span> [] data_;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            data_ = new_data;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        data_[num_items_++] = element;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classstk_1_1_stack_as_mass.html#a85fe3d75069a6304ab95e8715c5b3cb6">   97</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classstk_1_1_stack_as_mass.html#a85fe3d75069a6304ab95e8715c5b3cb6">StackAsMass&lt;T&gt;::pop</a>(){</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        ASSERT_NOT_EMPTY();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        --num_items_;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classstk_1_1_stack_as_mass.html#a6b1b18b02db67e82ed6abbcfdc8ede1e">  103</a></span>&#160;    T&amp; <a class="code" href="classstk_1_1_stack_as_mass.html#a6b1b18b02db67e82ed6abbcfdc8ede1e">StackAsMass&lt;T&gt;::top</a>(){</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        ASSERT_NOT_EMPTY();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">return</span> data_[num_items_-1];</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#endif //STK_AS_MASS_REALIZATION_H</span></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a6b1b18b02db67e82ed6abbcfdc8ede1e"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a6b1b18b02db67e82ed6abbcfdc8ede1e">stk::StackAsMass::top</a></div><div class="ttdeci">T &amp; top()</div><div class="ttdef"><b>Definition:</b> stk_as_mass_realization.h:103</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a8859a0ecb70f45282bc9b5c8b9ade0fc"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a8859a0ecb70f45282bc9b5c8b9ade0fc">stk::StackAsMass::size</a></div><div class="ttdeci">size_t size() const </div><div class="ttdef"><b>Definition:</b> stk_as_mass_realization.h:72</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_aa03eca24b4a73e040690da8a14ffef8b"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b">stk::StackAsMass::capacity_</a></div><div class="ttdeci">size_t capacity_</div><div class="ttdoc">Размер массива, в котором хранятся данные стека. </div><div class="ttdef"><b>Definition:</b> stk.h:166</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a4893c23d722d514f79a8e8fd10b9f0eb"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a4893c23d722d514f79a8e8fd10b9f0eb">stk::StackAsMass::dump</a></div><div class="ttdeci">void dump() const </div><div class="ttdef"><b>Definition:</b> stk_as_mass_realization.h:42</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a85fe3d75069a6304ab95e8715c5b3cb6"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a85fe3d75069a6304ab95e8715c5b3cb6">stk::StackAsMass::pop</a></div><div class="ttdeci">void pop()</div><div class="ttdef"><b>Definition:</b> stk_as_mass_realization.h:97</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a0e8e793c3f09ebe95679a4a588f7973d"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a0e8e793c3f09ebe95679a4a588f7973d">stk::StackAsMass::empty</a></div><div class="ttdeci">bool empty() const </div><div class="ttdef"><b>Definition:</b> stk_as_mass_realization.h:67</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a3f5a454382082b41a6b57c4862491568"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a3f5a454382082b41a6b57c4862491568">stk::StackAsMass::operator=</a></div><div class="ttdeci">StackAsMass &amp; operator=(StackAsMass other_stack)</div><div class="ttdef"><b>Definition:</b> stk_as_mass_realization.h:31</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a15bf94917c32ed7f450f22de28d14467"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">stk::StackAsMass::data_</a></div><div class="ttdeci">T * data_</div><div class="ttdoc">Указатель на массив хранящий данные стека в динамической памяти. </div><div class="ttdef"><b>Definition:</b> stk.h:168</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_ab347dc6a6b317fb438d865ee854b9293"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#ab347dc6a6b317fb438d865ee854b9293">stk::StackAsMass::swap</a></div><div class="ttdeci">void swap(StackAsMass &amp;other_stack)</div><div class="ttdef"><b>Definition:</b> stk_as_mass_realization.h:17</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a83bdc71146620e82a676ae572a6756b6"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a83bdc71146620e82a676ae572a6756b6">stk::StackAsMass::~StackAsMass</a></div><div class="ttdeci">~StackAsMass()</div><div class="ttdef"><b>Definition:</b> stk_as_mass_realization.h:37</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a5e9451aac734a824c73b3d7054093fef"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">stk::StackAsMass::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Количество хранимых элементов в стеке. </div><div class="ttdef"><b>Definition:</b> stk.h:167</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a543d8f8b0b88bf906da28af2a39d61d5"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a543d8f8b0b88bf906da28af2a39d61d5">stk::StackAsMass::push</a></div><div class="ttdeci">void push(const T &amp;)</div><div class="ttdef"><b>Definition:</b> stk_as_mass_realization.h:77</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html">stk::StackAsMass</a></div><div class="ttdoc">Класс стека, реализованный на основе динамического массива. </div><div class="ttdef"><b>Definition:</b> stk.h:129</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_aa5dca4927f4cf652cacd3741a45eb2ad"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#aa5dca4927f4cf652cacd3741a45eb2ad">stk::StackAsMass::StackAsMass</a></div><div class="ttdeci">StackAsMass()</div><div class="ttdef"><b>Definition:</b> stk_as_mass_realization.h:11</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по Реализация стека. Последние изменения: Чт 2 Мар 2017 06:02:50. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

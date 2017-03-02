@@ -2,319 +2,326 @@
 \label{namespacestk__test}\index{stk\+\_\+test@{stk\+\_\+test}}
 
 
-В данном пространстве имён представлены средства тестирования класса Stack.  
+В данном пространстве имён представлены средства тестирования классов Stack\+As\+List и Stack\+As\+Mass.  
 
 
 \subsection*{Функции}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{namespacestk__test_a38a19eb652f1ac8ca90dfa8236b187ff}{Pushing\+Single\+Number} ()
+{\footnotesize template$<$template$<$ class T $>$ class Stack\+Type$>$ }\\void \hyperlink{namespacestk__test_a2d62ae6019345309a38d3a15ff28cc5d}{Test\+Push} ()
 \begin{DoxyCompactList}\small\item\em Тестирование на верное добавление одного элемента в стек переменных int. \end{DoxyCompactList}\item 
-void \hyperlink{namespacestk__test_a8c0697020af071c235acd621eb93a83b}{Pop\+From\+Empty} ()
+{\footnotesize template$<$template$<$ class T $>$ class Stack\+Type$>$ }\\void \hyperlink{namespacestk__test_a359fc261443d7bdcd4d9bfa43ce9dc7d}{Test\+Pop} ()
 \begin{DoxyCompactList}\small\item\em Тестирование на удаление узла из пустого стека. \end{DoxyCompactList}\item 
-void \hyperlink{namespacestk__test_a263e5f6322755d69d17e5cd0f139a0da}{Try\+Take\+Tope\+From\+Empty} ()
+{\footnotesize template$<$template$<$ class T $>$ class Stack\+Type$>$ }\\void \hyperlink{namespacestk__test_aadcc1a403c31c6f26df731492b32bb5e}{Test\+Top} ()
 \begin{DoxyCompactList}\small\item\em Тестирование на получение ссылки на верхний элемент пустого стека. \end{DoxyCompactList}\item 
-void \hyperlink{namespacestk__test_acef2e62a5fc6f13e8de2fb4d4bfb5162}{Copy\+Stack} ()
+{\footnotesize template$<$template$<$ class T $>$ class Stack\+Type$>$ }\\void \hyperlink{namespacestk__test_aa0039c601a4cf946ebfaad9ef3af4e7f}{Test\+Copy\+Constructor} ()
 \begin{DoxyCompactList}\small\item\em Тестирование на правильную работу конструктора копирования. \end{DoxyCompactList}\item 
-void \hyperlink{namespacestk__test_a216906bc10bd75cc160aeb2cd29c531f}{Assignment\+Stacks} ()
+{\footnotesize template$<$template$<$ class T $>$ class Stack\+Type$>$ }\\void \hyperlink{namespacestk__test_a3ba77d093637ee2f396e752cea61aee0}{Test\+Assignment\+Operator} ()
 \begin{DoxyCompactList}\small\item\em Тестирование на правильную работу операции присваивания. \end{DoxyCompactList}\item 
-void \hyperlink{namespacestk__test_a8799bc067463b4ac0f8136ebd9c0f587}{Check\+Emptiness} ()
+{\footnotesize template$<$template$<$ class T $>$ class Stack\+Type$>$ }\\void \hyperlink{namespacestk__test_a7c74f2910436ae4560d47bd088fa414c}{Test\+Empty} ()
 \begin{DoxyCompactList}\small\item\em Тестирование проверки стека на пустоту. \end{DoxyCompactList}\item 
-void \hyperlink{namespacestk__test_a6a1e992225350cf59f367d70b00bb6d1}{Get\+Size} ()
+{\footnotesize template$<$template$<$ class T $>$ class Stack\+Type$>$ }\\void \hyperlink{namespacestk__test_a24faf9dd70ba3d62af3a455dd9437090}{Test\+Size} ()
 \begin{DoxyCompactList}\small\item\em Тестирование получения размера стека. \end{DoxyCompactList}\item 
-void \hyperlink{namespacestk__test_a776f181b0a4495c9dff164b51bfb4d1e}{Try\+Of\+Swapping} ()
+{\footnotesize template$<$template$<$ class T $>$ class Stack\+Type$>$ }\\void \hyperlink{namespacestk__test_af617996279c5a7955ab644d545de7efc}{Test\+Swap} ()
 \begin{DoxyCompactList}\small\item\em Тестирование обмена содержимым стеков. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Подробное описание}
-В данном пространстве имён представлены средства тестирования класса Stack. 
+В данном пространстве имён представлены средства тестирования классов Stack\+As\+List и Stack\+As\+Mass. 
 
 \subsection{Функции}
-\hypertarget{namespacestk__test_a216906bc10bd75cc160aeb2cd29c531f}{}\index{stk\+\_\+test@{stk\+\_\+test}!Assignment\+Stacks@{Assignment\+Stacks}}
-\index{Assignment\+Stacks@{Assignment\+Stacks}!stk\+\_\+test@{stk\+\_\+test}}
-\subsubsection[{Assignment\+Stacks}]{\setlength{\rightskip}{0pt plus 5cm}void stk\+\_\+test\+::\+Assignment\+Stacks (
+\hypertarget{namespacestk__test_a3ba77d093637ee2f396e752cea61aee0}{}\index{stk\+\_\+test@{stk\+\_\+test}!Test\+Assignment\+Operator@{Test\+Assignment\+Operator}}
+\index{Test\+Assignment\+Operator@{Test\+Assignment\+Operator}!stk\+\_\+test@{stk\+\_\+test}}
+\subsubsection[{Test\+Assignment\+Operator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$template$<$ class T $>$ class Stack\+Type$>$ void stk\+\_\+test\+::\+Test\+Assignment\+Operator (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{namespacestk__test_a216906bc10bd75cc160aeb2cd29c531f}
+)}\label{namespacestk__test_a3ba77d093637ee2f396e752cea61aee0}
 
 
 Тестирование на правильную работу операции присваивания. 
 
 
 \begin{DoxyCode}
-137                            \{
-138         \textcolor{keyword}{auto} num\_of\_elements1 = 5;
-139         \textcolor{keyword}{auto} num\_of\_elements2 = 3;
-140         \hyperlink{classstk__as__list_1_1_stack}{stk\_as\_list::Stack<int>} s\_i1;
-141         \textcolor{keywordflow}{try}\{
-142             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0;i<num\_of\_elements1;++i)\{
-143                 s\_i1.\hyperlink{classstk__as__list_1_1_stack_ad31b678390ac3f2076e9b757c95600be}{push}(i);
-144             \}
-145         \}
-146         \textcolor{keywordflow}{catch}(std::exception & ex)\{
-147             std::cout << ex.what() << std::endl;
-148             s\_i1.\hyperlink{classstk__as__list_1_1_stack_aa556423ef52feaa947b2683440f2860c}{dump}();
-149         \}
-150         \hyperlink{classstk__as__list_1_1_stack}{stk\_as\_list::Stack<int>} s\_i2;
-151         \textcolor{keywordflow}{try}\{
-152             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0;i<num\_of\_elements2;++i)\{
-153                 s\_i2.\hyperlink{classstk__as__list_1_1_stack_ad31b678390ac3f2076e9b757c95600be}{push}(i);
-154             \}
-155             s\_i2 = s\_i1;                               
-156             ASSERT\_TRUE(s\_i1.\hyperlink{classstk__as__list_1_1_stack_a3f3772679c16de93eae9eb92e2b85955}{size}() == s\_i2.\hyperlink{classstk__as__list_1_1_stack_a3f3772679c16de93eae9eb92e2b85955}{size}());
-157             \textcolor{keywordflow}{while}(s\_i2.\hyperlink{classstk__as__list_1_1_stack_a3f3772679c16de93eae9eb92e2b85955}{size}())\{
-158                 ASSERT\_TRUE(s\_i1.\hyperlink{classstk__as__list_1_1_stack_a20e64b09239efa6340b33546115424b6}{top}() == s\_i2.\hyperlink{classstk__as__list_1_1_stack_a20e64b09239efa6340b33546115424b6}{top}());  
-159                 ASSERT\_TRUE(&s\_i1.\hyperlink{classstk__as__list_1_1_stack_a20e64b09239efa6340b33546115424b6}{top}() != &s\_i2.\hyperlink{classstk__as__list_1_1_stack_a20e64b09239efa6340b33546115424b6}{top}()); 
-160                 s\_i1.\hyperlink{classstk__as__list_1_1_stack_a09e820f3c3531cf3f401af3b3ca5d56f}{pop}();
-161                 s\_i2.\hyperlink{classstk__as__list_1_1_stack_a09e820f3c3531cf3f401af3b3ca5d56f}{pop}();
-162             \}
-163             ASSERT\_TRUE(s\_i1.\hyperlink{classstk__as__list_1_1_stack_a2bd88c7b8faf901f4830ed616bf6478f}{empty}());
-164             TEST\_PASSED();
-165         \}
-166         \textcolor{keywordflow}{catch}(std::exception & ex)\{
-167             std::cout << ex.what() << std::endl;
-168             s\_i1.\hyperlink{classstk__as__list_1_1_stack_aa556423ef52feaa947b2683440f2860c}{dump}();
-169             s\_i2.\hyperlink{classstk__as__list_1_1_stack_aa556423ef52feaa947b2683440f2860c}{dump}();
-170             TEST\_FAILED();
-171         \}
-172     \}
-\end{DoxyCode}
-\hypertarget{namespacestk__test_a8799bc067463b4ac0f8136ebd9c0f587}{}\index{stk\+\_\+test@{stk\+\_\+test}!Check\+Emptiness@{Check\+Emptiness}}
-\index{Check\+Emptiness@{Check\+Emptiness}!stk\+\_\+test@{stk\+\_\+test}}
-\subsubsection[{Check\+Emptiness}]{\setlength{\rightskip}{0pt plus 5cm}void stk\+\_\+test\+::\+Check\+Emptiness (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\label{namespacestk__test_a8799bc067463b4ac0f8136ebd9c0f587}
-
-
-Тестирование проверки стека на пустоту. 
-
-
-\begin{DoxyCode}
-175                          \{
-176         \hyperlink{classstk__as__list_1_1_stack}{stk\_as\_list::Stack<int>} s\_i;
-177         \textcolor{keyword}{const} \textcolor{keywordtype}{int} push\_num = 1;
-178         \textcolor{keywordflow}{try}\{
-179             ASSERT\_TRUE(s\_i.\hyperlink{classstk__as__list_1_1_stack_a2bd88c7b8faf901f4830ed616bf6478f}{empty}());
-180             s\_i.\hyperlink{classstk__as__list_1_1_stack_ad31b678390ac3f2076e9b757c95600be}{push}(push\_num);
-181             ASSERT\_TRUE(!s\_i.\hyperlink{classstk__as__list_1_1_stack_a2bd88c7b8faf901f4830ed616bf6478f}{empty}());
-182             TEST\_PASSED();
+149                                  \{
+150         \textcolor{keyword}{auto} num\_of\_elements1 = 5;
+151         \textcolor{keyword}{auto} num\_of\_elements2 = 3;
+152         StackType<int> s\_i1;
+153         \textcolor{keywordflow}{try}\{
+154             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0;i<num\_of\_elements1;++i)\{
+155                 s\_i1.push(i);
+156             \}
+157         \}
+158         \textcolor{keywordflow}{catch}(std::exception & ex)\{
+159             std::cout << ex.what() << std::endl;
+160             s\_i1.dump();
+161         \}
+162         StackType<int> s\_i2;
+163         \textcolor{keywordflow}{try}\{
+164             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0;i<num\_of\_elements2;++i)\{
+165                 s\_i2.push(i);
+166             \}
+167             s\_i2 = s\_i1;                               
+168             ASSERT\_TRUE(s\_i1.size() == s\_i2.size());
+169             \textcolor{keywordflow}{while}(s\_i2.size())\{
+170                 ASSERT\_TRUE(s\_i1.top() == s\_i2.top());  
+171                 ASSERT\_TRUE(&s\_i1.top() != &s\_i2.top()); 
+172                 s\_i1.pop();
+173                 s\_i2.pop();
+174             \}
+175             ASSERT\_TRUE(s\_i1.empty());
+176             TEST\_PASSED();
+177         \}
+178         \textcolor{keywordflow}{catch}(std::exception & ex)\{
+179             std::cout << ex.what() << std::endl;
+180             s\_i1.dump();
+181             s\_i2.dump();
+182             TEST\_FAILED();
 183         \}
-184         \textcolor{keywordflow}{catch}(std::exception & ex)\{
-185             std::cout << ex.what() << std::endl;
-186             s\_i.\hyperlink{classstk__as__list_1_1_stack_aa556423ef52feaa947b2683440f2860c}{dump}();
-187             TEST\_FAILED();
-188         \}
-189     \}
+184     \}
 \end{DoxyCode}
-\hypertarget{namespacestk__test_acef2e62a5fc6f13e8de2fb4d4bfb5162}{}\index{stk\+\_\+test@{stk\+\_\+test}!Copy\+Stack@{Copy\+Stack}}
-\index{Copy\+Stack@{Copy\+Stack}!stk\+\_\+test@{stk\+\_\+test}}
-\subsubsection[{Copy\+Stack}]{\setlength{\rightskip}{0pt plus 5cm}void stk\+\_\+test\+::\+Copy\+Stack (
+\hypertarget{namespacestk__test_aa0039c601a4cf946ebfaad9ef3af4e7f}{}\index{stk\+\_\+test@{stk\+\_\+test}!Test\+Copy\+Constructor@{Test\+Copy\+Constructor}}
+\index{Test\+Copy\+Constructor@{Test\+Copy\+Constructor}!stk\+\_\+test@{stk\+\_\+test}}
+\subsubsection[{Test\+Copy\+Constructor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$template$<$ class T $>$ class Stack\+Type$>$ void stk\+\_\+test\+::\+Test\+Copy\+Constructor (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{namespacestk__test_acef2e62a5fc6f13e8de2fb4d4bfb5162}
+)}\label{namespacestk__test_aa0039c601a4cf946ebfaad9ef3af4e7f}
 
 
 Тестирование на правильную работу конструктора копирования. 
 
 
 \begin{DoxyCode}
-104                     \{
-105         \textcolor{keyword}{auto} num\_of\_elements = 5;
-106         \hyperlink{classstk__as__list_1_1_stack}{stk\_as\_list::Stack<int>} s\_i1;
-107         \textcolor{keywordflow}{try}\{
-108             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0;i<num\_of\_elements;++i)\{
-109                 s\_i1.\hyperlink{classstk__as__list_1_1_stack_ad31b678390ac3f2076e9b757c95600be}{push}(i);
-110             \}
-111         \}
-112         \textcolor{keywordflow}{catch}(std::exception & ex)\{
-113             std::cout << ex.what() << std::endl;
-114             s\_i1.\hyperlink{classstk__as__list_1_1_stack_aa556423ef52feaa947b2683440f2860c}{dump}();
-115         \}
-116         \hyperlink{classstk__as__list_1_1_stack}{stk\_as\_list::Stack<int>} s\_i2(s\_i1);
-117         \textcolor{keywordflow}{try}\{
-118             ASSERT\_TRUE(s\_i1.\hyperlink{classstk__as__list_1_1_stack_a3f3772679c16de93eae9eb92e2b85955}{size}() == s\_i2.size());
-119             \textcolor{keywordflow}{while}(s\_i2.size())\{
-120                 ASSERT\_TRUE(s\_i1.\hyperlink{classstk__as__list_1_1_stack_a20e64b09239efa6340b33546115424b6}{top}() == s\_i2.top());   
-121                 ASSERT\_TRUE(&s\_i1.\hyperlink{classstk__as__list_1_1_stack_a20e64b09239efa6340b33546115424b6}{top}() != &s\_i2.top()); 
-122                 s\_i1.\hyperlink{classstk__as__list_1_1_stack_a09e820f3c3531cf3f401af3b3ca5d56f}{pop}();
-123                 s\_i2.pop();
-124             \}
-125             ASSERT\_TRUE(s\_i1.\hyperlink{classstk__as__list_1_1_stack_a2bd88c7b8faf901f4830ed616bf6478f}{empty}());
-126             TEST\_PASSED();
-127         \}
-128         \textcolor{keywordflow}{catch}(std::exception & ex)\{
-129             std::cout << ex.what() << std::endl;
-130             s\_i1.\hyperlink{classstk__as__list_1_1_stack_aa556423ef52feaa947b2683440f2860c}{dump}();
-131             s\_i2.dump();
-132             TEST\_FAILED();
-133         \}
-134     \}
+115                               \{
+116         \textcolor{keyword}{auto} num\_of\_elements = 5;
+117         StackType<int> s\_i1;
+118         \textcolor{keywordflow}{try}\{
+119             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0;i<num\_of\_elements;++i)\{
+120                 s\_i1.push(i);
+121             \}
+122         \}
+123         \textcolor{keywordflow}{catch}(std::exception & ex)\{
+124             std::cout << ex.what() << std::endl;
+125             s\_i1.dump();
+126         \}
+127         StackType<int> s\_i2(s\_i1);
+128         \textcolor{keywordflow}{try}\{
+129             ASSERT\_TRUE(s\_i1.size() == s\_i2.size());
+130             \textcolor{keywordflow}{while}(s\_i2.size())\{
+131                 ASSERT\_TRUE(s\_i1.top() == s\_i2.top());   
+132                 ASSERT\_TRUE(&s\_i1.top() != &s\_i2.top()); 
+133                 s\_i1.pop();
+134                 s\_i2.pop();
+135             \}
+136             ASSERT\_TRUE(s\_i1.empty());
+137             TEST\_PASSED();
+138         \}
+139         \textcolor{keywordflow}{catch}(std::exception & ex)\{
+140             std::cout << ex.what() << std::endl;
+141             s\_i1.dump();
+142             s\_i2.dump();
+143             TEST\_FAILED();
+144         \}
+145     \}
 \end{DoxyCode}
-\hypertarget{namespacestk__test_a6a1e992225350cf59f367d70b00bb6d1}{}\index{stk\+\_\+test@{stk\+\_\+test}!Get\+Size@{Get\+Size}}
-\index{Get\+Size@{Get\+Size}!stk\+\_\+test@{stk\+\_\+test}}
-\subsubsection[{Get\+Size}]{\setlength{\rightskip}{0pt plus 5cm}void stk\+\_\+test\+::\+Get\+Size (
+\hypertarget{namespacestk__test_a7c74f2910436ae4560d47bd088fa414c}{}\index{stk\+\_\+test@{stk\+\_\+test}!Test\+Empty@{Test\+Empty}}
+\index{Test\+Empty@{Test\+Empty}!stk\+\_\+test@{stk\+\_\+test}}
+\subsubsection[{Test\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$template$<$ class T $>$ class Stack\+Type$>$ void stk\+\_\+test\+::\+Test\+Empty (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{namespacestk__test_a6a1e992225350cf59f367d70b00bb6d1}
+)}\label{namespacestk__test_a7c74f2910436ae4560d47bd088fa414c}
 
 
-Тестирование получения размера стека. 
+Тестирование проверки стека на пустоту. 
 
 
 \begin{DoxyCode}
-192                   \{
-193         \hyperlink{classstk__as__list_1_1_stack}{stk\_as\_list::Stack<int>} s\_i;
-194         \textcolor{keyword}{const} \textcolor{keywordtype}{int} num\_of\_elements = 3;
-195         \textcolor{keywordflow}{try}\{
-196             ASSERT\_TRUE(s\_i.\hyperlink{classstk__as__list_1_1_stack_a3f3772679c16de93eae9eb92e2b85955}{size}()==0);
-197             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0; i<num\_of\_elements; ++i)\{
-198                 s\_i.\hyperlink{classstk__as__list_1_1_stack_ad31b678390ac3f2076e9b757c95600be}{push}(i);
-199             \}
-200             ASSERT\_TRUE(s\_i.\hyperlink{classstk__as__list_1_1_stack_a3f3772679c16de93eae9eb92e2b85955}{size}()==num\_of\_elements);
-201             TEST\_PASSED();
-202         \}
-203         \textcolor{keywordflow}{catch}(std::exception & ex)\{
-204             std::cout << ex.what() << std::endl;
-205             s\_i.\hyperlink{classstk__as__list_1_1_stack_aa556423ef52feaa947b2683440f2860c}{dump}();
-206             TEST\_FAILED();
-207         \}
-208     \}
+188                     \{
+189         StackType<int> s\_i;
+190         \textcolor{keyword}{const} \textcolor{keywordtype}{int} push\_num = 1;
+191         \textcolor{keywordflow}{try}\{
+192             ASSERT\_TRUE(s\_i.empty());
+193             s\_i.push(push\_num);
+194             ASSERT\_TRUE(!s\_i.empty());
+195             TEST\_PASSED();
+196         \}
+197         \textcolor{keywordflow}{catch}(std::exception & ex)\{
+198             std::cout << ex.what() << std::endl;
+199             s\_i.dump();
+200             TEST\_FAILED();
+201         \}
+202     \}
 \end{DoxyCode}
-\hypertarget{namespacestk__test_a8c0697020af071c235acd621eb93a83b}{}\index{stk\+\_\+test@{stk\+\_\+test}!Pop\+From\+Empty@{Pop\+From\+Empty}}
-\index{Pop\+From\+Empty@{Pop\+From\+Empty}!stk\+\_\+test@{stk\+\_\+test}}
-\subsubsection[{Pop\+From\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}void stk\+\_\+test\+::\+Pop\+From\+Empty (
+\hypertarget{namespacestk__test_a359fc261443d7bdcd4d9bfa43ce9dc7d}{}\index{stk\+\_\+test@{stk\+\_\+test}!Test\+Pop@{Test\+Pop}}
+\index{Test\+Pop@{Test\+Pop}!stk\+\_\+test@{stk\+\_\+test}}
+\subsubsection[{Test\+Pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$template$<$ class T $>$ class Stack\+Type$>$ void stk\+\_\+test\+::\+Test\+Pop (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{namespacestk__test_a8c0697020af071c235acd621eb93a83b}
+)}\label{namespacestk__test_a359fc261443d7bdcd4d9bfa43ce9dc7d}
 
 
 Тестирование на удаление узла из пустого стека. 
 
 
 \begin{DoxyCode}
-73                        \{
-74         \hyperlink{classstk__as__list_1_1_stack}{stk\_as\_list::Stack<int>} s\_i; 
-75         \textcolor{keywordflow}{try}\{
-76             ASSERT\_TRUE(s\_i.\hyperlink{classstk__as__list_1_1_stack_a3f3772679c16de93eae9eb92e2b85955}{size}() == 0);
-77             s\_i.\hyperlink{classstk__as__list_1_1_stack_a09e820f3c3531cf3f401af3b3ca5d56f}{pop}();
-78             TEST\_FAILED();
-79             s\_i.\hyperlink{classstk__as__list_1_1_stack_aa556423ef52feaa947b2683440f2860c}{dump}();
-80         \}
-81         \textcolor{keywordflow}{catch}(std::exception & ex)\{
-82             std::cout << ex.what() << std::endl;
-83             TEST\_PASSED();
-84         \}
-85     \}
+75                   \{
+76         StackType<int> s\_i;
+77         \textcolor{keyword}{const} \textcolor{keywordtype}{int} value = 1;
+78         \textcolor{keywordflow}{try}\{
+79             s\_i.push(value);
+80             s\_i.pop();
+81             ASSERT\_TRUE(s\_i.size() == 0);
+82             s\_i.pop();
+83             TEST\_FAILED();
+84             s\_i.dump();
+85         \}
+86         \textcolor{keywordflow}{catch}(std::exception & ex)\{
+87             std::cout << ex.what() << std::endl;
+88             TEST\_PASSED();
+89         \}
+90     \}
 \end{DoxyCode}
-\hypertarget{namespacestk__test_a38a19eb652f1ac8ca90dfa8236b187ff}{}\index{stk\+\_\+test@{stk\+\_\+test}!Pushing\+Single\+Number@{Pushing\+Single\+Number}}
-\index{Pushing\+Single\+Number@{Pushing\+Single\+Number}!stk\+\_\+test@{stk\+\_\+test}}
-\subsubsection[{Pushing\+Single\+Number}]{\setlength{\rightskip}{0pt plus 5cm}void stk\+\_\+test\+::\+Pushing\+Single\+Number (
+\hypertarget{namespacestk__test_a2d62ae6019345309a38d3a15ff28cc5d}{}\index{stk\+\_\+test@{stk\+\_\+test}!Test\+Push@{Test\+Push}}
+\index{Test\+Push@{Test\+Push}!stk\+\_\+test@{stk\+\_\+test}}
+\subsubsection[{Test\+Push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$template$<$ class T $>$ class Stack\+Type$>$ void stk\+\_\+test\+::\+Test\+Push (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{namespacestk__test_a38a19eb652f1ac8ca90dfa8236b187ff}
+)}\label{namespacestk__test_a2d62ae6019345309a38d3a15ff28cc5d}
 
 
 Тестирование на верное добавление одного элемента в стек переменных int. 
 
 
 \begin{DoxyCode}
-55                               \{
-56         \hyperlink{classstk__as__list_1_1_stack}{stk\_as\_list::Stack<int>} s\_i;                                                 
-57         \textcolor{keywordflow}{try}\{                                                                                                
-58             s\_i.\hyperlink{classstk__as__list_1_1_stack_ad31b678390ac3f2076e9b757c95600be}{push}(3802);                                         
-59             ASSERT\_TRUE(s\_i.\hyperlink{classstk__as__list_1_1_stack_a20e64b09239efa6340b33546115424b6}{top}() == 0xEDA);
-60             s\_i.\hyperlink{classstk__as__list_1_1_stack_a09e820f3c3531cf3f401af3b3ca5d56f}{pop}();
-61             ASSERT\_TRUE(s\_i.\hyperlink{classstk__as__list_1_1_stack_a3f3772679c16de93eae9eb92e2b85955}{size}() == 0);
-62             ASSERT\_TRUE(s\_i.\hyperlink{classstk__as__list_1_1_stack_a2bd88c7b8faf901f4830ed616bf6478f}{empty}());
-63             TEST\_PASSED();
-64         \}                                                               
-65         \textcolor{keywordflow}{catch}(std::exception & ex)\{   
-66             std::cout << ex.what() << std::endl;
-67             s\_i.\hyperlink{classstk__as__list_1_1_stack_aa556423ef52feaa947b2683440f2860c}{dump}();
-68             TEST\_FAILED();
-69         \} 
-70     \}
+56                    \{
+57         StackType<int> s\_i;                                                 
+58         \textcolor{keywordflow}{try}\{                                                                                                
+59             s\_i.push(3802);                                         
+60             ASSERT\_TRUE(s\_i.top() == 0xEDA);
+61             s\_i.pop();
+62             ASSERT\_TRUE(s\_i.size() == 0);
+63             ASSERT\_TRUE(s\_i.empty());
+64             TEST\_PASSED();
+65         \}                                                               
+66         \textcolor{keywordflow}{catch}(std::exception & ex)\{   
+67             std::cout << ex.what() << std::endl;
+68             s\_i.dump();
+69             TEST\_FAILED();
+70         \} 
+71     \}
 \end{DoxyCode}
-\hypertarget{namespacestk__test_a776f181b0a4495c9dff164b51bfb4d1e}{}\index{stk\+\_\+test@{stk\+\_\+test}!Try\+Of\+Swapping@{Try\+Of\+Swapping}}
-\index{Try\+Of\+Swapping@{Try\+Of\+Swapping}!stk\+\_\+test@{stk\+\_\+test}}
-\subsubsection[{Try\+Of\+Swapping}]{\setlength{\rightskip}{0pt plus 5cm}void stk\+\_\+test\+::\+Try\+Of\+Swapping (
+\hypertarget{namespacestk__test_a24faf9dd70ba3d62af3a455dd9437090}{}\index{stk\+\_\+test@{stk\+\_\+test}!Test\+Size@{Test\+Size}}
+\index{Test\+Size@{Test\+Size}!stk\+\_\+test@{stk\+\_\+test}}
+\subsubsection[{Test\+Size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$template$<$ class T $>$ class Stack\+Type$>$ void stk\+\_\+test\+::\+Test\+Size (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{namespacestk__test_a776f181b0a4495c9dff164b51bfb4d1e}
+)}\label{namespacestk__test_a24faf9dd70ba3d62af3a455dd9437090}
+
+
+Тестирование получения размера стека. 
+
+
+\begin{DoxyCode}
+206                    \{
+207         StackType<int> s\_i;
+208         \textcolor{keyword}{const} \textcolor{keywordtype}{int} num\_of\_elements = 3;
+209         \textcolor{keywordflow}{try}\{
+210             ASSERT\_TRUE(s\_i.size()==0);
+211             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0; i<num\_of\_elements; ++i)\{
+212                 s\_i.push(i);
+213             \}
+214             ASSERT\_TRUE(s\_i.size()==num\_of\_elements);
+215             TEST\_PASSED();
+216         \}
+217         \textcolor{keywordflow}{catch}(std::exception & ex)\{
+218             std::cout << ex.what() << std::endl;
+219             s\_i.dump();
+220             TEST\_FAILED();
+221         \}
+222     \}
+\end{DoxyCode}
+\hypertarget{namespacestk__test_af617996279c5a7955ab644d545de7efc}{}\index{stk\+\_\+test@{stk\+\_\+test}!Test\+Swap@{Test\+Swap}}
+\index{Test\+Swap@{Test\+Swap}!stk\+\_\+test@{stk\+\_\+test}}
+\subsubsection[{Test\+Swap}]{\setlength{\rightskip}{0pt plus 5cm}template$<$template$<$ class T $>$ class Stack\+Type$>$ void stk\+\_\+test\+::\+Test\+Swap (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespacestk__test_af617996279c5a7955ab644d545de7efc}
 
 
 Тестирование обмена содержимым стеков. 
 
 
 \begin{DoxyCode}
-211                         \{
-212         \hyperlink{classstk__as__list_1_1_stack}{stk\_as\_list::Stack<int>} s\_i1, s\_i2;
-213         \textcolor{keyword}{const} \textcolor{keywordtype}{int} num\_of\_elements1 = 3, num\_of\_elements2 = 5;
-214         \textcolor{keywordflow}{try}\{
-215             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0; i<num\_of\_elements1; ++i)\{
-216                 s\_i1.\hyperlink{classstk__as__list_1_1_stack_ad31b678390ac3f2076e9b757c95600be}{push}(i);
-217             \}
-218             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0; i<num\_of\_elements2; ++i)\{
-219                 s\_i2.\hyperlink{classstk__as__list_1_1_stack_ad31b678390ac3f2076e9b757c95600be}{push}(i);
-220             \}
-221 
-222             s\_i1.\hyperlink{classstk__as__list_1_1_stack_a873d054824f9029f80df0fe8101eeda3}{swap}(s\_i2);
-223 
-224             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=(num\_of\_elements2-1); i>=0; --i)\{
-225                 ASSERT\_TRUE(s\_i1.\hyperlink{classstk__as__list_1_1_stack_a20e64b09239efa6340b33546115424b6}{top}()==i);
-226                 s\_i1.\hyperlink{classstk__as__list_1_1_stack_a09e820f3c3531cf3f401af3b3ca5d56f}{pop}();
-227             \}
-228             ASSERT\_TRUE(s\_i1.\hyperlink{classstk__as__list_1_1_stack_a2bd88c7b8faf901f4830ed616bf6478f}{empty}());
-229 
-230             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=(num\_of\_elements1-1); i>=0; --i)\{
-231                 ASSERT\_TRUE(s\_i2.\hyperlink{classstk__as__list_1_1_stack_a20e64b09239efa6340b33546115424b6}{top}()==i);
-232                 s\_i2.\hyperlink{classstk__as__list_1_1_stack_a09e820f3c3531cf3f401af3b3ca5d56f}{pop}();
-233             \}
-234             ASSERT\_TRUE(s\_i2.\hyperlink{classstk__as__list_1_1_stack_a2bd88c7b8faf901f4830ed616bf6478f}{empty}());
-235 
-236             TEST\_PASSED();
-237         \}
-238         \textcolor{keywordflow}{catch}(std::exception & ex)\{
-239             std::cout << ex.what() << std::endl;
-240             s\_i1.\hyperlink{classstk__as__list_1_1_stack_aa556423ef52feaa947b2683440f2860c}{dump}();
-241             s\_i2.\hyperlink{classstk__as__list_1_1_stack_aa556423ef52feaa947b2683440f2860c}{dump}();
-242             TEST\_FAILED();
-243         \}
-244     \}
+226                    \{
+227         StackType<int> s\_i1, s\_i2;
+228         \textcolor{keyword}{const} \textcolor{keywordtype}{int} num\_of\_elements1 = 3, num\_of\_elements2 = 5;
+229         \textcolor{keywordflow}{try}\{
+230             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0; i<num\_of\_elements1; ++i)\{
+231                 s\_i1.push(i);
+232             \}
+233             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0; i<num\_of\_elements2; ++i)\{
+234                 s\_i2.push(i);
+235             \}
+236 
+237             s\_i1.swap(s\_i2);
+238 
+239             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=(num\_of\_elements2-1); i>=0; --i)\{
+240                 ASSERT\_TRUE(s\_i1.top()==i);
+241                 s\_i1.pop();
+242             \}
+243             ASSERT\_TRUE(s\_i1.empty());
+244 
+245             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=(num\_of\_elements1-1); i>=0; --i)\{
+246                 ASSERT\_TRUE(s\_i2.top()==i);
+247                 s\_i2.pop();
+248             \}
+249             ASSERT\_TRUE(s\_i2.empty());
+250 
+251             TEST\_PASSED();
+252         \}
+253         \textcolor{keywordflow}{catch}(std::exception & ex)\{
+254             std::cout << ex.what() << std::endl;
+255             s\_i1.dump();
+256             s\_i2.dump();
+257             TEST\_FAILED();
+258         \}
+259     \}
 \end{DoxyCode}
-\hypertarget{namespacestk__test_a263e5f6322755d69d17e5cd0f139a0da}{}\index{stk\+\_\+test@{stk\+\_\+test}!Try\+Take\+Tope\+From\+Empty@{Try\+Take\+Tope\+From\+Empty}}
-\index{Try\+Take\+Tope\+From\+Empty@{Try\+Take\+Tope\+From\+Empty}!stk\+\_\+test@{stk\+\_\+test}}
-\subsubsection[{Try\+Take\+Tope\+From\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}void stk\+\_\+test\+::\+Try\+Take\+Tope\+From\+Empty (
+\hypertarget{namespacestk__test_aadcc1a403c31c6f26df731492b32bb5e}{}\index{stk\+\_\+test@{stk\+\_\+test}!Test\+Top@{Test\+Top}}
+\index{Test\+Top@{Test\+Top}!stk\+\_\+test@{stk\+\_\+test}}
+\subsubsection[{Test\+Top}]{\setlength{\rightskip}{0pt plus 5cm}template$<$template$<$ class T $>$ class Stack\+Type$>$ void stk\+\_\+test\+::\+Test\+Top (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{namespacestk__test_a263e5f6322755d69d17e5cd0f139a0da}
+)}\label{namespacestk__test_aadcc1a403c31c6f26df731492b32bb5e}
 
 
 Тестирование на получение ссылки на верхний элемент пустого стека. 
 
 
 \begin{DoxyCode}
-88                                \{
-89         \hyperlink{classstk__as__list_1_1_stack}{stk\_as\_list::Stack<int>} s\_i; 
-90         \textcolor{keywordflow}{try}\{
-91             ASSERT\_TRUE(s\_i.\hyperlink{classstk__as__list_1_1_stack_a3f3772679c16de93eae9eb92e2b85955}{size}() == 0);
-92             \textcolor{keywordtype}{int} var = s\_i.\hyperlink{classstk__as__list_1_1_stack_a20e64b09239efa6340b33546115424b6}{top}();
-93             std::cout << \textcolor{stringliteral}{"Top variable = "} << var << std::endl;
-94             TEST\_FAILED();
-95             s\_i.\hyperlink{classstk__as__list_1_1_stack_aa556423ef52feaa947b2683440f2860c}{dump}();
-96         \}
-97         \textcolor{keywordflow}{catch}(std::exception & ex)\{
-98             std::cout << ex.what() << std::endl;
-99             TEST\_PASSED();
-100         \}
-101     \}
+94                   \{
+95         StackType<int> s\_i;
+96         \textcolor{keyword}{const} \textcolor{keywordtype}{int} value = 1;
+97         \textcolor{keywordflow}{try}\{
+98             s\_i.push(value);
+99             ASSERT\_TRUE(s\_i.top() == 1);
+100             s\_i.pop();
+101             ASSERT\_TRUE(s\_i.size() == 0);
+102             \textcolor{keywordtype}{int} var = s\_i.top();
+103             std::cout << \textcolor{stringliteral}{"Top variable = "} << var << std::endl;
+104             TEST\_FAILED();
+105             s\_i.dump();
+106         \}
+107         \textcolor{keywordflow}{catch}(std::exception & ex)\{
+108             std::cout << ex.what() << std::endl;
+109             TEST\_PASSED();
+110         \}
+111     \}
 \end{DoxyCode}

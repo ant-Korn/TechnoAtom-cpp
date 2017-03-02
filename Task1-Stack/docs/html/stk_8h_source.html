@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Реализация стека: Исходный файл stk.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Реализация стека
+   </div>
+   <div id="projectbrief">Структура данных с методом доступа к элементам LIFO</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Переменные</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ebaf227da311181dbf462f3e9d6f7103.html">GitHub_repr</a></li><li class="navelem"><a class="el" href="dir_9c51c48bb16cd40bfe580a125881f6b9.html">TechnoAtom-cpp</a></li><li class="navelem"><a class="el" href="dir_ad94f232f2b5474a09d694d32296c46f.html">Task1-Stack</a></li><li class="navelem"><a class="el" href="dir_7601da3f2b604a7fc7021f6cb888807d.html">Stack_LinkedList</a></li><li class="navelem"><a class="el" href="dir_a06226a1326f923108beff988a03d229.html">Stack_LinkedList_try1</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">stk.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="stk_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifndef STK_LINKED_LIST_H</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define STK_LINKED_LIST_H</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define new new( _NORMAL_BLOCK, __FILE__, __LINE__) </span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#ifdef _MSC_VER</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">    #define FUNKNAME __FUNCSIG__ </span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">    #define FUNKNAME __PRETTY_FUNCTION__ </span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif //_MSC_VER</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define ASSERT_NOT_EMPTY() \</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">    if (empty()){     \</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">        dump();     \</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">        throw std::length_error(&quot;Error: Try to work with empty stack in: &quot; FUNKNAME); \</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">    }   </span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacestk.html">stk</a>{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classstk_1_1_stack___interface.html">   40</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classstk_1_1_stack___interface.html">Stack_Interface</a>{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classstk_1_1_stack___interface.html#af00db15e47ba67823e4c8a48b02696cf">dump</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classstk_1_1_stack___interface.html#a110be2e10971d665a46febee3606d353">empty</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a class="code" href="classstk_1_1_stack___interface.html#a3a0b1b8863b419f37662252285954258">size</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classstk_1_1_stack___interface.html#a530e980f187732215e15b51e9b895ffc">push</a>(<span class="keyword">const</span> T&amp; element) = 0;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classstk_1_1_stack___interface.html#a1b575af9649d9ce6285183469a466f9f">pop</a>() = 0;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">virtual</span> T&amp; <a class="code" href="classstk_1_1_stack___interface.html#a72962a23863f45a8b2b6905144689681">top</a>() = 0;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    };</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classstk_1_1_stack_as_list.html">   77</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classstk_1_1_stack_as_list.html">StackAsList</a>: <span class="keyword">public</span> <a class="code" href="classstk_1_1_stack___interface.html">Stack_Interface</a>&lt;T&gt;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="classstk_1_1_stack_as_list.html#afeaf9531232f88bbfaea6fa27bfbfadb">StackAsList</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classstk_1_1_stack_as_list.html#ac60180f79b421783661b48e0aa3f5ed4">swap</a>(<a class="code" href="classstk_1_1_stack_as_list.html">StackAsList</a> &amp; other_stack);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="classstk_1_1_stack_as_list.html#afeaf9531232f88bbfaea6fa27bfbfadb">StackAsList</a>(<span class="keyword">const</span> <a class="code" href="classstk_1_1_stack_as_list.html">StackAsList</a> &amp; other_stack);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="classstk_1_1_stack_as_list.html">StackAsList</a> &amp; <a class="code" href="classstk_1_1_stack_as_list.html#ae7aad592f9620668c52ea8a68257bdd2">operator=</a>(<a class="code" href="classstk_1_1_stack_as_list.html">StackAsList</a> other_stack);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <a class="code" href="classstk_1_1_stack_as_list.html#aa1bf1ce65b108c2888d95195bfc9d473">~StackAsList</a>();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classstk_1_1_stack_as_list.html#aa1da18d566ab35554f4d3005d345ee5e">dump</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classstk_1_1_stack_as_list.html#a56147e51e4a0c2fef70e6d40a7a0b63d">empty</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classstk_1_1_stack_as_list.html#abd769ed3547312e16f9d8a1eff362cf0">size</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classstk_1_1_stack_as_list.html#abb8422958e3e7605f040550ab4400ccb">push</a>(<span class="keyword">const</span> T&amp;);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classstk_1_1_stack_as_list.html#a2f2b3319a9d76a9feb84b1855c84c55b">pop</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        T&amp; <a class="code" href="classstk_1_1_stack_as_list.html#a12cfaa9a9a137c07258aec159779cd1e">top</a>();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="structstk_1_1_stack_as_list_1_1_node.html">  111</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="structstk_1_1_stack_as_list_1_1_node.html">Node</a>{</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="structstk_1_1_stack_as_list_1_1_node.html#a7a634b5814175d7bcdee465da07ca3d4">  112</a></span>&#160;            T <a class="code" href="structstk_1_1_stack_as_list_1_1_node.html#a7a634b5814175d7bcdee465da07ca3d4">data_</a>;      </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="structstk_1_1_stack_as_list_1_1_node.html#a45d62691349a0aac6d0c03cd2f1c35f5">  113</a></span>&#160;            <a class="code" href="structstk_1_1_stack_as_list_1_1_node.html">Node</a> * <a class="code" href="structstk_1_1_stack_as_list_1_1_node.html#a45d62691349a0aac6d0c03cd2f1c35f5">next_</a>; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <a class="code" href="structstk_1_1_stack_as_list_1_1_node.html#ad61cfb928b1f9a6c8d8a3d77982826c8">Node</a>(<span class="keyword">const</span> T&amp; new_data, <a class="code" href="structstk_1_1_stack_as_list_1_1_node.html">Node</a> * next_node = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <a class="code" href="structstk_1_1_stack_as_list_1_1_node.html#a34fa2b48f60262c41d17caabba4dccf5">~Node</a>();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        };</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classstk_1_1_stack_as_list.html#afb5080650911a8b907dd5b383a153239">  123</a></span>&#160;        <a class="code" href="structstk_1_1_stack_as_list_1_1_node.html">Node</a> * <a class="code" href="classstk_1_1_stack_as_list.html#afb5080650911a8b907dd5b383a153239">top_</a>;        </div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classstk_1_1_stack_as_list.html#a203bb8328f70a7e5b6eebbc29e71d011">  124</a></span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classstk_1_1_stack_as_list.html#a203bb8328f70a7e5b6eebbc29e71d011">num_items_</a>;  </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    };</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="classstk_1_1_stack_as_mass.html">  129</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classstk_1_1_stack_as_mass.html">StackAsMass</a>: <span class="keyword">public</span> <a class="code" href="classstk_1_1_stack___interface.html">Stack_Interface</a>&lt;T&gt;{</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <a class="code" href="classstk_1_1_stack_as_mass.html#aa5dca4927f4cf652cacd3741a45eb2ad">StackAsMass</a>();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classstk_1_1_stack_as_mass.html#aa5dca4927f4cf652cacd3741a45eb2ad">StackAsMass</a>(<span class="keywordtype">size_t</span> capacity);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classstk_1_1_stack_as_mass.html#ab347dc6a6b317fb438d865ee854b9293">swap</a>(<a class="code" href="classstk_1_1_stack_as_mass.html">StackAsMass</a> &amp; other_stack);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <a class="code" href="classstk_1_1_stack_as_mass.html#aa5dca4927f4cf652cacd3741a45eb2ad">StackAsMass</a>(<span class="keyword">const</span> <a class="code" href="classstk_1_1_stack_as_mass.html">StackAsMass</a> &amp; other_stack);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <a class="code" href="classstk_1_1_stack_as_mass.html">StackAsMass</a> &amp; <a class="code" href="classstk_1_1_stack_as_mass.html#a3f5a454382082b41a6b57c4862491568">operator=</a>(<a class="code" href="classstk_1_1_stack_as_mass.html">StackAsMass</a> other_stack);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <a class="code" href="classstk_1_1_stack_as_mass.html#a83bdc71146620e82a676ae572a6756b6">~StackAsMass</a>();</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classstk_1_1_stack_as_mass.html#a4893c23d722d514f79a8e8fd10b9f0eb">dump</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classstk_1_1_stack_as_mass.html#a0e8e793c3f09ebe95679a4a588f7973d">empty</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classstk_1_1_stack_as_mass.html#a8859a0ecb70f45282bc9b5c8b9ade0fc">size</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classstk_1_1_stack_as_mass.html#a543d8f8b0b88bf906da28af2a39d61d5">push</a>(<span class="keyword">const</span> T&amp;);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classstk_1_1_stack_as_mass.html#a85fe3d75069a6304ab95e8715c5b3cb6">pop</a>();</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        T&amp; <a class="code" href="classstk_1_1_stack_as_mass.html#a6b1b18b02db67e82ed6abbcfdc8ede1e">top</a>();</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b">  166</a></span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b">capacity_</a>;       </div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">  167</a></span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">num_items_</a>;      </div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">  168</a></span>&#160;        T * <a class="code" href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">data_</a>;              </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    };</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stk__as__list__realization_8h.html">stk_as_list_realization.h</a>&quot;</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stk__as__mass__realization_8h.html">stk_as_mass_realization.h</a>&quot;</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;}</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">#endif //STK_LINKED_LIST_H</span></div>
+<div class="ttc" id="classstk_1_1_stack_as_list_html_afeaf9531232f88bbfaea6fa27bfbfadb"><div class="ttname"><a href="classstk_1_1_stack_as_list.html#afeaf9531232f88bbfaea6fa27bfbfadb">stk::StackAsList::StackAsList</a></div><div class="ttdeci">StackAsList()</div><div class="ttdef"><b>Definition:</b> stk_as_list_realization.h:22</div></div>
+<div class="ttc" id="classstk_1_1_stack___interface_html_af00db15e47ba67823e4c8a48b02696cf"><div class="ttname"><a href="classstk_1_1_stack___interface.html#af00db15e47ba67823e4c8a48b02696cf">stk::Stack_Interface::dump</a></div><div class="ttdeci">virtual void dump() const =0</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a6b1b18b02db67e82ed6abbcfdc8ede1e"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a6b1b18b02db67e82ed6abbcfdc8ede1e">stk::StackAsMass::top</a></div><div class="ttdeci">T &amp; top()</div><div class="ttdef"><b>Definition:</b> stk_as_mass_realization.h:103</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_list_html_ae7aad592f9620668c52ea8a68257bdd2"><div class="ttname"><a href="classstk_1_1_stack_as_list.html#ae7aad592f9620668c52ea8a68257bdd2">stk::StackAsList::operator=</a></div><div class="ttdeci">StackAsList &amp; operator=(StackAsList other_stack)</div><div class="ttdef"><b>Definition:</b> stk_as_list_realization.h:46</div></div>
+<div class="ttc" id="structstk_1_1_stack_as_list_1_1_node_html"><div class="ttname"><a href="structstk_1_1_stack_as_list_1_1_node.html">stk::StackAsList::Node</a></div><div class="ttdoc">Структура узла стека. </div><div class="ttdef"><b>Definition:</b> stk.h:111</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_list_html"><div class="ttname"><a href="classstk_1_1_stack_as_list.html">stk::StackAsList</a></div><div class="ttdoc">Класс стека, реализованный на основе связного списка. </div><div class="ttdef"><b>Definition:</b> stk.h:77</div></div>
+<div class="ttc" id="structstk_1_1_stack_as_list_1_1_node_html_a45d62691349a0aac6d0c03cd2f1c35f5"><div class="ttname"><a href="structstk_1_1_stack_as_list_1_1_node.html#a45d62691349a0aac6d0c03cd2f1c35f5">stk::StackAsList::Node::next_</a></div><div class="ttdeci">Node * next_</div><div class="ttdoc">Указатель на следующий узел стека. Если данный узел последний, то равна nullptr. </div><div class="ttdef"><b>Definition:</b> stk.h:113</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a8859a0ecb70f45282bc9b5c8b9ade0fc"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a8859a0ecb70f45282bc9b5c8b9ade0fc">stk::StackAsMass::size</a></div><div class="ttdeci">size_t size() const </div><div class="ttdef"><b>Definition:</b> stk_as_mass_realization.h:72</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_aa03eca24b4a73e040690da8a14ffef8b"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b">stk::StackAsMass::capacity_</a></div><div class="ttdeci">size_t capacity_</div><div class="ttdoc">Размер массива, в котором хранятся данные стека. </div><div class="ttdef"><b>Definition:</b> stk.h:166</div></div>
+<div class="ttc" id="structstk_1_1_stack_as_list_1_1_node_html_a7a634b5814175d7bcdee465da07ca3d4"><div class="ttname"><a href="structstk_1_1_stack_as_list_1_1_node.html#a7a634b5814175d7bcdee465da07ca3d4">stk::StackAsList::Node::data_</a></div><div class="ttdeci">T data_</div><div class="ttdoc">Хранит элемент, переданый в стек. </div><div class="ttdef"><b>Definition:</b> stk.h:112</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a4893c23d722d514f79a8e8fd10b9f0eb"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a4893c23d722d514f79a8e8fd10b9f0eb">stk::StackAsMass::dump</a></div><div class="ttdeci">void dump() const </div><div class="ttdef"><b>Definition:</b> stk_as_mass_realization.h:42</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a85fe3d75069a6304ab95e8715c5b3cb6"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a85fe3d75069a6304ab95e8715c5b3cb6">stk::StackAsMass::pop</a></div><div class="ttdeci">void pop()</div><div class="ttdef"><b>Definition:</b> stk_as_mass_realization.h:97</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a0e8e793c3f09ebe95679a4a588f7973d"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a0e8e793c3f09ebe95679a4a588f7973d">stk::StackAsMass::empty</a></div><div class="ttdeci">bool empty() const </div><div class="ttdef"><b>Definition:</b> stk_as_mass_realization.h:67</div></div>
+<div class="ttc" id="classstk_1_1_stack___interface_html_a72962a23863f45a8b2b6905144689681"><div class="ttname"><a href="classstk_1_1_stack___interface.html#a72962a23863f45a8b2b6905144689681">stk::Stack_Interface::top</a></div><div class="ttdeci">virtual T &amp; top()=0</div></div>
+<div class="ttc" id="namespacestk_html"><div class="ttname"><a href="namespacestk.html">stk</a></div><div class="ttdoc">В данном пространстве имён представлены описания и реализации классов стеков на основе связанного спи...</div></div>
+<div class="ttc" id="stk__as__list__realization_8h_html"><div class="ttname"><a href="stk__as__list__realization_8h.html">stk_as_list_realization.h</a></div><div class="ttdoc">Реализация класса стека на основе связанного списка в отдельном файле. </div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a3f5a454382082b41a6b57c4862491568"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a3f5a454382082b41a6b57c4862491568">stk::StackAsMass::operator=</a></div><div class="ttdeci">StackAsMass &amp; operator=(StackAsMass other_stack)</div><div class="ttdef"><b>Definition:</b> stk_as_mass_realization.h:31</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_list_html_a203bb8328f70a7e5b6eebbc29e71d011"><div class="ttname"><a href="classstk_1_1_stack_as_list.html#a203bb8328f70a7e5b6eebbc29e71d011">stk::StackAsList::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Хранит текущее количество узлов в стеке. </div><div class="ttdef"><b>Definition:</b> stk.h:124</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_list_html_a12cfaa9a9a137c07258aec159779cd1e"><div class="ttname"><a href="classstk_1_1_stack_as_list.html#a12cfaa9a9a137c07258aec159779cd1e">stk::StackAsList::top</a></div><div class="ttdeci">T &amp; top()</div><div class="ttdef"><b>Definition:</b> stk_as_list_realization.h:115</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a15bf94917c32ed7f450f22de28d14467"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467">stk::StackAsMass::data_</a></div><div class="ttdeci">T * data_</div><div class="ttdoc">Указатель на массив хранящий данные стека в динамической памяти. </div><div class="ttdef"><b>Definition:</b> stk.h:168</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_list_html_aa1bf1ce65b108c2888d95195bfc9d473"><div class="ttname"><a href="classstk_1_1_stack_as_list.html#aa1bf1ce65b108c2888d95195bfc9d473">stk::StackAsList::~StackAsList</a></div><div class="ttdeci">~StackAsList()</div><div class="ttdef"><b>Definition:</b> stk_as_list_realization.h:52</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_list_html_a2f2b3319a9d76a9feb84b1855c84c55b"><div class="ttname"><a href="classstk_1_1_stack_as_list.html#a2f2b3319a9d76a9feb84b1855c84c55b">stk::StackAsList::pop</a></div><div class="ttdeci">void pop()</div><div class="ttdef"><b>Definition:</b> stk_as_list_realization.h:104</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_list_html_afb5080650911a8b907dd5b383a153239"><div class="ttname"><a href="classstk_1_1_stack_as_list.html#afb5080650911a8b907dd5b383a153239">stk::StackAsList::top_</a></div><div class="ttdeci">Node * top_</div><div class="ttdoc">Хранит указатель на текущий элемент на вершине стека. Если элементов нет, то он равен nullptr...</div><div class="ttdef"><b>Definition:</b> stk.h:123</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_list_html_aa1da18d566ab35554f4d3005d345ee5e"><div class="ttname"><a href="classstk_1_1_stack_as_list.html#aa1da18d566ab35554f4d3005d345ee5e">stk::StackAsList::dump</a></div><div class="ttdeci">void dump() const </div><div class="ttdef"><b>Definition:</b> stk_as_list_realization.h:63</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_ab347dc6a6b317fb438d865ee854b9293"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#ab347dc6a6b317fb438d865ee854b9293">stk::StackAsMass::swap</a></div><div class="ttdeci">void swap(StackAsMass &amp;other_stack)</div><div class="ttdef"><b>Definition:</b> stk_as_mass_realization.h:17</div></div>
+<div class="ttc" id="classstk_1_1_stack___interface_html_a110be2e10971d665a46febee3606d353"><div class="ttname"><a href="classstk_1_1_stack___interface.html#a110be2e10971d665a46febee3606d353">stk::Stack_Interface::empty</a></div><div class="ttdeci">virtual bool empty() const =0</div></div>
+<div class="ttc" id="classstk_1_1_stack___interface_html_a530e980f187732215e15b51e9b895ffc"><div class="ttname"><a href="classstk_1_1_stack___interface.html#a530e980f187732215e15b51e9b895ffc">stk::Stack_Interface::push</a></div><div class="ttdeci">virtual void push(const T &amp;element)=0</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_list_html_abd769ed3547312e16f9d8a1eff362cf0"><div class="ttname"><a href="classstk_1_1_stack_as_list.html#abd769ed3547312e16f9d8a1eff362cf0">stk::StackAsList::size</a></div><div class="ttdeci">size_t size() const </div><div class="ttdef"><b>Definition:</b> stk_as_list_realization.h:92</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a83bdc71146620e82a676ae572a6756b6"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a83bdc71146620e82a676ae572a6756b6">stk::StackAsMass::~StackAsMass</a></div><div class="ttdeci">~StackAsMass()</div><div class="ttdef"><b>Definition:</b> stk_as_mass_realization.h:37</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a5e9451aac734a824c73b3d7054093fef"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef">stk::StackAsMass::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Количество хранимых элементов в стеке. </div><div class="ttdef"><b>Definition:</b> stk.h:167</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_a543d8f8b0b88bf906da28af2a39d61d5"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#a543d8f8b0b88bf906da28af2a39d61d5">stk::StackAsMass::push</a></div><div class="ttdeci">void push(const T &amp;)</div><div class="ttdef"><b>Definition:</b> stk_as_mass_realization.h:77</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_list_html_ac60180f79b421783661b48e0aa3f5ed4"><div class="ttname"><a href="classstk_1_1_stack_as_list.html#ac60180f79b421783661b48e0aa3f5ed4">stk::StackAsList::swap</a></div><div class="ttdeci">void swap(StackAsList &amp;other_stack)</div><div class="ttdef"><b>Definition:</b> stk_as_list_realization.h:25</div></div>
+<div class="ttc" id="classstk_1_1_stack___interface_html"><div class="ttname"><a href="classstk_1_1_stack___interface.html">stk::Stack_Interface</a></div><div class="ttdoc">Класс, представляющий интерфейс для классов стеков. </div><div class="ttdef"><b>Definition:</b> stk.h:40</div></div>
+<div class="ttc" id="structstk_1_1_stack_as_list_1_1_node_html_a34fa2b48f60262c41d17caabba4dccf5"><div class="ttname"><a href="structstk_1_1_stack_as_list_1_1_node.html#a34fa2b48f60262c41d17caabba4dccf5">stk::StackAsList::Node::~Node</a></div><div class="ttdeci">~Node()</div><div class="ttdef"><b>Definition:</b> stk_as_list_realization.h:14</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_list_html_a56147e51e4a0c2fef70e6d40a7a0b63d"><div class="ttname"><a href="classstk_1_1_stack_as_list.html#a56147e51e4a0c2fef70e6d40a7a0b63d">stk::StackAsList::empty</a></div><div class="ttdeci">bool empty() const </div><div class="ttdef"><b>Definition:</b> stk_as_list_realization.h:87</div></div>
+<div class="ttc" id="structstk_1_1_stack_as_list_1_1_node_html_ad61cfb928b1f9a6c8d8a3d77982826c8"><div class="ttname"><a href="structstk_1_1_stack_as_list_1_1_node.html#ad61cfb928b1f9a6c8d8a3d77982826c8">stk::StackAsList::Node::Node</a></div><div class="ttdeci">Node(const T &amp;new_data, Node *next_node=nullptr)</div><div class="ttdef"><b>Definition:</b> stk_as_list_realization.h:11</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_list_html_abb8422958e3e7605f040550ab4400ccb"><div class="ttname"><a href="classstk_1_1_stack_as_list.html#abb8422958e3e7605f040550ab4400ccb">stk::StackAsList::push</a></div><div class="ttdeci">void push(const T &amp;)</div><div class="ttdef"><b>Definition:</b> stk_as_list_realization.h:97</div></div>
+<div class="ttc" id="classstk_1_1_stack___interface_html_a1b575af9649d9ce6285183469a466f9f"><div class="ttname"><a href="classstk_1_1_stack___interface.html#a1b575af9649d9ce6285183469a466f9f">stk::Stack_Interface::pop</a></div><div class="ttdeci">virtual void pop()=0</div></div>
+<div class="ttc" id="stk__as__mass__realization_8h_html"><div class="ttname"><a href="stk__as__mass__realization_8h.html">stk_as_mass_realization.h</a></div><div class="ttdoc">Реализация класса стека на основе массива в отдельном файле. </div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html">stk::StackAsMass</a></div><div class="ttdoc">Класс стека, реализованный на основе динамического массива. </div><div class="ttdef"><b>Definition:</b> stk.h:129</div></div>
+<div class="ttc" id="classstk_1_1_stack___interface_html_a3a0b1b8863b419f37662252285954258"><div class="ttname"><a href="classstk_1_1_stack___interface.html#a3a0b1b8863b419f37662252285954258">stk::Stack_Interface::size</a></div><div class="ttdeci">virtual size_t size() const =0</div></div>
+<div class="ttc" id="classstk_1_1_stack_as_mass_html_aa5dca4927f4cf652cacd3741a45eb2ad"><div class="ttname"><a href="classstk_1_1_stack_as_mass.html#aa5dca4927f4cf652cacd3741a45eb2ad">stk::StackAsMass::StackAsMass</a></div><div class="ttdeci">StackAsMass()</div><div class="ttdef"><b>Definition:</b> stk_as_mass_realization.h:11</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по Реализация стека. Последние изменения: Чт 2 Мар 2017 06:02:50. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

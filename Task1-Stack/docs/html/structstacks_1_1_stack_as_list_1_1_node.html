@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Реализация стека: Структура stacks::StackAsList&lt; T &gt;::Node</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Реализация стека
+   </div>
+   <div id="projectbrief">Структура данных с методом доступа к элементам LIFO</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="classes.html"><span>Алфавитный&#160;указатель&#160;классов</span></a></li>
+      <li><a href="hierarchy.html"><span>Иерархия&#160;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&#160;классов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Переменные</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacestacks.html">stacks</a></li><li class="navelem"><a class="el" href="classstacks_1_1_stack_as_list.html">StackAsList</a></li><li class="navelem"><a class="el" href="structstacks_1_1_stack_as_list_1_1_node.html">Node</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structstacks_1_1_stack_as_list_1_1_node-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура stacks::StackAsList&lt; T &gt;::Node</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Структура узла стека.  
+ <a href="structstacks_1_1_stack_as_list_1_1_node.html#details">Подробнее...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ad61cfb928b1f9a6c8d8a3d77982826c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstacks_1_1_stack_as_list_1_1_node.html#ad61cfb928b1f9a6c8d8a3d77982826c8">Node</a> (const T &amp;new_data, <a class="el" href="structstacks_1_1_stack_as_list_1_1_node.html">Node</a> *next_node=nullptr)</td></tr>
+<tr class="separator:ad61cfb928b1f9a6c8d8a3d77982826c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34fa2b48f60262c41d17caabba4dccf5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstacks_1_1_stack_as_list_1_1_node.html#a34fa2b48f60262c41d17caabba4dccf5">~Node</a> ()</td></tr>
+<tr class="separator:a34fa2b48f60262c41d17caabba4dccf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a088b1a89491b40c68e329991d1a13192"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstacks_1_1_stack_as_list_1_1_node.html#a088b1a89491b40c68e329991d1a13192">data_</a></td></tr>
+<tr class="memdesc:a088b1a89491b40c68e329991d1a13192"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хранит элемент, переданый в стек.  <a href="#a088b1a89491b40c68e329991d1a13192">Подробнее...</a><br /></td></tr>
+<tr class="separator:a088b1a89491b40c68e329991d1a13192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b46e2b77445e68cdc3e5a91156567a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structstacks_1_1_stack_as_list_1_1_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstacks_1_1_stack_as_list_1_1_node.html#a8b46e2b77445e68cdc3e5a91156567a9">next_</a></td></tr>
+<tr class="memdesc:a8b46e2b77445e68cdc3e5a91156567a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Указатель на следующий узел стека. Если данный узел последний, то равна nullptr.  <a href="#a8b46e2b77445e68cdc3e5a91156567a9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8b46e2b77445e68cdc3e5a91156567a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><h3>template&lt;class T&gt;<br />
+struct stacks::StackAsList&lt; T &gt;::Node</h3>
+
+<p>Структура узла стека. </p>
+<p>Каждый из узлов хранит занесёную в стек информацию, а также указатель на следующий узел. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a class="anchor" id="ad61cfb928b1f9a6c8d8a3d77982826c8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">StackAsList::Node::Node </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>new_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structstacks_1_1_stack_as_list_1_1_node.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>next_node</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Конструктор узла стека. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">new_data</td><td>Хранимая узлом информация. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">next_node</td><td>Указатель на следующий узел. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;: <a class="code" href="structstacks_1_1_stack_as_list_1_1_node.html#a088b1a89491b40c68e329991d1a13192">data_</a>(new_data), <a class="code" href="structstacks_1_1_stack_as_list_1_1_node.html#a8b46e2b77445e68cdc3e5a91156567a9">next_</a>(next_node) {}</div>
+<div class="ttc" id="structstacks_1_1_stack_as_list_1_1_node_html_a088b1a89491b40c68e329991d1a13192"><div class="ttname"><a href="structstacks_1_1_stack_as_list_1_1_node.html#a088b1a89491b40c68e329991d1a13192">stacks::StackAsList::Node::data_</a></div><div class="ttdeci">T data_</div><div class="ttdoc">Хранит элемент, переданый в стек. </div><div class="ttdef"><b>Definition:</b> stk.h:111</div></div>
+<div class="ttc" id="structstacks_1_1_stack_as_list_1_1_node_html_a8b46e2b77445e68cdc3e5a91156567a9"><div class="ttname"><a href="structstacks_1_1_stack_as_list_1_1_node.html#a8b46e2b77445e68cdc3e5a91156567a9">stacks::StackAsList::Node::next_</a></div><div class="ttdeci">Node * next_</div><div class="ttdoc">Указатель на следующий узел стека. Если данный узел последний, то равна nullptr. </div><div class="ttdef"><b>Definition:</b> stk.h:112</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a34fa2b48f60262c41d17caabba4dccf5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">StackAsList::Node::~Node </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Деструктор узла стека </p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                             {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="comment">//std::cout &lt;&lt; &quot;delete &quot; &lt;&lt; data_ &lt;&lt; std::endl;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="structstacks_1_1_stack_as_list_1_1_node.html#a8b46e2b77445e68cdc3e5a91156567a9">next_</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
+<div class="ttc" id="structstacks_1_1_stack_as_list_1_1_node_html_a8b46e2b77445e68cdc3e5a91156567a9"><div class="ttname"><a href="structstacks_1_1_stack_as_list_1_1_node.html#a8b46e2b77445e68cdc3e5a91156567a9">stacks::StackAsList::Node::next_</a></div><div class="ttdeci">Node * next_</div><div class="ttdoc">Указатель на следующий узел стека. Если данный узел последний, то равна nullptr. </div><div class="ttdef"><b>Definition:</b> stk.h:112</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a class="anchor" id="a088b1a89491b40c68e329991d1a13192"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classstacks_1_1_stack_as_list.html">stacks::StackAsList</a>&lt; T &gt;::Node::data_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Хранит элемент, переданый в стек. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8b46e2b77445e68cdc3e5a91156567a9"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structstacks_1_1_stack_as_list_1_1_node.html">Node</a>* <a class="el" href="classstacks_1_1_stack_as_list.html">stacks::StackAsList</a>&lt; T &gt;::Node::next_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Указатель на следующий узел стека. Если данный узел последний, то равна nullptr. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структур находятся в файлах:<ul>
+<li><a class="el" href="stk_8h_source.html">stk.h</a></li>
+<li><a class="el" href="stk__as__list__realization_8h_source.html">stk_as_list_realization.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по Реализация стека. Последние изменения: Чт 2 Мар 2017 05:37:49. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['empty',['empty',['../classstk__as__list_1_1_stack.html#a2bd88c7b8faf901f4830ed616bf6478f',1,'stk_as_list::Stack']]]
+  ['node',['Node',['../structstk_1_1_stack_as_list_1_1_node.html#ad61cfb928b1f9a6c8d8a3d77982826c8',1,'stk::StackAsList::Node']]]
 ];

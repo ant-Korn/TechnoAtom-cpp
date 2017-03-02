@@ -1,0 +1,342 @@
+\hypertarget{classstk_1_1_stack_as_list}{}\section{Шаблон класса stk\+:\+:Stack\+As\+List$<$ T $>$}
+\label{classstk_1_1_stack_as_list}\index{stk\+::\+Stack\+As\+List$<$ T $>$@{stk\+::\+Stack\+As\+List$<$ T $>$}}
+
+
+Класс стека, реализованный на основе связного списка.  
+
+
+
+
+{\ttfamily \#include $<$stk.\+h$>$}
+
+
+
+Базовые классы\+:\hyperlink{classstk_1_1_stack___interface}{stk\+::\+Stack\+\_\+\+Interface$<$ T $>$}.
+
+\subsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structstk_1_1_stack_as_list_1_1_node}{Node}
+\begin{DoxyCompactList}\small\item\em Структура узла стека. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstk_1_1_stack_as_list_afeaf9531232f88bbfaea6fa27bfbfadb}{Stack\+As\+List} ()
+\item 
+void \hyperlink{classstk_1_1_stack_as_list_ac60180f79b421783661b48e0aa3f5ed4}{swap} (\hyperlink{classstk_1_1_stack_as_list}{Stack\+As\+List} \&other\+\_\+stack)
+\item 
+\hyperlink{classstk_1_1_stack_as_list_a0506170dead8015e69e5216269f7d730}{Stack\+As\+List} (const \hyperlink{classstk_1_1_stack_as_list}{Stack\+As\+List} \&other\+\_\+stack)
+\item 
+\hyperlink{classstk_1_1_stack_as_list}{Stack\+As\+List} \& \hyperlink{classstk_1_1_stack_as_list_ae7aad592f9620668c52ea8a68257bdd2}{operator=} (\hyperlink{classstk_1_1_stack_as_list}{Stack\+As\+List} other\+\_\+stack)
+\item 
+\hyperlink{classstk_1_1_stack_as_list_aa1bf1ce65b108c2888d95195bfc9d473}{$\sim$\+Stack\+As\+List} ()
+\item 
+void \hyperlink{classstk_1_1_stack_as_list_aa1da18d566ab35554f4d3005d345ee5e}{dump} () const 
+\item 
+bool \hyperlink{classstk_1_1_stack_as_list_a56147e51e4a0c2fef70e6d40a7a0b63d}{empty} () const 
+\item 
+size\+\_\+t \hyperlink{classstk_1_1_stack_as_list_abd769ed3547312e16f9d8a1eff362cf0}{size} () const 
+\item 
+void \hyperlink{classstk_1_1_stack_as_list_abb8422958e3e7605f040550ab4400ccb}{push} (const T \&)
+\item 
+void \hyperlink{classstk_1_1_stack_as_list_a2f2b3319a9d76a9feb84b1855c84c55b}{pop} ()
+\item 
+T \& \hyperlink{classstk_1_1_stack_as_list_a12cfaa9a9a137c07258aec159779cd1e}{top} ()
+\end{DoxyCompactItemize}
+\subsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structstk_1_1_stack_as_list_1_1_node}{Node} $\ast$ \hyperlink{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}{top\+\_\+}
+\begin{DoxyCompactList}\small\item\em Хранит указатель на текущий элемент на вершине стека. Если элементов нет, то он равен nullptr. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classstk_1_1_stack_as_list_a203bb8328f70a7e5b6eebbc29e71d011}{num\+\_\+items\+\_\+}
+\begin{DoxyCompactList}\small\item\em Хранит текущее количество узлов в стеке. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+\subsubsection*{template$<$class T$>$class stk\+::\+Stack\+As\+List$<$ T $>$}
+
+Класс стека, реализованный на основе связного списка. 
+
+\subsection{Конструктор(ы)}
+\hypertarget{classstk_1_1_stack_as_list_afeaf9531232f88bbfaea6fa27bfbfadb}{}\index{stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}!Stack\+As\+List@{Stack\+As\+List}}
+\index{Stack\+As\+List@{Stack\+As\+List}!stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}}
+\subsubsection[{Stack\+As\+List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ Stack\+As\+List\+::\+Stack\+As\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classstk_1_1_stack_as_list_afeaf9531232f88bbfaea6fa27bfbfadb}
+Конструктор стека на основе списка по умолчанию. 
+\begin{DoxyCode}
+22 : \hyperlink{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}{top\_}(\textcolor{keyword}{nullptr}), \hyperlink{classstk_1_1_stack_as_list_a203bb8328f70a7e5b6eebbc29e71d011}{num\_items\_}(0) \{\}
+\end{DoxyCode}
+\hypertarget{classstk_1_1_stack_as_list_a0506170dead8015e69e5216269f7d730}{}\index{stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}!Stack\+As\+List@{Stack\+As\+List}}
+\index{Stack\+As\+List@{Stack\+As\+List}!stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}}
+\subsubsection[{Stack\+As\+List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ Stack\+As\+List\+::\+Stack\+As\+List (
+\begin{DoxyParamCaption}
+\item[{const {\bf Stack\+As\+List}$<$ T $>$ \&}]{other\+\_\+stack}
+\end{DoxyParamCaption}
+)}\label{classstk_1_1_stack_as_list_a0506170dead8015e69e5216269f7d730}
+Конструктор копирования стека на основе списка. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em other\+\_\+stack} & Стек, всю информацию из которого необходимо перенести в создаваемый. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+31                                                                : \hyperlink{classstk_1_1_stack_as_list_a203bb8328f70a7e5b6eebbc29e71d011}{num\_items\_}(other\_stack.
+      num\_items\_), \hyperlink{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}{top\_}(\textcolor{keyword}{nullptr})\{
+32         Node * node\_iter = other\_stack.top\_, * tmp\_top = \textcolor{keyword}{nullptr};    
+33         \textcolor{keywordflow}{if} (node\_iter != \textcolor{keyword}{nullptr})\{
+34             \hyperlink{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}{top\_} = \textcolor{keyword}{new} Node(node\_iter->data\_);
+35             tmp\_top = \hyperlink{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}{top\_};
+36             node\_iter = node\_iter->\hyperlink{structstk_1_1_stack_as_list_1_1_node_a45d62691349a0aac6d0c03cd2f1c35f5}{next\_};
+37         \}
+38         \textcolor{keywordflow}{while} (node\_iter != \textcolor{keyword}{nullptr})\{
+39             tmp\_top->\hyperlink{structstk_1_1_stack_as_list_1_1_node_a45d62691349a0aac6d0c03cd2f1c35f5}{next\_} = \textcolor{keyword}{new} Node(node\_iter->data\_);
+40             node\_iter = node\_iter->next\_;
+41             tmp\_top = tmp\_top->next\_;
+42         \}
+43     \}
+\end{DoxyCode}
+\hypertarget{classstk_1_1_stack_as_list_aa1bf1ce65b108c2888d95195bfc9d473}{}\index{stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}!````~Stack\+As\+List@{$\sim$\+Stack\+As\+List}}
+\index{````~Stack\+As\+List@{$\sim$\+Stack\+As\+List}!stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}}
+\subsubsection[{$\sim$\+Stack\+As\+List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ Stack\+As\+List\+::$\sim$\+Stack\+As\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classstk_1_1_stack_as_list_aa1bf1ce65b108c2888d95195bfc9d473}
+Деструктор стека. 
+\begin{DoxyCode}
+52                                 \{
+53         Node * next\_node;
+54         \hyperlink{classstk_1_1_stack_as_list_a203bb8328f70a7e5b6eebbc29e71d011}{num\_items\_} = 0;
+55         \textcolor{keywordflow}{while} (\hyperlink{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}{top\_} != \textcolor{keyword}{nullptr})\{
+56             next\_node = \hyperlink{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}{top\_}->\hyperlink{structstk_1_1_stack_as_list_1_1_node_a45d62691349a0aac6d0c03cd2f1c35f5}{next\_};
+57             \textcolor{keyword}{delete} \hyperlink{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}{top\_};
+58             \hyperlink{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}{top\_} = next\_node;
+59         \}
+60     \}
+\end{DoxyCode}
+
+
+\subsection{Методы}
+\hypertarget{classstk_1_1_stack_as_list_aa1da18d566ab35554f4d3005d345ee5e}{}\index{stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}!dump@{dump}}
+\index{dump@{dump}!stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}}
+\subsubsection[{dump}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void Stack\+As\+List\+::dump (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classstk_1_1_stack_as_list_aa1da18d566ab35554f4d3005d345ee5e}
+Вывод полной информации о стеке. 
+
+Замещает \hyperlink{classstk_1_1_stack___interface_af00db15e47ba67823e4c8a48b02696cf}{stk\+::\+Stack\+\_\+\+Interface$<$ T $>$}.
+
+
+\begin{DoxyCode}
+63                                    \{
+64         \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} num\_dashes = 50, num\_chars1 = 11, num\_chars2 = 21, num\_chars3 = 8;
+65         std::cout << std::setfill(\textcolor{charliteral}{'-'}) << std::setw(num\_dashes) << \textcolor{stringliteral}{""} << std::setfill(\textcolor{charliteral}{' '}) << std::endl;
+66         std::cout << \textcolor{stringliteral}{"   StackAsList:\(\backslash\)n\(\backslash\)tnum. of items:"} << std::setw(num\_chars1) << 
+      \hyperlink{classstk_1_1_stack_as_list_a203bb8328f70a7e5b6eebbc29e71d011}{num\_items\_} << \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)ttop:"} << std::setw(num\_chars2);
+67         \textcolor{keywordflow}{if} (\hyperlink{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}{top\_}==\textcolor{keyword}{nullptr})\{
+68             std::cout << \textcolor{stringliteral}{"nullptr"} << std::endl;
+69         \}
+70         \textcolor{keywordflow}{else} std::cout << std::hex << \hyperlink{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}{top\_} << std::dec << \textcolor{stringliteral}{" value: "} << \hyperlink{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}{top\_}->
+      \hyperlink{structstk_1_1_stack_as_list_1_1_node_a7a634b5814175d7bcdee465da07ca3d4}{data\_} << std::endl;
+71         std::cout << \textcolor{stringliteral}{"    All nodes:"} << std::endl;
+72         Node * node\_iter = \hyperlink{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}{top\_};
+73         \textcolor{keywordtype}{size\_t} i = 0;
+74         \textcolor{keywordflow}{while} (node\_iter != \textcolor{keyword}{nullptr})\{
+75             std::cout << \textcolor{stringliteral}{"\(\backslash\)t["} << i << \textcolor{stringliteral}{"] "} << std::hex << node\_iter << \textcolor{stringliteral}{" link to: "} << std::setw(
+      num\_chars3);
+76             \textcolor{keywordflow}{if} (node\_iter->next\_ == \textcolor{keyword}{nullptr})
+77                 std::cout << \textcolor{stringliteral}{"nullptr"};
+78             \textcolor{keywordflow}{else} std::cout << node\_iter->next\_;
+79             std::cout << std::dec << \textcolor{stringliteral}{" value: "} << node\_iter->data\_ << std::endl;
+80             node\_iter = node\_iter->next\_;
+81             ++i;
+82         \}
+83         std::cout << std::setfill(\textcolor{charliteral}{'-'}) << std::setw(num\_dashes) << \textcolor{stringliteral}{""} << std::setfill(\textcolor{charliteral}{' '}) << std::endl;
+84     \}
+\end{DoxyCode}
+\hypertarget{classstk_1_1_stack_as_list_a56147e51e4a0c2fef70e6d40a7a0b63d}{}\index{stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}!empty@{empty}}
+\index{empty@{empty}!stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool Stack\+As\+List\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classstk_1_1_stack_as_list_a56147e51e4a0c2fef70e6d40a7a0b63d}
+Проверка на пустоту стека. \begin{DoxyReturn}{Возвращает}
+Логическую переменную, которая говорит о том, является ли стек пустым или нет. 
+\end{DoxyReturn}
+
+
+Замещает \hyperlink{classstk_1_1_stack___interface_a110be2e10971d665a46febee3606d353}{stk\+::\+Stack\+\_\+\+Interface$<$ T $>$}.
+
+
+\begin{DoxyCode}
+87                                     \{
+88         \textcolor{keywordflow}{return} \hyperlink{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}{top\_} == \textcolor{keyword}{nullptr};
+89     \}
+\end{DoxyCode}
+\hypertarget{classstk_1_1_stack_as_list_ae7aad592f9620668c52ea8a68257bdd2}{}\index{stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}!operator=@{operator=}}
+\index{operator=@{operator=}!stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Stack\+As\+List}$<$ T $>$ \& Stack\+As\+List\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Stack\+As\+List}$<$ T $>$}]{other\+\_\+stack}
+\end{DoxyParamCaption}
+)}\label{classstk_1_1_stack_as_list_ae7aad592f9620668c52ea8a68257bdd2}
+Операция присваивания стека на основе списка. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em other\+\_\+stack} & Стек, всю информацию из которого необходимо перенести в текущий. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ссылку на текущий стек с перенесённой информацией. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+46                                                                      \{
+47         \hyperlink{classstk_1_1_stack_as_list_ac60180f79b421783661b48e0aa3f5ed4}{swap}(other\_stack);
+48         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+49     \}
+\end{DoxyCode}
+\hypertarget{classstk_1_1_stack_as_list_a2f2b3319a9d76a9feb84b1855c84c55b}{}\index{stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}!pop@{pop}}
+\index{pop@{pop}!stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void Stack\+As\+List\+::pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classstk_1_1_stack_as_list_a2f2b3319a9d76a9feb84b1855c84c55b}
+Удаление узла с вершины стека. 
+\begin{DoxyExceptions}{Исключения}
+{\em length\+\_\+error} & В случае, если стек оказался пустым. \\
+\hline
+\end{DoxyExceptions}
+
+
+Замещает \hyperlink{classstk_1_1_stack___interface_a1b575af9649d9ce6285183469a466f9f}{stk\+::\+Stack\+\_\+\+Interface$<$ T $>$}.
+
+
+\begin{DoxyCode}
+104                             \{
+105         ASSERT\_NOT\_EMPTY();
+106         Node * prev\_top = \hyperlink{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}{top\_};
+107         \hyperlink{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}{top\_} = \hyperlink{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}{top\_}->\hyperlink{structstk_1_1_stack_as_list_1_1_node_a45d62691349a0aac6d0c03cd2f1c35f5}{next\_};
+108         prev\_top->\hyperlink{structstk_1_1_stack_as_list_1_1_node_a45d62691349a0aac6d0c03cd2f1c35f5}{next\_} = \textcolor{keyword}{nullptr};
+109         \textcolor{keyword}{delete} prev\_top;
+110         --\hyperlink{classstk_1_1_stack_as_list_a203bb8328f70a7e5b6eebbc29e71d011}{num\_items\_};
+111     \}
+\end{DoxyCode}
+\hypertarget{classstk_1_1_stack_as_list_abb8422958e3e7605f040550ab4400ccb}{}\index{stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}!push@{push}}
+\index{push@{push}!stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void Stack\+As\+List\+::push (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classstk_1_1_stack_as_list_abb8422958e3e7605f040550ab4400ccb}
+Добавление элемента. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em element} & Ссылка на элемент, информацию из которого необходимо хранить в стеке. \\
+\hline
+\end{DoxyParams}
+
+
+Замещает \hyperlink{classstk_1_1_stack___interface_a530e980f187732215e15b51e9b895ffc}{stk\+::\+Stack\+\_\+\+Interface$<$ T $>$}.
+
+
+\begin{DoxyCode}
+97                                              \{
+98         Node * new\_top = \textcolor{keyword}{new} Node(element, \hyperlink{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}{top\_});
+99         \hyperlink{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}{top\_} = new\_top;
+100         ++\hyperlink{classstk_1_1_stack_as_list_a203bb8328f70a7e5b6eebbc29e71d011}{num\_items\_};
+101     \}
+\end{DoxyCode}
+\hypertarget{classstk_1_1_stack_as_list_abd769ed3547312e16f9d8a1eff362cf0}{}\index{stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}!size@{size}}
+\index{size@{size}!stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ size\+\_\+t Stack\+As\+List\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classstk_1_1_stack_as_list_abd769ed3547312e16f9d8a1eff362cf0}
+Метод определения размера стека. \begin{DoxyReturn}{Возвращает}
+Размер стека. 
+\end{DoxyReturn}
+
+
+Замещает \hyperlink{classstk_1_1_stack___interface_a3a0b1b8863b419f37662252285954258}{stk\+::\+Stack\+\_\+\+Interface$<$ T $>$}.
+
+
+\begin{DoxyCode}
+92                                      \{
+93         \textcolor{keywordflow}{return} \hyperlink{classstk_1_1_stack_as_list_a203bb8328f70a7e5b6eebbc29e71d011}{num\_items\_};
+94     \}
+\end{DoxyCode}
+\hypertarget{classstk_1_1_stack_as_list_ac60180f79b421783661b48e0aa3f5ed4}{}\index{stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}!swap@{swap}}
+\index{swap@{swap}!stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}}
+\subsubsection[{swap}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void Stack\+As\+List\+::swap (
+\begin{DoxyParamCaption}
+\item[{{\bf Stack\+As\+List}$<$ T $>$ \&}]{other\+\_\+stack}
+\end{DoxyParamCaption}
+)}\label{classstk_1_1_stack_as_list_ac60180f79b421783661b48e0aa3f5ed4}
+Метод обмена содержимым стеков на основе списка. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em other\+\_\+stack} & Стек, информацией с которым необходимо поменяться. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+25                                                       \{
+26         std::swap(\hyperlink{classstk_1_1_stack_as_list_a203bb8328f70a7e5b6eebbc29e71d011}{num\_items\_}, other\_stack.num\_items\_);
+27         std::swap(\hyperlink{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}{top\_}, other\_stack.top\_);
+28     \}
+\end{DoxyCode}
+\hypertarget{classstk_1_1_stack_as_list_a12cfaa9a9a137c07258aec159779cd1e}{}\index{stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}!top@{top}}
+\index{top@{top}!stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}}
+\subsubsection[{top}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T \& Stack\+As\+List\+::top (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classstk_1_1_stack_as_list_a12cfaa9a9a137c07258aec159779cd1e}
+Доступ к верхнему элементу стека. \begin{DoxyReturn}{Возвращает}
+Ссылку на хранимую информацию на вершине стека. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em length\+\_\+error} & В случае, если стек оказался пустым. \\
+\hline
+\end{DoxyExceptions}
+
+
+Замещает \hyperlink{classstk_1_1_stack___interface_a72962a23863f45a8b2b6905144689681}{stk\+::\+Stack\+\_\+\+Interface$<$ T $>$}.
+
+
+\begin{DoxyCode}
+115                           \{
+116         ASSERT\_NOT\_EMPTY();
+117         \textcolor{keywordflow}{return} \hyperlink{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}{top\_}->\hyperlink{structstk_1_1_stack_as_list_1_1_node_a7a634b5814175d7bcdee465da07ca3d4}{data\_};
+118     \}
+\end{DoxyCode}
+
+
+\subsection{Данные класса}
+\hypertarget{classstk_1_1_stack_as_list_a203bb8328f70a7e5b6eebbc29e71d011}{}\index{stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}!num\+\_\+items\+\_\+@{num\+\_\+items\+\_\+}}
+\index{num\+\_\+items\+\_\+@{num\+\_\+items\+\_\+}!stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}}
+\subsubsection[{num\+\_\+items\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ size\+\_\+t {\bf stk\+::\+Stack\+As\+List}$<$ T $>$\+::num\+\_\+items\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\label{classstk_1_1_stack_as_list_a203bb8328f70a7e5b6eebbc29e71d011}
+
+
+Хранит текущее количество узлов в стеке. 
+
+\hypertarget{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}{}\index{stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}!top\+\_\+@{top\+\_\+}}
+\index{top\+\_\+@{top\+\_\+}!stk\+::\+Stack\+As\+List@{stk\+::\+Stack\+As\+List}}
+\subsubsection[{top\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Node}$\ast$ {\bf stk\+::\+Stack\+As\+List}$<$ T $>$\+::top\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\label{classstk_1_1_stack_as_list_afb5080650911a8b907dd5b383a153239}
+
+
+Хранит указатель на текущий элемент на вершине стека. Если элементов нет, то он равен nullptr. 
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{stk_8h}{stk.\+h}\item 
+\hyperlink{stk__as__list__realization_8h}{stk\+\_\+as\+\_\+list\+\_\+realization.\+h}\end{DoxyCompactItemize}

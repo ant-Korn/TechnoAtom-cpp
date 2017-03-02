@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dump',['dump',['../classstk__as__list_1_1_stack.html#aa556423ef52feaa947b2683440f2860c',1,'stk_as_list::Stack']]]
+  ['main',['main',['../main__file_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main_file.cpp']]]
 ];

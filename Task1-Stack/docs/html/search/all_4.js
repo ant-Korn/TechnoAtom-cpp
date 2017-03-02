@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['getsize',['GetSize',['../namespacestk__test.html#a6a1e992225350cf59f367d70b00bb6d1',1,'stk_test']]]
+  ['next_5f',['next_',['../structstk_1_1_stack_as_list_1_1_node.html#a45d62691349a0aac6d0c03cd2f1c35f5',1,'stk::StackAsList::Node']]],
+  ['node',['Node',['../structstk_1_1_stack_as_list_1_1_node.html',1,'stk::StackAsList']]],
+  ['node',['Node',['../structstk_1_1_stack_as_list_1_1_node.html#ad61cfb928b1f9a6c8d8a3d77982826c8',1,'stk::StackAsList::Node']]],
+  ['num_5fitems_5f',['num_items_',['../classstk_1_1_stack_as_list.html#a203bb8328f70a7e5b6eebbc29e71d011',1,'stk::StackAsList::num_items_()'],['../classstk_1_1_stack_as_mass.html#a5e9451aac734a824c73b3d7054093fef',1,'stk::StackAsMass::num_items_()']]]
 ];

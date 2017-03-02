@@ -68,8 +68,9 @@
     <ClCompile Include="main_file.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stk_linked_list.h" />
-    <ClInclude Include="stk_linked_list_realization.h" />
+    <ClInclude Include="stk_as_mass_realization.h" />
+    <ClInclude Include="stk.h" />
+    <ClInclude Include="stk_as_list_realization.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

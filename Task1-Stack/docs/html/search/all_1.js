@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['checkemptiness',['CheckEmptiness',['../namespacestk__test.html#a8799bc067463b4ac0f8136ebd9c0f587',1,'stk_test']]],
-  ['clean',['clean',['../classstk__as__list_1_1_stack.html#ad96efdeb39952c4914d4e9eb578936c4',1,'stk_as_list::Stack']]],
-  ['copystack',['CopyStack',['../namespacestk__test.html#acef2e62a5fc6f13e8de2fb4d4bfb5162',1,'stk_test']]]
+  ['data_5f',['data_',['../structstk_1_1_stack_as_list_1_1_node.html#a7a634b5814175d7bcdee465da07ca3d4',1,'stk::StackAsList::Node::data_()'],['../classstk_1_1_stack_as_mass.html#a15bf94917c32ed7f450f22de28d14467',1,'stk::StackAsMass::data_()']]],
+  ['dump',['dump',['../classstk_1_1_stack___interface.html#af00db15e47ba67823e4c8a48b02696cf',1,'stk::Stack_Interface::dump()'],['../classstk_1_1_stack_as_list.html#aa1da18d566ab35554f4d3005d345ee5e',1,'stk::StackAsList::dump()'],['../classstk_1_1_stack_as_mass.html#a4893c23d722d514f79a8e8fd10b9f0eb',1,'stk::StackAsMass::dump()']]]
 ];

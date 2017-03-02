@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['data_5f',['data_',['../structstk__as__list_1_1_stack_1_1_node.html#a98a491bef8f5531040d0ccca743d33d4',1,'stk_as_list::Stack::Node']]],
-  ['dump',['dump',['../classstk__as__list_1_1_stack.html#aa556423ef52feaa947b2683440f2860c',1,'stk_as_list::Stack']]]
+  ['empty',['empty',['../classstk_1_1_stack___interface.html#a110be2e10971d665a46febee3606d353',1,'stk::Stack_Interface::empty()'],['../classstk_1_1_stack_as_list.html#a56147e51e4a0c2fef70e6d40a7a0b63d',1,'stk::StackAsList::empty()'],['../classstk_1_1_stack_as_mass.html#a0e8e793c3f09ebe95679a4a588f7973d',1,'stk::StackAsMass::empty()']]]
 ];

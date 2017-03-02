@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Реализация стека: Шаблон класса stk::Stack_Interface&lt; T &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Реализация стека
+   </div>
+   <div id="projectbrief">Структура данных с методом доступа к элементам LIFO</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="classes.html"><span>Алфавитный&#160;указатель&#160;классов</span></a></li>
+      <li><a href="hierarchy.html"><span>Иерархия&#160;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&#160;классов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Переменные</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacestk.html">stk</a></li><li class="navelem"><a class="el" href="classstk_1_1_stack___interface.html">Stack_Interface</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classstk_1_1_stack___interface-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса stk::Stack_Interface&lt; T &gt;<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс, представляющий интерфейс для классов стеков.  
+ <a href="classstk_1_1_stack___interface.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="stk_8h_source.html">stk.h</a>&gt;</code></p>
+
+<p>Производные классы:<a class="el" href="classstk_1_1_stack_as_list.html">stk::StackAsList&lt; T &gt;</a> и <a class="el" href="classstk_1_1_stack_as_mass.html">stk::StackAsMass&lt; T &gt;</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:af00db15e47ba67823e4c8a48b02696cf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstk_1_1_stack___interface.html#af00db15e47ba67823e4c8a48b02696cf">dump</a> () const =0</td></tr>
+<tr class="separator:af00db15e47ba67823e4c8a48b02696cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a110be2e10971d665a46febee3606d353"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstk_1_1_stack___interface.html#a110be2e10971d665a46febee3606d353">empty</a> () const =0</td></tr>
+<tr class="separator:a110be2e10971d665a46febee3606d353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a0b1b8863b419f37662252285954258"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstk_1_1_stack___interface.html#a3a0b1b8863b419f37662252285954258">size</a> () const =0</td></tr>
+<tr class="separator:a3a0b1b8863b419f37662252285954258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a530e980f187732215e15b51e9b895ffc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstk_1_1_stack___interface.html#a530e980f187732215e15b51e9b895ffc">push</a> (const T &amp;element)=0</td></tr>
+<tr class="separator:a530e980f187732215e15b51e9b895ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b575af9649d9ce6285183469a466f9f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstk_1_1_stack___interface.html#a1b575af9649d9ce6285183469a466f9f">pop</a> ()=0</td></tr>
+<tr class="separator:a1b575af9649d9ce6285183469a466f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72962a23863f45a8b2b6905144689681"><td class="memItemLeft" align="right" valign="top">virtual T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstk_1_1_stack___interface.html#a72962a23863f45a8b2b6905144689681">top</a> ()=0</td></tr>
+<tr class="separator:a72962a23863f45a8b2b6905144689681"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><h3>template&lt;class T&gt;<br />
+class stk::Stack_Interface&lt; T &gt;</h3>
+
+<p>Класс, представляющий интерфейс для классов стеков. </p>
+</div><h2 class="groupheader">Методы</h2>
+<a class="anchor" id="af00db15e47ba67823e4c8a48b02696cf"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classstk_1_1_stack___interface.html">stk::Stack_Interface</a>&lt; T &gt;::dump </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Вывод полной информации о стеке. </p>
+
+<p>Замещается в <a class="el" href="classstk_1_1_stack_as_mass.html#a4893c23d722d514f79a8e8fd10b9f0eb">stk::StackAsMass&lt; T &gt;</a> и <a class="el" href="classstk_1_1_stack_as_list.html#aa1da18d566ab35554f4d3005d345ee5e">stk::StackAsList&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a110be2e10971d665a46febee3606d353"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool <a class="el" href="classstk_1_1_stack___interface.html">stk::Stack_Interface</a>&lt; T &gt;::empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Проверка на пустоту стека. </p><dl class="section return"><dt>Возвращает</dt><dd>Логическую переменную, которая говорит о том, является ли стек пустым или нет. </dd></dl>
+
+<p>Замещается в <a class="el" href="classstk_1_1_stack_as_mass.html#a0e8e793c3f09ebe95679a4a588f7973d">stk::StackAsMass&lt; T &gt;</a> и <a class="el" href="classstk_1_1_stack_as_list.html#a56147e51e4a0c2fef70e6d40a7a0b63d">stk::StackAsList&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1b575af9649d9ce6285183469a466f9f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classstk_1_1_stack___interface.html">stk::Stack_Interface</a>&lt; T &gt;::pop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Удаление узла с вершины стека. </p><dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">length_error</td><td>В случае, если стек оказался пустым. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещается в <a class="el" href="classstk_1_1_stack_as_mass.html#a85fe3d75069a6304ab95e8715c5b3cb6">stk::StackAsMass&lt; T &gt;</a> и <a class="el" href="classstk_1_1_stack_as_list.html#a2f2b3319a9d76a9feb84b1855c84c55b">stk::StackAsList&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a530e980f187732215e15b51e9b895ffc"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classstk_1_1_stack___interface.html">stk::Stack_Interface</a>&lt; T &gt;::push </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Добавление элемента. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">element</td><td>Ссылка на элемент, информацию из которого необходимо хранить в стеке. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещается в <a class="el" href="classstk_1_1_stack_as_mass.html#a543d8f8b0b88bf906da28af2a39d61d5">stk::StackAsMass&lt; T &gt;</a> и <a class="el" href="classstk_1_1_stack_as_list.html#abb8422958e3e7605f040550ab4400ccb">stk::StackAsList&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3a0b1b8863b419f37662252285954258"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual size_t <a class="el" href="classstk_1_1_stack___interface.html">stk::Stack_Interface</a>&lt; T &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Метод определения размера стека. </p><dl class="section return"><dt>Возвращает</dt><dd>Размер стека. </dd></dl>
+
+<p>Замещается в <a class="el" href="classstk_1_1_stack_as_mass.html#a8859a0ecb70f45282bc9b5c8b9ade0fc">stk::StackAsMass&lt; T &gt;</a> и <a class="el" href="classstk_1_1_stack_as_list.html#abd769ed3547312e16f9d8a1eff362cf0">stk::StackAsList&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a72962a23863f45a8b2b6905144689681"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual T&amp; <a class="el" href="classstk_1_1_stack___interface.html">stk::Stack_Interface</a>&lt; T &gt;::top </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Доступ к верхнему элементу стека. </p><dl class="section return"><dt>Возвращает</dt><dd>Ссылку на хранимую информацию на вершине стека. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">length_error</td><td>В случае, если стек оказался пустым. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещается в <a class="el" href="classstk_1_1_stack_as_mass.html#a6b1b18b02db67e82ed6abbcfdc8ede1e">stk::StackAsMass&lt; T &gt;</a> и <a class="el" href="classstk_1_1_stack_as_list.html#a12cfaa9a9a137c07258aec159779cd1e">stk::StackAsList&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li><a class="el" href="stk_8h_source.html">stk.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по Реализация стека. Последние изменения: Чт 2 Мар 2017 06:02:50. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,360 @@
+\hypertarget{classstk_1_1_stack_as_mass}{}\section{Шаблон класса stk\+:\+:Stack\+As\+Mass$<$ T $>$}
+\label{classstk_1_1_stack_as_mass}\index{stk\+::\+Stack\+As\+Mass$<$ T $>$@{stk\+::\+Stack\+As\+Mass$<$ T $>$}}
+
+
+Класс стека, реализованный на основе динамического массива.  
+
+
+
+
+{\ttfamily \#include $<$stk.\+h$>$}
+
+
+
+Базовые классы\+:\hyperlink{classstk_1_1_stack___interface}{stk\+::\+Stack\+\_\+\+Interface$<$ T $>$}.
+
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstk_1_1_stack_as_mass_aa5dca4927f4cf652cacd3741a45eb2ad}{Stack\+As\+Mass} ()
+\item 
+\hyperlink{classstk_1_1_stack_as_mass_a2b85fdd4e6f15092e1fa96bf35398985}{Stack\+As\+Mass} (size\+\_\+t capacity)
+\item 
+void \hyperlink{classstk_1_1_stack_as_mass_ab347dc6a6b317fb438d865ee854b9293}{swap} (\hyperlink{classstk_1_1_stack_as_mass}{Stack\+As\+Mass} \&other\+\_\+stack)
+\item 
+\hyperlink{classstk_1_1_stack_as_mass_ab5096a618f3822ca8ebc7c60a2218c24}{Stack\+As\+Mass} (const \hyperlink{classstk_1_1_stack_as_mass}{Stack\+As\+Mass} \&other\+\_\+stack)
+\item 
+\hyperlink{classstk_1_1_stack_as_mass}{Stack\+As\+Mass} \& \hyperlink{classstk_1_1_stack_as_mass_a3f5a454382082b41a6b57c4862491568}{operator=} (\hyperlink{classstk_1_1_stack_as_mass}{Stack\+As\+Mass} other\+\_\+stack)
+\item 
+\hyperlink{classstk_1_1_stack_as_mass_a83bdc71146620e82a676ae572a6756b6}{$\sim$\+Stack\+As\+Mass} ()
+\item 
+void \hyperlink{classstk_1_1_stack_as_mass_a4893c23d722d514f79a8e8fd10b9f0eb}{dump} () const 
+\item 
+bool \hyperlink{classstk_1_1_stack_as_mass_a0e8e793c3f09ebe95679a4a588f7973d}{empty} () const 
+\item 
+size\+\_\+t \hyperlink{classstk_1_1_stack_as_mass_a8859a0ecb70f45282bc9b5c8b9ade0fc}{size} () const 
+\item 
+void \hyperlink{classstk_1_1_stack_as_mass_a543d8f8b0b88bf906da28af2a39d61d5}{push} (const T \&)
+\item 
+void \hyperlink{classstk_1_1_stack_as_mass_a85fe3d75069a6304ab95e8715c5b3cb6}{pop} ()
+\item 
+T \& \hyperlink{classstk_1_1_stack_as_mass_a6b1b18b02db67e82ed6abbcfdc8ede1e}{top} ()
+\end{DoxyCompactItemize}
+\subsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \hyperlink{classstk_1_1_stack_as_mass_aa03eca24b4a73e040690da8a14ffef8b}{capacity\+\_\+}
+\begin{DoxyCompactList}\small\item\em Размер массива, в котором хранятся данные стека. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classstk_1_1_stack_as_mass_a5e9451aac734a824c73b3d7054093fef}{num\+\_\+items\+\_\+}
+\begin{DoxyCompactList}\small\item\em Количество хранимых элементов в стеке. \end{DoxyCompactList}\item 
+T $\ast$ \hyperlink{classstk_1_1_stack_as_mass_a15bf94917c32ed7f450f22de28d14467}{data\+\_\+}
+\begin{DoxyCompactList}\small\item\em Указатель на массив хранящий данные стека в динамической памяти. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+\subsubsection*{template$<$class T$>$class stk\+::\+Stack\+As\+Mass$<$ T $>$}
+
+Класс стека, реализованный на основе динамического массива. 
+
+\subsection{Конструктор(ы)}
+\hypertarget{classstk_1_1_stack_as_mass_aa5dca4927f4cf652cacd3741a45eb2ad}{}\index{stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}!Stack\+As\+Mass@{Stack\+As\+Mass}}
+\index{Stack\+As\+Mass@{Stack\+As\+Mass}!stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}}
+\subsubsection[{Stack\+As\+Mass}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ Stack\+As\+Mass\+::\+Stack\+As\+Mass (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classstk_1_1_stack_as_mass_aa5dca4927f4cf652cacd3741a45eb2ad}
+Конструктор стека на основе массива по умолчанию. 
+\begin{DoxyCode}
+11 : \hyperlink{classstk_1_1_stack_as_mass_aa03eca24b4a73e040690da8a14ffef8b}{capacity\_}(0), \hyperlink{classstk_1_1_stack_as_mass_a5e9451aac734a824c73b3d7054093fef}{num\_items\_}(0), \hyperlink{classstk_1_1_stack_as_mass_a15bf94917c32ed7f450f22de28d14467}{data\_}(\textcolor{keyword}{nullptr}) \{\}
+\end{DoxyCode}
+\hypertarget{classstk_1_1_stack_as_mass_a2b85fdd4e6f15092e1fa96bf35398985}{}\index{stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}!Stack\+As\+Mass@{Stack\+As\+Mass}}
+\index{Stack\+As\+Mass@{Stack\+As\+Mass}!stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}}
+\subsubsection[{Stack\+As\+Mass}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ Stack\+As\+Mass\+::\+Stack\+As\+Mass (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{capacity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\label{classstk_1_1_stack_as_mass_a2b85fdd4e6f15092e1fa96bf35398985}
+Конструктор стека на основе массива с заданием начального размера динамического массива. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em capacity} & Начальный размер динамического массива. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+14 : \hyperlink{classstk_1_1_stack_as_mass_aa03eca24b4a73e040690da8a14ffef8b}{capacity\_}(capacity), \hyperlink{classstk_1_1_stack_as_mass_a5e9451aac734a824c73b3d7054093fef}{num\_items\_}(0), \hyperlink{classstk_1_1_stack_as_mass_a15bf94917c32ed7f450f22de28d14467}{data\_}(\textcolor{keyword}{new} T [capacity]) \{\}
+\end{DoxyCode}
+\hypertarget{classstk_1_1_stack_as_mass_ab5096a618f3822ca8ebc7c60a2218c24}{}\index{stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}!Stack\+As\+Mass@{Stack\+As\+Mass}}
+\index{Stack\+As\+Mass@{Stack\+As\+Mass}!stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}}
+\subsubsection[{Stack\+As\+Mass}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ Stack\+As\+Mass\+::\+Stack\+As\+Mass (
+\begin{DoxyParamCaption}
+\item[{const {\bf Stack\+As\+Mass}$<$ T $>$ \&}]{other\+\_\+stack}
+\end{DoxyParamCaption}
+)}\label{classstk_1_1_stack_as_mass_ab5096a618f3822ca8ebc7c60a2218c24}
+Конструктор копирования стека на основе массива. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em other\+\_\+stack} & Стек, всю информацию из которого необходимо перенести в создаваемый. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+24                                                                : \hyperlink{classstk_1_1_stack_as_mass_aa03eca24b4a73e040690da8a14ffef8b}{capacity\_}(other\_stack.capacity\_),
+       \hyperlink{classstk_1_1_stack_as_mass_a5e9451aac734a824c73b3d7054093fef}{num\_items\_}(other\_stack.num\_items\_), \hyperlink{classstk_1_1_stack_as_mass_a15bf94917c32ed7f450f22de28d14467}{data\_}(\textcolor{keyword}{new} T [other\_stack.capacity\_])\{
+25         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i=0; i<\hyperlink{classstk_1_1_stack_as_mass_a5e9451aac734a824c73b3d7054093fef}{num\_items\_}; ++i)\{
+26             \hyperlink{classstk_1_1_stack_as_mass_a15bf94917c32ed7f450f22de28d14467}{data\_}[i] = other\_stack.data\_[i];
+27         \}
+28     \}
+\end{DoxyCode}
+\hypertarget{classstk_1_1_stack_as_mass_a83bdc71146620e82a676ae572a6756b6}{}\index{stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}!````~Stack\+As\+Mass@{$\sim$\+Stack\+As\+Mass}}
+\index{````~Stack\+As\+Mass@{$\sim$\+Stack\+As\+Mass}!stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}}
+\subsubsection[{$\sim$\+Stack\+As\+Mass}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ Stack\+As\+Mass\+::$\sim$\+Stack\+As\+Mass (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classstk_1_1_stack_as_mass_a83bdc71146620e82a676ae572a6756b6}
+Деструктор стека на основе массива. 
+\begin{DoxyCode}
+37                                 \{
+38         \textcolor{keyword}{delete} [] \hyperlink{classstk_1_1_stack_as_mass_a15bf94917c32ed7f450f22de28d14467}{data\_};
+39     \}
+\end{DoxyCode}
+
+
+\subsection{Методы}
+\hypertarget{classstk_1_1_stack_as_mass_a4893c23d722d514f79a8e8fd10b9f0eb}{}\index{stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}!dump@{dump}}
+\index{dump@{dump}!stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}}
+\subsubsection[{dump}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void Stack\+As\+Mass\+::dump (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classstk_1_1_stack_as_mass_a4893c23d722d514f79a8e8fd10b9f0eb}
+Вывод полной информации о стеке. 
+
+Замещает \hyperlink{classstk_1_1_stack___interface_af00db15e47ba67823e4c8a48b02696cf}{stk\+::\+Stack\+\_\+\+Interface$<$ T $>$}.
+
+
+\begin{DoxyCode}
+42                                    \{
+43         \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} num\_dashes = 50, num\_chars1 = 11, num\_chars2 = 7, num\_chars3 = 21;
+44         std::cout << std::setfill(\textcolor{charliteral}{'-'}) << std::setw(num\_dashes) << \textcolor{stringliteral}{""} << std::setfill(\textcolor{charliteral}{' '}) << std::endl;
+45         std::cout << \textcolor{stringliteral}{"   StackAsMass:\(\backslash\)n\(\backslash\)tnum. of items:"} << std::setw(num\_chars1) << 
+      \hyperlink{classstk_1_1_stack_as_mass_a5e9451aac734a824c73b3d7054093fef}{num\_items\_} << \textcolor{stringliteral}{" capacity:"} << std::setw(num\_chars2) \(\backslash\)
+46             << \hyperlink{classstk_1_1_stack_as_mass_aa03eca24b4a73e040690da8a14ffef8b}{capacity\_} << \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tdata pointer:"} << std::setw(num\_chars3);
+47         \textcolor{keywordflow}{if} (\hyperlink{classstk_1_1_stack_as_mass_a15bf94917c32ed7f450f22de28d14467}{data\_}==\textcolor{keyword}{nullptr})\{
+48             std::cout << \textcolor{stringliteral}{"nullptr"} << std::endl;
+49         \}
+50         \textcolor{keywordflow}{else} \{
+51             std::cout << std::hex << \hyperlink{classstk_1_1_stack_as_mass_a15bf94917c32ed7f450f22de28d14467}{data\_} << std::dec << \textcolor{stringliteral}{" top value: "};
+52             \textcolor{keywordflow}{if}(\hyperlink{classstk_1_1_stack_as_mass_a5e9451aac734a824c73b3d7054093fef}{num\_items\_})\{
+53                 std::cout << \hyperlink{classstk_1_1_stack_as_mass_a15bf94917c32ed7f450f22de28d14467}{data\_}[\hyperlink{classstk_1_1_stack_as_mass_a5e9451aac734a824c73b3d7054093fef}{num\_items\_}-1] << std::endl;
+54             \}
+55             \textcolor{keywordflow}{else} \{
+56                 std::cout << \textcolor{stringliteral}{"no item"} << std::endl;
+57             \}
+58         \}
+59         std::cout << \textcolor{stringliteral}{"    All nodes:"} << std::endl;
+60         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i=0; i<\hyperlink{classstk_1_1_stack_as_mass_a5e9451aac734a824c73b3d7054093fef}{num\_items\_}; ++i)\{
+61             std::cout << \textcolor{stringliteral}{"\(\backslash\)t["} << i << \textcolor{stringliteral}{"] "} << std::hex << (\hyperlink{classstk_1_1_stack_as_mass_a15bf94917c32ed7f450f22de28d14467}{data\_}+i) << \textcolor{stringliteral}{" value: "} << std::dec << 
+      \hyperlink{classstk_1_1_stack_as_mass_a15bf94917c32ed7f450f22de28d14467}{data\_}[i] << std::endl;
+62         \}
+63         std::cout << std::setfill(\textcolor{charliteral}{'-'}) << std::setw(num\_dashes) << \textcolor{stringliteral}{""} << std::setfill(\textcolor{charliteral}{' '}) << std::endl;
+64     \}
+\end{DoxyCode}
+\hypertarget{classstk_1_1_stack_as_mass_a0e8e793c3f09ebe95679a4a588f7973d}{}\index{stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}!empty@{empty}}
+\index{empty@{empty}!stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool Stack\+As\+Mass\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classstk_1_1_stack_as_mass_a0e8e793c3f09ebe95679a4a588f7973d}
+Проверка на пустоту стека. \begin{DoxyReturn}{Возвращает}
+Логическую переменную, которая говорит о том, является ли стек пустым или нет. 
+\end{DoxyReturn}
+
+
+Замещает \hyperlink{classstk_1_1_stack___interface_a110be2e10971d665a46febee3606d353}{stk\+::\+Stack\+\_\+\+Interface$<$ T $>$}.
+
+
+\begin{DoxyCode}
+67                                     \{
+68         \textcolor{keywordflow}{return} \hyperlink{classstk_1_1_stack_as_mass_a5e9451aac734a824c73b3d7054093fef}{num\_items\_} == 0;
+69     \}
+\end{DoxyCode}
+\hypertarget{classstk_1_1_stack_as_mass_a3f5a454382082b41a6b57c4862491568}{}\index{stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}!operator=@{operator=}}
+\index{operator=@{operator=}!stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Stack\+As\+Mass}$<$ T $>$ \& Stack\+As\+Mass\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Stack\+As\+Mass}$<$ T $>$}]{other\+\_\+stack}
+\end{DoxyParamCaption}
+)}\label{classstk_1_1_stack_as_mass_a3f5a454382082b41a6b57c4862491568}
+Операция присваивания стека на основе массива. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em other\+\_\+stack} & Стек, всю информацию из которого необходимо перенести в текущий. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ссылку на текущий стек с перенесённой информацией. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+31                                                                      \{
+32         \hyperlink{classstk_1_1_stack_as_mass_ab347dc6a6b317fb438d865ee854b9293}{swap}(other\_stack);
+33         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+34     \}
+\end{DoxyCode}
+\hypertarget{classstk_1_1_stack_as_mass_a85fe3d75069a6304ab95e8715c5b3cb6}{}\index{stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}!pop@{pop}}
+\index{pop@{pop}!stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void Stack\+As\+Mass\+::pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classstk_1_1_stack_as_mass_a85fe3d75069a6304ab95e8715c5b3cb6}
+Удаление узла с вершины стека. 
+\begin{DoxyExceptions}{Исключения}
+{\em length\+\_\+error} & В случае, если стек оказался пустым. \\
+\hline
+\end{DoxyExceptions}
+
+
+Замещает \hyperlink{classstk_1_1_stack___interface_a1b575af9649d9ce6285183469a466f9f}{stk\+::\+Stack\+\_\+\+Interface$<$ T $>$}.
+
+
+\begin{DoxyCode}
+97                             \{
+98         ASSERT\_NOT\_EMPTY();
+99         --\hyperlink{classstk_1_1_stack_as_mass_a5e9451aac734a824c73b3d7054093fef}{num\_items\_};
+100     \}
+\end{DoxyCode}
+\hypertarget{classstk_1_1_stack_as_mass_a543d8f8b0b88bf906da28af2a39d61d5}{}\index{stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}!push@{push}}
+\index{push@{push}!stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void Stack\+As\+Mass\+::push (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classstk_1_1_stack_as_mass_a543d8f8b0b88bf906da28af2a39d61d5}
+Добавление элемента. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em element} & Ссылка на элемент, информацию из которого необходимо хранить в стеке. \\
+\hline
+\end{DoxyParams}
+
+
+Замещает \hyperlink{classstk_1_1_stack___interface_a530e980f187732215e15b51e9b895ffc}{stk\+::\+Stack\+\_\+\+Interface$<$ T $>$}.
+
+
+\begin{DoxyCode}
+77                                              \{
+78         \textcolor{keywordflow}{if} (\hyperlink{classstk_1_1_stack_as_mass_a5e9451aac734a824c73b3d7054093fef}{num\_items\_} == \hyperlink{classstk_1_1_stack_as_mass_aa03eca24b4a73e040690da8a14ffef8b}{capacity\_})\{
+79             \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} capacity\_multiplier = 2;
+80             \textcolor{keywordflow}{if} (\hyperlink{classstk_1_1_stack_as_mass_aa03eca24b4a73e040690da8a14ffef8b}{capacity\_} == 0)\{
+81                 ++\hyperlink{classstk_1_1_stack_as_mass_aa03eca24b4a73e040690da8a14ffef8b}{capacity\_};
+82             \}
+83             \textcolor{keywordflow}{else}\{
+84                 \hyperlink{classstk_1_1_stack_as_mass_aa03eca24b4a73e040690da8a14ffef8b}{capacity\_} *= capacity\_multiplier;
+85             \}
+86             T * new\_data = \textcolor{keyword}{new} T [\hyperlink{classstk_1_1_stack_as_mass_aa03eca24b4a73e040690da8a14ffef8b}{capacity\_}];
+87             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i=0; i<\hyperlink{classstk_1_1_stack_as_mass_a5e9451aac734a824c73b3d7054093fef}{num\_items\_}; ++i)\{
+88                 new\_data[i] = \hyperlink{classstk_1_1_stack_as_mass_a15bf94917c32ed7f450f22de28d14467}{data\_}[i];
+89             \}
+90             \textcolor{keyword}{delete} [] \hyperlink{classstk_1_1_stack_as_mass_a15bf94917c32ed7f450f22de28d14467}{data\_};
+91             \hyperlink{classstk_1_1_stack_as_mass_a15bf94917c32ed7f450f22de28d14467}{data\_} = new\_data;
+92         \}
+93         \hyperlink{classstk_1_1_stack_as_mass_a15bf94917c32ed7f450f22de28d14467}{data\_}[\hyperlink{classstk_1_1_stack_as_mass_a5e9451aac734a824c73b3d7054093fef}{num\_items\_}++] = element;
+94     \}
+\end{DoxyCode}
+\hypertarget{classstk_1_1_stack_as_mass_a8859a0ecb70f45282bc9b5c8b9ade0fc}{}\index{stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}!size@{size}}
+\index{size@{size}!stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ size\+\_\+t Stack\+As\+Mass\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classstk_1_1_stack_as_mass_a8859a0ecb70f45282bc9b5c8b9ade0fc}
+Метод определения размера стека. \begin{DoxyReturn}{Возвращает}
+Размер стека. 
+\end{DoxyReturn}
+
+
+Замещает \hyperlink{classstk_1_1_stack___interface_a3a0b1b8863b419f37662252285954258}{stk\+::\+Stack\+\_\+\+Interface$<$ T $>$}.
+
+
+\begin{DoxyCode}
+72                                      \{
+73         \textcolor{keywordflow}{return} \hyperlink{classstk_1_1_stack_as_mass_a5e9451aac734a824c73b3d7054093fef}{num\_items\_};
+74     \}
+\end{DoxyCode}
+\hypertarget{classstk_1_1_stack_as_mass_ab347dc6a6b317fb438d865ee854b9293}{}\index{stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}!swap@{swap}}
+\index{swap@{swap}!stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}}
+\subsubsection[{swap}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void Stack\+As\+Mass\+::swap (
+\begin{DoxyParamCaption}
+\item[{{\bf Stack\+As\+Mass}$<$ T $>$ \&}]{other\+\_\+stack}
+\end{DoxyParamCaption}
+)}\label{classstk_1_1_stack_as_mass_ab347dc6a6b317fb438d865ee854b9293}
+Метод обмена содержимым стеков на основе массива. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em other\+\_\+stack} & Стек, информацией с которым необходимо поменяться. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+17                                                       \{
+18         std::swap(\hyperlink{classstk_1_1_stack_as_mass_aa03eca24b4a73e040690da8a14ffef8b}{capacity\_}, other\_stack.capacity\_);
+19         std::swap(\hyperlink{classstk_1_1_stack_as_mass_a5e9451aac734a824c73b3d7054093fef}{num\_items\_}, other\_stack.num\_items\_);
+20         std::swap(\hyperlink{classstk_1_1_stack_as_mass_a15bf94917c32ed7f450f22de28d14467}{data\_}, other\_stack.data\_);
+21     \}
+\end{DoxyCode}
+\hypertarget{classstk_1_1_stack_as_mass_a6b1b18b02db67e82ed6abbcfdc8ede1e}{}\index{stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}!top@{top}}
+\index{top@{top}!stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}}
+\subsubsection[{top}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T \& Stack\+As\+Mass\+::top (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classstk_1_1_stack_as_mass_a6b1b18b02db67e82ed6abbcfdc8ede1e}
+Доступ к верхнему элементу стека. \begin{DoxyReturn}{Возвращает}
+Ссылку на хранимую информацию на вершине стека. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em length\+\_\+error} & В случае, если стек оказался пустым. \\
+\hline
+\end{DoxyExceptions}
+
+
+Замещает \hyperlink{classstk_1_1_stack___interface_a72962a23863f45a8b2b6905144689681}{stk\+::\+Stack\+\_\+\+Interface$<$ T $>$}.
+
+
+\begin{DoxyCode}
+103                           \{
+104         ASSERT\_NOT\_EMPTY();
+105         \textcolor{keywordflow}{return} \hyperlink{classstk_1_1_stack_as_mass_a15bf94917c32ed7f450f22de28d14467}{data\_}[\hyperlink{classstk_1_1_stack_as_mass_a5e9451aac734a824c73b3d7054093fef}{num\_items\_}-1];
+106     \}
+\end{DoxyCode}
+
+
+\subsection{Данные класса}
+\hypertarget{classstk_1_1_stack_as_mass_aa03eca24b4a73e040690da8a14ffef8b}{}\index{stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}!capacity\+\_\+@{capacity\+\_\+}}
+\index{capacity\+\_\+@{capacity\+\_\+}!stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}}
+\subsubsection[{capacity\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ size\+\_\+t {\bf stk\+::\+Stack\+As\+Mass}$<$ T $>$\+::capacity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\label{classstk_1_1_stack_as_mass_aa03eca24b4a73e040690da8a14ffef8b}
+
+
+Размер массива, в котором хранятся данные стека. 
+
+\hypertarget{classstk_1_1_stack_as_mass_a15bf94917c32ed7f450f22de28d14467}{}\index{stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}!data\+\_\+@{data\+\_\+}}
+\index{data\+\_\+@{data\+\_\+}!stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}}
+\subsubsection[{data\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T$\ast$ {\bf stk\+::\+Stack\+As\+Mass}$<$ T $>$\+::data\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\label{classstk_1_1_stack_as_mass_a15bf94917c32ed7f450f22de28d14467}
+
+
+Указатель на массив хранящий данные стека в динамической памяти. 
+
+\hypertarget{classstk_1_1_stack_as_mass_a5e9451aac734a824c73b3d7054093fef}{}\index{stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}!num\+\_\+items\+\_\+@{num\+\_\+items\+\_\+}}
+\index{num\+\_\+items\+\_\+@{num\+\_\+items\+\_\+}!stk\+::\+Stack\+As\+Mass@{stk\+::\+Stack\+As\+Mass}}
+\subsubsection[{num\+\_\+items\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ size\+\_\+t {\bf stk\+::\+Stack\+As\+Mass}$<$ T $>$\+::num\+\_\+items\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\label{classstk_1_1_stack_as_mass_a5e9451aac734a824c73b3d7054093fef}
+
+
+Количество хранимых элементов в стеке. 
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{stk_8h}{stk.\+h}\item 
+\hyperlink{stk__as__mass__realization_8h}{stk\+\_\+as\+\_\+mass\+\_\+realization.\+h}\end{DoxyCompactItemize}

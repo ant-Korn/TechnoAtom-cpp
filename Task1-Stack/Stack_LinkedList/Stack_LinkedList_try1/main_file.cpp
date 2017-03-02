@@ -1,5 +1,5 @@
 //!@file main_file.cpp
-//!Тестирование стека, описанного в файле stk_linked_list.h.
+//!Тестирование стеков, описанных в файле stk.h.
 //!
 //!@author Корнилов Антон, 2017
 //!@date 24.02.2017
@@ -33,27 +33,28 @@
 
 
 #include <iostream>
-#include "stk_linked_list.h"
+#include "stk.h"
 
 
-//! \namespace stk_test В данном пространстве имён представлены средства тестирования класса Stack.
+//! \namespace stk_test В данном пространстве имён представлены средства тестирования классов StackAsList и StackAsMass.
 namespace stk_test{
 
 	//! Макрос проверки условия. Если оно не верно, то бросается исключение.
 	#define ASSERT_TRUE( condition ) \
 		if (! (condition) )			 \
-			throw std::exception("Testing of "FUNKNAME" false in "#condition);
+			throw std::exception("Testing of " FUNKNAME " false in "#condition);
 
 	//! Макрос для сообщения о удачном завершении теста.
 	#define TEST_PASSED()	\
-		std::cout << FUNKNAME" is successfully complete!" << std::endl << std::endl;
+		std::cout << FUNKNAME " is successfully complete!" << std::endl << std::endl;
 	#define TEST_FAILED()	\
-		std::cout << "When trying to "FUNKNAME" failed!" << std::endl << std::endl;
+		std::cout << "When trying to " FUNKNAME " failed!" << std::endl << std::endl;
 
 
 	//!Тестирование на верное добавление одного элемента в стек переменных int.
-	void PushingSingleNumber(){
-		stk_as_list::Stack<int> s_i;													
+	template <template <class T> class StackType>
+	void TestPush(){
+		StackType<int> s_i;													
 		try{																								
 			s_i.push(3802);											
 			ASSERT_TRUE(s_i.top() == 0xEDA);
@@ -70,9 +71,13 @@ namespace stk_test{
 	}
 
 	//!Тестирование на удаление узла из пустого стека.
-	void PopFromEmpty(){
-		stk_as_list::Stack<int> s_i; 
+	template <template <class T> class StackType>
+	void TestPop(){
+		StackType<int> s_i;
+		const int value = 1;
 		try{
+			s_i.push(value);
+			s_i.pop();
 			ASSERT_TRUE(s_i.size() == 0);
 			s_i.pop();
 			TEST_FAILED();
@@ -85,9 +90,14 @@ namespace stk_test{
 	}
 
 	//!Тестирование на получение ссылки на верхний элемент пустого стека.
-	void TryTakeTopeFromEmpty(){
-		stk_as_list::Stack<int> s_i; 
+	template <template <class T> class StackType>
+	void TestTop(){
+		StackType<int> s_i;
+		const int value = 1;
 		try{
+			s_i.push(value);
+			ASSERT_TRUE(s_i.top() == 1);
+			s_i.pop();
 			ASSERT_TRUE(s_i.size() == 0);
 			int var = s_i.top();
 			std::cout << "Top variable = " << var << std::endl;
@@ -101,9 +111,10 @@ namespace stk_test{
 	}
 
 	//!Тестирование на правильную работу конструктора копирования.
-	void CopyStack(){
+	template <template <class T> class StackType>
+	void TestCopyConstructor(){
 		auto num_of_elements = 5;
-		stk_as_list::Stack<int> s_i1;
+		StackType<int> s_i1;
 		try{
 			for(auto i=0;i<num_of_elements;++i){
 				s_i1.push(i);
@@ -113,7 +124,7 @@ namespace stk_test{
 			std::cout << ex.what() << std::endl;
 			s_i1.dump();
 		}
-		stk_as_list::Stack<int> s_i2(s_i1);
+		StackType<int> s_i2(s_i1);
 		try{
 			ASSERT_TRUE(s_i1.size() == s_i2.size());
 			while(s_i2.size()){
@@ -134,10 +145,11 @@ namespace stk_test{
 	}
 
 	//!Тестирование на правильную работу операции присваивания.
-	void AssignmentStacks(){
+	template <template <class T> class StackType>
+	void TestAssignmentOperator(){
 		auto num_of_elements1 = 5;
 		auto num_of_elements2 = 3;
-		stk_as_list::Stack<int> s_i1;
+		StackType<int> s_i1;
 		try{
 			for(auto i=0;i<num_of_elements1;++i){
 				s_i1.push(i);
@@ -147,7 +159,7 @@ namespace stk_test{
 			std::cout << ex.what() << std::endl;
 			s_i1.dump();
 		}
-		stk_as_list::Stack<int> s_i2;
+		StackType<int> s_i2;
 		try{
 			for(auto i=0;i<num_of_elements2;++i){
 				s_i2.push(i);
@@ -172,8 +184,9 @@ namespace stk_test{
 	}
 
 	//!Тестирование проверки стека на пустоту.
-	void CheckEmptiness(){
-		stk_as_list::Stack<int> s_i;
+	template <template <class T> class StackType>
+	void TestEmpty(){
+		StackType<int> s_i;
 		const int push_num = 1;
 		try{
 			ASSERT_TRUE(s_i.empty());
@@ -189,8 +202,9 @@ namespace stk_test{
 	}
 
 	//!Тестирование получения размера стека.
-	void GetSize(){
-		stk_as_list::Stack<int> s_i;
+	template <template <class T> class StackType>
+	void TestSize(){
+		StackType<int> s_i;
 		const int num_of_elements = 3;
 		try{
 			ASSERT_TRUE(s_i.size()==0);
@@ -208,8 +222,9 @@ namespace stk_test{
 	}
 
 	//!Тестирование обмена содержимым стеков.
-	void TryOfSwapping(){
-		stk_as_list::Stack<int> s_i1, s_i2;
+	template <template <class T> class StackType>
+	void TestSwap(){
+		StackType<int> s_i1, s_i2;
 		const int num_of_elements1 = 3, num_of_elements2 = 5;
 		try{
 			for(auto i=0; i<num_of_elements1; ++i){
@@ -250,10 +265,18 @@ int main(){
 	//! Инициализация отслеживания утечек памяти.
 	INIT_CRT_MEM_CHECK();
 
-	/*! Проведение тестов:
-	    PushingSingleNumber, PopFromEmpty, TryTakeTopeFromEmpty, CopyStack, AssignmentOperatorOfStack, CheckEmptiness, GetSize , TryOfSwapping.*/
-	void (* tests[])() = {stk_test::PushingSingleNumber, stk_test::PopFromEmpty, stk_test::TryTakeTopeFromEmpty,	\
-		stk_test::CopyStack, stk_test::AssignmentStacks, stk_test::CheckEmptiness, stk_test::GetSize, stk_test::TryOfSwapping};
+	/*! Проведение тестов для стеков на основе списка и на основе массивов:
+	    TestPush, TestPop, TestTop, TestCopyConstructor, TestAssignmentOperator, TestEmpty, TestSize , TestSwap.*/
+	void (* tests[])() = {stk_test::TestPush<stk::StackAsList>, stk_test::TestPop<stk::StackAsList>,	\
+		stk_test::TestTop<stk::StackAsList>, stk_test::TestCopyConstructor<stk::StackAsList>, 			\
+		stk_test::TestAssignmentOperator<stk::StackAsList>, stk_test::TestEmpty<stk::StackAsList>,		\
+		stk_test::TestSize<stk::StackAsList>, stk_test::TestSwap<stk::StackAsList>,						\
+																										\
+		stk_test::TestPush<stk::StackAsMass>, stk_test::TestPop<stk::StackAsMass>,						\
+		stk_test::TestTop<stk::StackAsMass>, stk_test::TestCopyConstructor<stk::StackAsMass>, 			\
+		stk_test::TestAssignmentOperator<stk::StackAsMass>, stk_test::TestEmpty<stk::StackAsMass>,		\
+		stk_test::TestSize<stk::StackAsMass>, stk_test::TestSwap<stk::StackAsMass>,						\
+	};
 
 	for(auto test: tests){
 		(*test)();

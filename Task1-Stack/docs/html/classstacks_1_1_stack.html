@@ -1,0 +1,608 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Реализация стека: Шаблон класса stacks::Stack&lt; T &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Реализация стека
+   </div>
+   <div id="projectbrief">Структура данных с методом доступа к элементам LIFO</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="classes.html"><span>Алфавитный&#160;указатель&#160;классов</span></a></li>
+      <li><a href="hierarchy.html"><span>Иерархия&#160;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&#160;классов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Переменные</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacestacks.html">stacks</a></li><li class="navelem"><a class="el" href="classstacks_1_1_stack.html">Stack</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="classstacks_1_1_stack-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса stacks::Stack&lt; T &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс стека, реализованный на основе связного списка.  
+ <a href="classstacks_1_1_stack.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="stk__linked__list_8h_source.html">stk_linked_list.h</a>&gt;</code></p>
+
+<p>Базовые классы:<a class="el" href="classstacks_1_1_stack___interface.html">stacks::Stack_Interface&lt; T &gt;</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstacks_1_1_stack_1_1_node.html">Node</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Структура узла стека.  <a href="structstacks_1_1_stack_1_1_node.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a14cd1cba325bead4ff0a91bc6eb0f6f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstacks_1_1_stack.html#a14cd1cba325bead4ff0a91bc6eb0f6f5">Stack</a> ()</td></tr>
+<tr class="separator:a14cd1cba325bead4ff0a91bc6eb0f6f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af675cab8a3cd6aa3be48d79de4b54d87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstacks_1_1_stack.html#af675cab8a3cd6aa3be48d79de4b54d87">swap</a> (<a class="el" href="classstacks_1_1_stack.html">Stack</a> &amp;other_stack)</td></tr>
+<tr class="separator:af675cab8a3cd6aa3be48d79de4b54d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31fcf797905470a84ec47fcd719b69a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstacks_1_1_stack.html#a31fcf797905470a84ec47fcd719b69a7">Stack</a> (const <a class="el" href="classstacks_1_1_stack.html">Stack</a> &amp;other_stack)</td></tr>
+<tr class="separator:a31fcf797905470a84ec47fcd719b69a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07eef6ab8e679b5720598904c2ff23b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classstacks_1_1_stack.html">Stack</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstacks_1_1_stack.html#a07eef6ab8e679b5720598904c2ff23b6">operator=</a> (<a class="el" href="classstacks_1_1_stack.html">Stack</a> other_stack)</td></tr>
+<tr class="separator:a07eef6ab8e679b5720598904c2ff23b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40bd5dff912f0e5290777c4b46d17809"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstacks_1_1_stack.html#a40bd5dff912f0e5290777c4b46d17809">~Stack</a> ()</td></tr>
+<tr class="separator:a40bd5dff912f0e5290777c4b46d17809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa556423ef52feaa947b2683440f2860c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstacks_1_1_stack.html#aa556423ef52feaa947b2683440f2860c">dump</a> () const </td></tr>
+<tr class="separator:aa556423ef52feaa947b2683440f2860c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bd88c7b8faf901f4830ed616bf6478f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstacks_1_1_stack.html#a2bd88c7b8faf901f4830ed616bf6478f">empty</a> () const </td></tr>
+<tr class="separator:a2bd88c7b8faf901f4830ed616bf6478f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f3772679c16de93eae9eb92e2b85955"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstacks_1_1_stack.html#a3f3772679c16de93eae9eb92e2b85955">size</a> () const </td></tr>
+<tr class="separator:a3f3772679c16de93eae9eb92e2b85955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad31b678390ac3f2076e9b757c95600be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstacks_1_1_stack.html#ad31b678390ac3f2076e9b757c95600be">push</a> (const T &amp;)</td></tr>
+<tr class="separator:ad31b678390ac3f2076e9b757c95600be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09e820f3c3531cf3f401af3b3ca5d56f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstacks_1_1_stack.html#a09e820f3c3531cf3f401af3b3ca5d56f">pop</a> ()</td></tr>
+<tr class="separator:a09e820f3c3531cf3f401af3b3ca5d56f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20e64b09239efa6340b33546115424b6"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstacks_1_1_stack.html#a20e64b09239efa6340b33546115424b6">top</a> ()</td></tr>
+<tr class="separator:a20e64b09239efa6340b33546115424b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a68cd067db6b89353ec1f803eecd4cb74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structstacks_1_1_stack_1_1_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">top_</a></td></tr>
+<tr class="memdesc:a68cd067db6b89353ec1f803eecd4cb74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хранит указатель на текущий элемент на вершине стека. Если элементов нет, то он равен nullptr.  <a href="#a68cd067db6b89353ec1f803eecd4cb74">Подробнее...</a><br /></td></tr>
+<tr class="separator:a68cd067db6b89353ec1f803eecd4cb74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43923df95ebc551432e9d3e955c32959"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstacks_1_1_stack.html#a43923df95ebc551432e9d3e955c32959">num_items_</a></td></tr>
+<tr class="memdesc:a43923df95ebc551432e9d3e955c32959"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хранит текущее количество узлов в стеке.  <a href="#a43923df95ebc551432e9d3e955c32959">Подробнее...</a><br /></td></tr>
+<tr class="separator:a43923df95ebc551432e9d3e955c32959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><h3>template&lt;class T&gt;<br />
+class stacks::Stack&lt; T &gt;</h3>
+
+<p>Класс стека, реализованный на основе связного списка. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a class="anchor" id="a14cd1cba325bead4ff0a91bc6eb0f6f5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Stack::Stack </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Конструктор стека по умолчанию. </p>
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;: <a class="code" href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">top_</a>(<span class="keyword">nullptr</span>), <a class="code" href="classstacks_1_1_stack.html#a43923df95ebc551432e9d3e955c32959">num_items_</a>(0) {}</div>
+<div class="ttc" id="classstacks_1_1_stack_html_a43923df95ebc551432e9d3e955c32959"><div class="ttname"><a href="classstacks_1_1_stack.html#a43923df95ebc551432e9d3e955c32959">stacks::Stack::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Хранит текущее количество узлов в стеке. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:120</div></div>
+<div class="ttc" id="classstacks_1_1_stack_html_a68cd067db6b89353ec1f803eecd4cb74"><div class="ttname"><a href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">stacks::Stack::top_</a></div><div class="ttdeci">Node * top_</div><div class="ttdoc">Хранит указатель на текущий элемент на вершине стека. Если элементов нет, то он равен nullptr...</div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:119</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a31fcf797905470a84ec47fcd719b69a7"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Stack::Stack </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classstacks_1_1_stack.html">Stack</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other_stack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Конструктор копирования стека. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other_stack</td><td>Стек, всю информацию из которого необходимо перенести в создаваемый. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                             : <a class="code" href="classstacks_1_1_stack.html#a43923df95ebc551432e9d3e955c32959">num_items_</a>(other_stack.num_items_), <a class="code" href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">top_</a>(<span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        Node * node_iter = other_stack.top_, * tmp_top = <span class="keyword">nullptr</span>;    </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">if</span> (node_iter != <span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <a class="code" href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">top_</a> = <span class="keyword">new</span> Node(node_iter-&gt;data_);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            tmp_top = <a class="code" href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">top_</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            node_iter = node_iter-&gt;<a class="code" href="structstacks_1_1_stack_1_1_node.html#a8274602a782c7533e4f1c7936026913d">next_</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">while</span> (node_iter != <span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            tmp_top-&gt;<a class="code" href="structstacks_1_1_stack_1_1_node.html#a8274602a782c7533e4f1c7936026913d">next_</a> = <span class="keyword">new</span> Node(node_iter-&gt;data_);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            node_iter = node_iter-&gt;next_;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            tmp_top = tmp_top-&gt;next_;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="ttc" id="classstacks_1_1_stack_html_a43923df95ebc551432e9d3e955c32959"><div class="ttname"><a href="classstacks_1_1_stack.html#a43923df95ebc551432e9d3e955c32959">stacks::Stack::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Хранит текущее количество узлов в стеке. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:120</div></div>
+<div class="ttc" id="classstacks_1_1_stack_html_a68cd067db6b89353ec1f803eecd4cb74"><div class="ttname"><a href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">stacks::Stack::top_</a></div><div class="ttdeci">Node * top_</div><div class="ttdoc">Хранит указатель на текущий элемент на вершине стека. Если элементов нет, то он равен nullptr...</div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:119</div></div>
+<div class="ttc" id="structstacks_1_1_stack_1_1_node_html_a8274602a782c7533e4f1c7936026913d"><div class="ttname"><a href="structstacks_1_1_stack_1_1_node.html#a8274602a782c7533e4f1c7936026913d">stacks::Stack::Node::next_</a></div><div class="ttdeci">Node * next_</div><div class="ttdoc">Указатель на следующий узел стека. Если данный узел последний, то равна nullptr. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:109</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a40bd5dff912f0e5290777c4b46d17809"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Stack::~Stack </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Деструктор стека. </p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                    {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        Node * next_node;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classstacks_1_1_stack.html#a43923df95ebc551432e9d3e955c32959">num_items_</a> = 0;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">while</span> (<a class="code" href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">top_</a> != <span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            next_node = <a class="code" href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">top_</a>-&gt;<a class="code" href="structstacks_1_1_stack_1_1_node.html#a8274602a782c7533e4f1c7936026913d">next_</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keyword">delete</span> <a class="code" href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">top_</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">top_</a> = next_node;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="ttc" id="classstacks_1_1_stack_html_a43923df95ebc551432e9d3e955c32959"><div class="ttname"><a href="classstacks_1_1_stack.html#a43923df95ebc551432e9d3e955c32959">stacks::Stack::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Хранит текущее количество узлов в стеке. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:120</div></div>
+<div class="ttc" id="classstacks_1_1_stack_html_a68cd067db6b89353ec1f803eecd4cb74"><div class="ttname"><a href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">stacks::Stack::top_</a></div><div class="ttdeci">Node * top_</div><div class="ttdoc">Хранит указатель на текущий элемент на вершине стека. Если элементов нет, то он равен nullptr...</div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:119</div></div>
+<div class="ttc" id="structstacks_1_1_stack_1_1_node_html_a8274602a782c7533e4f1c7936026913d"><div class="ttname"><a href="structstacks_1_1_stack_1_1_node.html#a8274602a782c7533e4f1c7936026913d">stacks::Stack::Node::next_</a></div><div class="ttdeci">Node * next_</div><div class="ttdoc">Указатель на следующий узел стека. Если данный узел последний, то равна nullptr. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:109</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a class="anchor" id="aa556423ef52feaa947b2683440f2860c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stack::dump </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Вывод полной информации о стеке. </p>
+
+<p>Замещает <a class="el" href="classstacks_1_1_stack___interface.html#a0d7472426e55bd2f093d03c8d3e24d7e">stacks::Stack_Interface&lt; T &gt;</a>.</p>
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                             {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">unsigned</span> num_dashes = 50, num_chars1 = 11, num_chars2 = 21, num_chars3 = 8;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        std::cout &lt;&lt; std::setfill(<span class="charliteral">&#39;-&#39;</span>) &lt;&lt; std::setw(num_dashes) &lt;&lt; <span class="stringliteral">&quot;&quot;</span> &lt;&lt; std::setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;   Stack:\n\tnum. of items:&quot;</span> &lt;&lt; std::setw(num_chars1) &lt;&lt; <a class="code" href="classstacks_1_1_stack.html#a43923df95ebc551432e9d3e955c32959">num_items_</a> &lt;&lt; <span class="stringliteral">&quot;\n\ttop:&quot;</span> &lt;&lt; std::setw(num_chars2);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">top_</a>==<span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;nullptr&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">else</span> std::cout &lt;&lt; std::hex &lt;&lt; <a class="code" href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">top_</a> &lt;&lt; std::dec &lt;&lt; <span class="stringliteral">&quot; value: &quot;</span> &lt;&lt; <a class="code" href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">top_</a>-&gt;<a class="code" href="structstacks_1_1_stack_1_1_node.html#afbadaa4f786b45d6cd157070caf8ab83">data_</a> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;    All nodes:&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        Node * node_iter = <a class="code" href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">top_</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">size_t</span> i = 0;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">while</span> (node_iter != <span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;\t[&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;] &quot;</span> &lt;&lt; std::hex &lt;&lt; node_iter &lt;&lt; <span class="stringliteral">&quot; link to: &quot;</span> &lt;&lt; std::setw(num_chars3);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">if</span> (node_iter-&gt;next_ == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;nullptr&quot;</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">else</span> std::cout &lt;&lt; node_iter-&gt;next_;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            std::cout &lt;&lt; std::dec &lt;&lt; <span class="stringliteral">&quot; value: &quot;</span> &lt;&lt; node_iter-&gt;data_ &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            node_iter = node_iter-&gt;next_;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            ++i;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        std::cout &lt;&lt; std::setfill(<span class="charliteral">&#39;-&#39;</span>) &lt;&lt; std::setw(num_dashes) &lt;&lt; <span class="stringliteral">&quot;&quot;</span> &lt;&lt; std::setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
+<div class="ttc" id="structstacks_1_1_stack_1_1_node_html_afbadaa4f786b45d6cd157070caf8ab83"><div class="ttname"><a href="structstacks_1_1_stack_1_1_node.html#afbadaa4f786b45d6cd157070caf8ab83">stacks::Stack::Node::data_</a></div><div class="ttdeci">T data_</div><div class="ttdoc">Хранит элемент, переданый в стек. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:108</div></div>
+<div class="ttc" id="classstacks_1_1_stack_html_a43923df95ebc551432e9d3e955c32959"><div class="ttname"><a href="classstacks_1_1_stack.html#a43923df95ebc551432e9d3e955c32959">stacks::Stack::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Хранит текущее количество узлов в стеке. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:120</div></div>
+<div class="ttc" id="classstacks_1_1_stack_html_a68cd067db6b89353ec1f803eecd4cb74"><div class="ttname"><a href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">stacks::Stack::top_</a></div><div class="ttdeci">Node * top_</div><div class="ttdoc">Хранит указатель на текущий элемент на вершине стека. Если элементов нет, то он равен nullptr...</div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:119</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a2bd88c7b8faf901f4830ed616bf6478f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Stack::empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Проверка на пустоту стека. </p><dl class="section return"><dt>Возвращает</dt><dd>Логическую переменную, которая говорит о том, является ли стек пустым или нет. </dd></dl>
+
+<p>Замещает <a class="el" href="classstacks_1_1_stack___interface.html#adba704850dd0b74c389021f677f0997f">stacks::Stack_Interface&lt; T &gt;</a>.</p>
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                              {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">top_</a> == <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="ttc" id="classstacks_1_1_stack_html_a68cd067db6b89353ec1f803eecd4cb74"><div class="ttname"><a href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">stacks::Stack::top_</a></div><div class="ttdeci">Node * top_</div><div class="ttdoc">Хранит указатель на текущий элемент на вершине стека. Если элементов нет, то он равен nullptr...</div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:119</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a07eef6ab8e679b5720598904c2ff23b6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classstacks_1_1_stack.html">Stack</a>&lt; T &gt; &amp; Stack::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classstacks_1_1_stack.html">Stack</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>other_stack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Операция присваивания. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other_stack</td><td>Стек, всю информацию из которого необходимо перенести в текущий. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Ссылку на текущий стек с перенесённой информацией. </dd></dl>
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                                   {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="classstacks_1_1_stack.html#af675cab8a3cd6aa3be48d79de4b54d87">swap</a>(other_stack);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="ttc" id="classstacks_1_1_stack_html_af675cab8a3cd6aa3be48d79de4b54d87"><div class="ttname"><a href="classstacks_1_1_stack.html#af675cab8a3cd6aa3be48d79de4b54d87">stacks::Stack::swap</a></div><div class="ttdeci">void swap(Stack &amp;other_stack)</div><div class="ttdef"><b>Definition:</b> stk_linked_list_realization.h:25</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a09e820f3c3531cf3f401af3b3ca5d56f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stack::pop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Удаление узла с вершины стека. </p><dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">length_error</td><td>В случае, если стек оказался пустым. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="classstacks_1_1_stack___interface.html#a6dabc24afd751f1431636cc017439eee">stacks::Stack_Interface&lt; T &gt;</a>.</p>
+<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                      {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        ASSERT_NOT_EMPTY();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        Node * prev_top = <a class="code" href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">top_</a>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <a class="code" href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">top_</a> = <a class="code" href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">top_</a>-&gt;<a class="code" href="structstacks_1_1_stack_1_1_node.html#a8274602a782c7533e4f1c7936026913d">next_</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        prev_top-&gt;<a class="code" href="structstacks_1_1_stack_1_1_node.html#a8274602a782c7533e4f1c7936026913d">next_</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">delete</span> prev_top;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        --<a class="code" href="classstacks_1_1_stack.html#a43923df95ebc551432e9d3e955c32959">num_items_</a>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
+<div class="ttc" id="classstacks_1_1_stack_html_a43923df95ebc551432e9d3e955c32959"><div class="ttname"><a href="classstacks_1_1_stack.html#a43923df95ebc551432e9d3e955c32959">stacks::Stack::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Хранит текущее количество узлов в стеке. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:120</div></div>
+<div class="ttc" id="classstacks_1_1_stack_html_a68cd067db6b89353ec1f803eecd4cb74"><div class="ttname"><a href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">stacks::Stack::top_</a></div><div class="ttdeci">Node * top_</div><div class="ttdoc">Хранит указатель на текущий элемент на вершине стека. Если элементов нет, то он равен nullptr...</div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:119</div></div>
+<div class="ttc" id="structstacks_1_1_stack_1_1_node_html_a8274602a782c7533e4f1c7936026913d"><div class="ttname"><a href="structstacks_1_1_stack_1_1_node.html#a8274602a782c7533e4f1c7936026913d">stacks::Stack::Node::next_</a></div><div class="ttdeci">Node * next_</div><div class="ttdoc">Указатель на следующий узел стека. Если данный узел последний, то равна nullptr. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:109</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ad31b678390ac3f2076e9b757c95600be"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stack::push </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Добавление элемента. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">element</td><td>Ссылка на элемент, информацию из которого необходимо хранить в стеке. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="classstacks_1_1_stack___interface.html#aad8d07fc9dd444c7b9e2e307ebf4162d">stacks::Stack_Interface&lt; T &gt;</a>.</p>
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                                       {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        Node * new_top = <span class="keyword">new</span> Node(element, <a class="code" href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">top_</a>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <a class="code" href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">top_</a> = new_top;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        ++<a class="code" href="classstacks_1_1_stack.html#a43923df95ebc551432e9d3e955c32959">num_items_</a>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
+<div class="ttc" id="classstacks_1_1_stack_html_a43923df95ebc551432e9d3e955c32959"><div class="ttname"><a href="classstacks_1_1_stack.html#a43923df95ebc551432e9d3e955c32959">stacks::Stack::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Хранит текущее количество узлов в стеке. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:120</div></div>
+<div class="ttc" id="classstacks_1_1_stack_html_a68cd067db6b89353ec1f803eecd4cb74"><div class="ttname"><a href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">stacks::Stack::top_</a></div><div class="ttdeci">Node * top_</div><div class="ttdoc">Хранит указатель на текущий элемент на вершине стека. Если элементов нет, то он равен nullptr...</div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:119</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a3f3772679c16de93eae9eb92e2b85955"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Stack::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Метод определения размера стека. </p><dl class="section return"><dt>Возвращает</dt><dd>Размер стека. </dd></dl>
+
+<p>Замещает <a class="el" href="classstacks_1_1_stack___interface.html#a066e191826953e5bed95413de1041e29">stacks::Stack_Interface&lt; T &gt;</a>.</p>
+<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                               {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classstacks_1_1_stack.html#a43923df95ebc551432e9d3e955c32959">num_items_</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="ttc" id="classstacks_1_1_stack_html_a43923df95ebc551432e9d3e955c32959"><div class="ttname"><a href="classstacks_1_1_stack.html#a43923df95ebc551432e9d3e955c32959">stacks::Stack::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Хранит текущее количество узлов в стеке. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:120</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="af675cab8a3cd6aa3be48d79de4b54d87"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stack::swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classstacks_1_1_stack.html">Stack</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other_stack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Метод обмена содержимым стеков </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other_stack</td><td>Стек, информацией с которым необходимо поменяться. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                                          {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        std::swap(<a class="code" href="classstacks_1_1_stack.html#a43923df95ebc551432e9d3e955c32959">num_items_</a>, other_stack.num_items_);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        std::swap(<a class="code" href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">top_</a>, other_stack.top_);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="ttc" id="classstacks_1_1_stack_html_a43923df95ebc551432e9d3e955c32959"><div class="ttname"><a href="classstacks_1_1_stack.html#a43923df95ebc551432e9d3e955c32959">stacks::Stack::num_items_</a></div><div class="ttdeci">size_t num_items_</div><div class="ttdoc">Хранит текущее количество узлов в стеке. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:120</div></div>
+<div class="ttc" id="classstacks_1_1_stack_html_a68cd067db6b89353ec1f803eecd4cb74"><div class="ttname"><a href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">stacks::Stack::top_</a></div><div class="ttdeci">Node * top_</div><div class="ttdoc">Хранит указатель на текущий элемент на вершине стека. Если элементов нет, то он равен nullptr...</div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:119</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a20e64b09239efa6340b33546115424b6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T &amp; Stack::top </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Доступ к верхнему элементу стека. </p><dl class="section return"><dt>Возвращает</dt><dd>Ссылку на хранимую информацию на вершине стека. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">length_error</td><td>В случае, если стек оказался пустым. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещает <a class="el" href="classstacks_1_1_stack___interface.html#a367aa4742f24927015a2b9a396faee56">stacks::Stack_Interface&lt; T &gt;</a>.</p>
+<div class="fragment"><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                    {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        ASSERT_NOT_EMPTY();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">top_</a>-&gt;<a class="code" href="structstacks_1_1_stack_1_1_node.html#afbadaa4f786b45d6cd157070caf8ab83">data_</a>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+<div class="ttc" id="structstacks_1_1_stack_1_1_node_html_afbadaa4f786b45d6cd157070caf8ab83"><div class="ttname"><a href="structstacks_1_1_stack_1_1_node.html#afbadaa4f786b45d6cd157070caf8ab83">stacks::Stack::Node::data_</a></div><div class="ttdeci">T data_</div><div class="ttdoc">Хранит элемент, переданый в стек. </div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:108</div></div>
+<div class="ttc" id="classstacks_1_1_stack_html_a68cd067db6b89353ec1f803eecd4cb74"><div class="ttname"><a href="classstacks_1_1_stack.html#a68cd067db6b89353ec1f803eecd4cb74">stacks::Stack::top_</a></div><div class="ttdeci">Node * top_</div><div class="ttdoc">Хранит указатель на текущий элемент на вершине стека. Если элементов нет, то он равен nullptr...</div><div class="ttdef"><b>Definition:</b> stk_linked_list.h:119</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a class="anchor" id="a43923df95ebc551432e9d3e955c32959"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="classstacks_1_1_stack.html">stacks::Stack</a>&lt; T &gt;::num_items_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Хранит текущее количество узлов в стеке. </p>
+
+</div>
+</div>
+<a class="anchor" id="a68cd067db6b89353ec1f803eecd4cb74"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structstacks_1_1_stack_1_1_node.html">Node</a>* <a class="el" href="classstacks_1_1_stack.html">stacks::Stack</a>&lt; T &gt;::top_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Хранит указатель на текущий элемент на вершине стека. Если элементов нет, то он равен nullptr. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="stk__linked__list_8h_source.html">stk_linked_list.h</a></li>
+<li><a class="el" href="stk__linked__list__realization_8h_source.html">stk_linked_list_realization.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по Реализация стека. Последние изменения: Чт 2 Мар 2017 02:12:50. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

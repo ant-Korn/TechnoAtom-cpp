@@ -1,0 +1,38 @@
+\hypertarget{stk_8h}{}\section{Файл stk.\+h}
+\label{stk_8h}\index{stk.\+h@{stk.\+h}}
+
+
+Заголовочный файл с описанием класса стека на основе связанного списка.  
+
+
+\subsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classstk_1_1_stack___interface}{stk\+::\+Stack\+\_\+\+Interface$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Класс, представляющий интерфейс для классов стеков. \end{DoxyCompactList}\item 
+class \hyperlink{classstk_1_1_stack_as_list}{stk\+::\+Stack\+As\+List$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Класс стека, реализованный на основе связного списка. \end{DoxyCompactList}\item 
+struct \hyperlink{structstk_1_1_stack_as_list_1_1_node}{stk\+::\+Stack\+As\+List$<$ T $>$\+::\+Node}
+\begin{DoxyCompactList}\small\item\em Структура узла стека. \end{DoxyCompactList}\item 
+class \hyperlink{classstk_1_1_stack_as_mass}{stk\+::\+Stack\+As\+Mass$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Класс стека, реализованный на основе динамического массива. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Пространства имен}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacestk}{stk}
+\begin{DoxyCompactList}\small\item\em В данном пространстве имён представлены описания и реализации классов стеков на основе связанного списка и на основе массива. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Заголовочный файл с описанием класса стека на основе связанного списка. 
+
+Стек -\/ это структура данных с методом доступа к элементам L\+I\+F\+O (last in — first out). В данном случае его реализации представлены в виде стеков на основе списка и на основе массива.
+
+Класс стека на основе списка стека хранит в себе информацию о количестве элементов (элементы могут быть произвольного типа, но одного, передаваемого шаблону), хранимых в данный момент в нём, а также указатель на верхний (последний занесённый) узел в нём. Узел же хранит информацию об одном из переданных элементов, а также указатель на следующий элемент в порядке\+: (последний переданный)-\/$>$...-\/$>$(первый переданный).
+
+Класс стека на основе массива хранит в себе информацию\+: о количестве элементов в стеке; указатель на динамический массив, в котором хранятся элементы стека; текущий размер динамического массива. \begin{DoxyAuthor}{Автор}
+Корнилов Антон, 2017 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+24.\+02.\+2017 
+\end{DoxyDate}

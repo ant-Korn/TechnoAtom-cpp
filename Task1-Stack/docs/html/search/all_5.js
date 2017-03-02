@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['main',['main',['../main__file_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main_file.cpp']]],
-  ['main_5ffile_2ecpp',['main_file.cpp',['../main__file_8cpp.html',1,'']]]
+  ['operator_3d',['operator=',['../classstk_1_1_stack_as_list.html#ae7aad592f9620668c52ea8a68257bdd2',1,'stk::StackAsList::operator=()'],['../classstk_1_1_stack_as_mass.html#a3f5a454382082b41a6b57c4862491568',1,'stk::StackAsMass::operator=()']]]
 ];

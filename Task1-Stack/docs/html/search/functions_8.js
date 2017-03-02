@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['pop',['pop',['../classstk__as__list_1_1_stack.html#a09e820f3c3531cf3f401af3b3ca5d56f',1,'stk_as_list::Stack']]],
-  ['popfromempty',['PopFromEmpty',['../namespacestk__test.html#a8c0697020af071c235acd621eb93a83b',1,'stk_test']]],
-  ['push',['push',['../classstk__as__list_1_1_stack.html#ad31b678390ac3f2076e9b757c95600be',1,'stk_as_list::Stack']]],
-  ['pushingsinglenumber',['PushingSingleNumber',['../namespacestk__test.html#a38a19eb652f1ac8ca90dfa8236b187ff',1,'stk_test']]]
+  ['_7enode',['~Node',['../structstk_1_1_stack_as_list_1_1_node.html#a34fa2b48f60262c41d17caabba4dccf5',1,'stk::StackAsList::Node']]],
+  ['_7estackaslist',['~StackAsList',['../classstk_1_1_stack_as_list.html#aa1bf1ce65b108c2888d95195bfc9d473',1,'stk::StackAsList']]],
+  ['_7estackasmass',['~StackAsMass',['../classstk_1_1_stack_as_mass.html#a83bdc71146620e82a676ae572a6756b6',1,'stk::StackAsMass']]]
 ];

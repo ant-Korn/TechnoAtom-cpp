@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['_7enode',['~Node',['../structstk__as__list_1_1_stack_1_1_node.html#a04e480b19d2c55a2a551be7acd56d809',1,'stk_as_list::Stack::Node']]],
-  ['_7estack',['~Stack',['../classstk__as__list_1_1_stack.html#a40bd5dff912f0e5290777c4b46d17809',1,'stk_as_list::Stack']]]
+  ['_7enode',['~Node',['../structstacks_1_1_stack_as_list_1_1_node.html#a34fa2b48f60262c41d17caabba4dccf5',1,'stacks::StackAsList::Node']]],
+  ['_7estackaslist',['~StackAsList',['../classstacks_1_1_stack_as_list.html#aa1bf1ce65b108c2888d95195bfc9d473',1,'stacks::StackAsList']]],
+  ['_7estackasmass',['~StackAsMass',['../classstacks_1_1_stack_as_mass.html#a0494d1e9449621951a509ab4ce5a3da3',1,'stacks::StackAsMass']]]
 ];

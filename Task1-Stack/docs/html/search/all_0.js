@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['assignmentstacks',['AssignmentStacks',['../namespacestk__test.html#a216906bc10bd75cc160aeb2cd29c531f',1,'stk_test']]]
+  ['capacity_5f',['capacity_',['../classstk_1_1_stack_as_mass.html#aa03eca24b4a73e040690da8a14ffef8b',1,'stk::StackAsMass']]]
 ];
