@@ -9,11 +9,11 @@
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$template$<$ class T $>$ class Stack\+Type$>$ }\\void \hyperlink{namespacestk__test_a2d62ae6019345309a38d3a15ff28cc5d}{Test\+Push} ()
-\begin{DoxyCompactList}\small\item\em Тестирование на верное добавление одного элемента в стек переменных int. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Тестирование на верное добавление одного элемента в стек. \end{DoxyCompactList}\item 
 {\footnotesize template$<$template$<$ class T $>$ class Stack\+Type$>$ }\\void \hyperlink{namespacestk__test_a359fc261443d7bdcd4d9bfa43ce9dc7d}{Test\+Pop} ()
-\begin{DoxyCompactList}\small\item\em Тестирование на удаление узла из пустого стека. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Тестирование на удаление элемента с вершины стека. \end{DoxyCompactList}\item 
 {\footnotesize template$<$template$<$ class T $>$ class Stack\+Type$>$ }\\void \hyperlink{namespacestk__test_aadcc1a403c31c6f26df731492b32bb5e}{Test\+Top} ()
-\begin{DoxyCompactList}\small\item\em Тестирование на получение ссылки на верхний элемент пустого стека. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Тестирование на получение ссылки на верхний элемент. \end{DoxyCompactList}\item 
 {\footnotesize template$<$template$<$ class T $>$ class Stack\+Type$>$ }\\void \hyperlink{namespacestk__test_aa0039c601a4cf946ebfaad9ef3af4e7f}{Test\+Copy\+Constructor} ()
 \begin{DoxyCompactList}\small\item\em Тестирование на правильную работу конструктора копирования. \end{DoxyCompactList}\item 
 {\footnotesize template$<$template$<$ class T $>$ class Stack\+Type$>$ }\\void \hyperlink{namespacestk__test_a3ba77d093637ee2f396e752cea61aee0}{Test\+Assignment\+Operator} ()
@@ -41,44 +41,44 @@
 
 Тестирование на правильную работу операции присваивания. 
 
-
+Given\+: Два стека типа int, заполненных разными известными количествомами элементов. When\+: Совершаем присваивание второму стеку первого, проверяем что размеры данных массивов совпадают, последовательно проверяем, что элементы данных стеков, находящиеся на равной глубине имеют одинаковые данные, но хранятся по разным адресам в памяти. Then\+: Все проверки и действия успешно завершаются без вызова исключений. 
 \begin{DoxyCode}
-149                                  \{
-150         \textcolor{keyword}{auto} num\_of\_elements1 = 5;
-151         \textcolor{keyword}{auto} num\_of\_elements2 = 3;
-152         StackType<int> s\_i1;
-153         \textcolor{keywordflow}{try}\{
-154             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0;i<num\_of\_elements1;++i)\{
-155                 s\_i1.push(i);
-156             \}
-157         \}
-158         \textcolor{keywordflow}{catch}(std::exception & ex)\{
-159             std::cout << ex.what() << std::endl;
-160             s\_i1.dump();
-161         \}
-162         StackType<int> s\_i2;
-163         \textcolor{keywordflow}{try}\{
-164             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0;i<num\_of\_elements2;++i)\{
-165                 s\_i2.push(i);
-166             \}
-167             s\_i2 = s\_i1;                               
-168             ASSERT\_TRUE(s\_i1.size() == s\_i2.size());
-169             \textcolor{keywordflow}{while}(s\_i2.size())\{
-170                 ASSERT\_TRUE(s\_i1.top() == s\_i2.top());  
-171                 ASSERT\_TRUE(&s\_i1.top() != &s\_i2.top()); 
-172                 s\_i1.pop();
-173                 s\_i2.pop();
-174             \}
-175             ASSERT\_TRUE(s\_i1.empty());
-176             TEST\_PASSED();
-177         \}
-178         \textcolor{keywordflow}{catch}(std::exception & ex)\{
-179             std::cout << ex.what() << std::endl;
-180             s\_i1.dump();
-181             s\_i2.dump();
-182             TEST\_FAILED();
-183         \}
-184     \}
+172                                  \{
+173         \textcolor{keyword}{auto} num\_of\_elements1 = 5;
+174         \textcolor{keyword}{auto} num\_of\_elements2 = 3;
+175         StackType<int> s\_i1;
+176         \textcolor{keywordflow}{try}\{
+177             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0;i<num\_of\_elements1;++i)\{
+178                 s\_i1.push(i);
+179             \}
+180         \}
+181         \textcolor{keywordflow}{catch}(std::exception & ex)\{
+182             std::cout << ex.what() << std::endl;
+183             s\_i1.dump();
+184         \}
+185         StackType<int> s\_i2;
+186         \textcolor{keywordflow}{try}\{
+187             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0;i<num\_of\_elements2;++i)\{
+188                 s\_i2.push(i);
+189             \}
+190             s\_i2 = s\_i1;                               
+191             ASSERT\_TRUE(s\_i1.size() == s\_i2.size());
+192             \textcolor{keywordflow}{while}(s\_i2.size())\{
+193                 ASSERT\_TRUE(s\_i1.top() == s\_i2.top());  
+194                 ASSERT\_TRUE(&s\_i1.top() != &s\_i2.top()); 
+195                 s\_i1.pop();
+196                 s\_i2.pop();
+197             \}
+198             ASSERT\_TRUE(s\_i1.empty());
+199             TEST\_PASSED();
+200         \}
+201         \textcolor{keywordflow}{catch}(std::exception & ex)\{
+202             std::cout << ex.what() << std::endl;
+203             s\_i1.dump();
+204             s\_i2.dump();
+205             TEST\_FAILED();
+206         \}
+207     \}
 \end{DoxyCode}
 \hypertarget{namespacestk__test_aa0039c601a4cf946ebfaad9ef3af4e7f}{}\index{stk\+\_\+test@{stk\+\_\+test}!Test\+Copy\+Constructor@{Test\+Copy\+Constructor}}
 \index{Test\+Copy\+Constructor@{Test\+Copy\+Constructor}!stk\+\_\+test@{stk\+\_\+test}}
@@ -91,39 +91,39 @@
 
 Тестирование на правильную работу конструктора копирования. 
 
-
+Given\+: Стек типа int, заполненный известным количеством элементов. When\+: Создаём новый стек на основе первого при помощи конструктора копирования, проверяем что размеры данных массивов совпадают, последовательно проверяем, что элементы данных стеков, находящиеся на равной глубине имеют одинаковые данные, но хранятся по разным адресам в памяти. Then\+: Все проверки и действия успешно завершаются без вызова исключений. 
 \begin{DoxyCode}
-115                               \{
-116         \textcolor{keyword}{auto} num\_of\_elements = 5;
-117         StackType<int> s\_i1;
-118         \textcolor{keywordflow}{try}\{
-119             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0;i<num\_of\_elements;++i)\{
-120                 s\_i1.push(i);
-121             \}
-122         \}
-123         \textcolor{keywordflow}{catch}(std::exception & ex)\{
-124             std::cout << ex.what() << std::endl;
-125             s\_i1.dump();
-126         \}
-127         StackType<int> s\_i2(s\_i1);
-128         \textcolor{keywordflow}{try}\{
-129             ASSERT\_TRUE(s\_i1.size() == s\_i2.size());
-130             \textcolor{keywordflow}{while}(s\_i2.size())\{
-131                 ASSERT\_TRUE(s\_i1.top() == s\_i2.top());   
-132                 ASSERT\_TRUE(&s\_i1.top() != &s\_i2.top()); 
-133                 s\_i1.pop();
-134                 s\_i2.pop();
-135             \}
-136             ASSERT\_TRUE(s\_i1.empty());
-137             TEST\_PASSED();
-138         \}
-139         \textcolor{keywordflow}{catch}(std::exception & ex)\{
-140             std::cout << ex.what() << std::endl;
-141             s\_i1.dump();
-142             s\_i2.dump();
-143             TEST\_FAILED();
+133                               \{
+134         \textcolor{keyword}{auto} num\_of\_elements = 5;
+135         StackType<int> s\_i1;
+136         \textcolor{keywordflow}{try}\{
+137             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0;i<num\_of\_elements;++i)\{
+138                 s\_i1.push(i);
+139             \}
+140         \}
+141         \textcolor{keywordflow}{catch}(std::exception & ex)\{
+142             std::cout << ex.what() << std::endl;
+143             s\_i1.dump();
 144         \}
-145     \}
+145         StackType<int> s\_i2(s\_i1);
+146         \textcolor{keywordflow}{try}\{
+147             ASSERT\_TRUE(s\_i1.size() == s\_i2.size());
+148             \textcolor{keywordflow}{while}(s\_i2.size())\{
+149                 ASSERT\_TRUE(s\_i1.top() == s\_i2.top());   
+150                 ASSERT\_TRUE(&s\_i1.top() != &s\_i2.top()); 
+151                 s\_i1.pop();
+152                 s\_i2.pop();
+153             \}
+154             ASSERT\_TRUE(s\_i1.empty());
+155             TEST\_PASSED();
+156         \}
+157         \textcolor{keywordflow}{catch}(std::exception & ex)\{
+158             std::cout << ex.what() << std::endl;
+159             s\_i1.dump();
+160             s\_i2.dump();
+161             TEST\_FAILED();
+162         \}
+163     \}
 \end{DoxyCode}
 \hypertarget{namespacestk__test_a7c74f2910436ae4560d47bd088fa414c}{}\index{stk\+\_\+test@{stk\+\_\+test}!Test\+Empty@{Test\+Empty}}
 \index{Test\+Empty@{Test\+Empty}!stk\+\_\+test@{stk\+\_\+test}}
@@ -136,23 +136,23 @@
 
 Тестирование проверки стека на пустоту. 
 
-
+Given\+: Пустой стек типа int. When\+: Проверяем стек на пустоту, кладём в стек один элемент типа int, проверяем что стек не пустой. Then\+: Все проиходящие проверки успешно завершаются без вызова исключений. 
 \begin{DoxyCode}
-188                     \{
-189         StackType<int> s\_i;
-190         \textcolor{keyword}{const} \textcolor{keywordtype}{int} push\_num = 1;
-191         \textcolor{keywordflow}{try}\{
-192             ASSERT\_TRUE(s\_i.empty());
-193             s\_i.push(push\_num);
-194             ASSERT\_TRUE(!s\_i.empty());
-195             TEST\_PASSED();
-196         \}
-197         \textcolor{keywordflow}{catch}(std::exception & ex)\{
-198             std::cout << ex.what() << std::endl;
-199             s\_i.dump();
-200             TEST\_FAILED();
-201         \}
-202     \}
+215                     \{
+216         StackType<int> s\_i;
+217         \textcolor{keyword}{const} \textcolor{keywordtype}{int} push\_num = 1;
+218         \textcolor{keywordflow}{try}\{
+219             ASSERT\_TRUE(s\_i.empty());
+220             s\_i.push(push\_num);
+221             ASSERT\_TRUE(!s\_i.empty());
+222             TEST\_PASSED();
+223         \}
+224         \textcolor{keywordflow}{catch}(std::exception & ex)\{
+225             std::cout << ex.what() << std::endl;
+226             s\_i.dump();
+227             TEST\_FAILED();
+228         \}
+229     \}
 \end{DoxyCode}
 \hypertarget{namespacestk__test_a359fc261443d7bdcd4d9bfa43ce9dc7d}{}\index{stk\+\_\+test@{stk\+\_\+test}!Test\+Pop@{Test\+Pop}}
 \index{Test\+Pop@{Test\+Pop}!stk\+\_\+test@{stk\+\_\+test}}
@@ -163,26 +163,26 @@
 )}\label{namespacestk__test_a359fc261443d7bdcd4d9bfa43ce9dc7d}
 
 
-Тестирование на удаление узла из пустого стека. 
+Тестирование на удаление элемента с вершины стека. 
 
-
+Given\+: Стек типа int с одним хранимым значением. When\+: Удаляем из стека один элемент, проверяем стек на пустоту, удаляем из стека ещё один элемент. Then\+: Проверка на пустоту стека успешно завершается, но при последующем удалении элемента вызывается исключение с сообщением о работе с пустым стеком и выводится его содержимое. 
 \begin{DoxyCode}
-75                   \{
-76         StackType<int> s\_i;
-77         \textcolor{keyword}{const} \textcolor{keywordtype}{int} value = 1;
-78         \textcolor{keywordflow}{try}\{
-79             s\_i.push(value);
-80             s\_i.pop();
-81             ASSERT\_TRUE(s\_i.size() == 0);
-82             s\_i.pop();
-83             TEST\_FAILED();
-84             s\_i.dump();
-85         \}
-86         \textcolor{keywordflow}{catch}(std::exception & ex)\{
-87             std::cout << ex.what() << std::endl;
-88             TEST\_PASSED();
-89         \}
-90     \}
+83                   \{
+84         StackType<int> s\_i;
+85         \textcolor{keyword}{const} \textcolor{keywordtype}{int} value = 1;
+86         \textcolor{keywordflow}{try}\{
+87             s\_i.push(value);
+88             s\_i.pop();
+89             ASSERT\_TRUE(s\_i.size() == 0);
+90             s\_i.pop();
+91             TEST\_FAILED();
+92             s\_i.dump();
+93         \}
+94         \textcolor{keywordflow}{catch}(std::exception & ex)\{
+95             std::cout << ex.what() << std::endl;
+96             TEST\_PASSED();
+97         \}
+98     \}
 \end{DoxyCode}
 \hypertarget{namespacestk__test_a2d62ae6019345309a38d3a15ff28cc5d}{}\index{stk\+\_\+test@{stk\+\_\+test}!Test\+Push@{Test\+Push}}
 \index{Test\+Push@{Test\+Push}!stk\+\_\+test@{stk\+\_\+test}}
@@ -193,26 +193,26 @@
 )}\label{namespacestk__test_a2d62ae6019345309a38d3a15ff28cc5d}
 
 
-Тестирование на верное добавление одного элемента в стек переменных int. 
+Тестирование на верное добавление одного элемента в стек. 
 
-
+Given\+: Пустой стек типа int. When\+: Кладём в стек число 3802, сравниваем число на вершине стека с числом 0x\+E\+D\+A, удаляем из стека один элемент, проверяем стек на пустоту. Then\+: Все действия со стеком и проиходящие проверки успешно завершаются без вызова исключений. 
 \begin{DoxyCode}
-56                    \{
-57         StackType<int> s\_i;                                                 
-58         \textcolor{keywordflow}{try}\{                                                                                                
-59             s\_i.push(3802);                                         
-60             ASSERT\_TRUE(s\_i.top() == 0xEDA);
-61             s\_i.pop();
-62             ASSERT\_TRUE(s\_i.size() == 0);
-63             ASSERT\_TRUE(s\_i.empty());
-64             TEST\_PASSED();
-65         \}                                                               
-66         \textcolor{keywordflow}{catch}(std::exception & ex)\{   
-67             std::cout << ex.what() << std::endl;
-68             s\_i.dump();
-69             TEST\_FAILED();
-70         \} 
-71     \}
+60                    \{
+61         StackType<int> s\_i;                                                 
+62         \textcolor{keywordflow}{try}\{                                                                                                
+63             s\_i.push(3802);                                         
+64             ASSERT\_TRUE(s\_i.top() == 0xEDA);
+65             s\_i.pop();
+66             ASSERT\_TRUE(s\_i.size() == 0);
+67             ASSERT\_TRUE(s\_i.empty());
+68             TEST\_PASSED();
+69         \}                                                               
+70         \textcolor{keywordflow}{catch}(std::exception & ex)\{   
+71             std::cout << ex.what() << std::endl;
+72             s\_i.dump();
+73             TEST\_FAILED();
+74         \} 
+75     \}
 \end{DoxyCode}
 \hypertarget{namespacestk__test_a24faf9dd70ba3d62af3a455dd9437090}{}\index{stk\+\_\+test@{stk\+\_\+test}!Test\+Size@{Test\+Size}}
 \index{Test\+Size@{Test\+Size}!stk\+\_\+test@{stk\+\_\+test}}
@@ -225,25 +225,25 @@
 
 Тестирование получения размера стека. 
 
-
+Given\+: Пустой стек типа int, количество элементов для заполнения. When\+: Получаем размер стека и сравниваем его с нулём, кладём в стек данное количество элементов типа int, получаем размер стека и сравниваем его с известным количеством элементов. Then\+: Все проиходящие проверки успешно завершаются без вызова исключений. 
 \begin{DoxyCode}
-206                    \{
-207         StackType<int> s\_i;
-208         \textcolor{keyword}{const} \textcolor{keywordtype}{int} num\_of\_elements = 3;
-209         \textcolor{keywordflow}{try}\{
-210             ASSERT\_TRUE(s\_i.size()==0);
-211             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0; i<num\_of\_elements; ++i)\{
-212                 s\_i.push(i);
-213             \}
-214             ASSERT\_TRUE(s\_i.size()==num\_of\_elements);
-215             TEST\_PASSED();
-216         \}
-217         \textcolor{keywordflow}{catch}(std::exception & ex)\{
-218             std::cout << ex.what() << std::endl;
-219             s\_i.dump();
-220             TEST\_FAILED();
-221         \}
-222     \}
+237                    \{
+238         StackType<int> s\_i;
+239         \textcolor{keyword}{const} \textcolor{keywordtype}{int} num\_of\_elements = 3;
+240         \textcolor{keywordflow}{try}\{
+241             ASSERT\_TRUE(s\_i.size()==0);
+242             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0; i<num\_of\_elements; ++i)\{
+243                 s\_i.push(i);
+244             \}
+245             ASSERT\_TRUE(s\_i.size()==num\_of\_elements);
+246             TEST\_PASSED();
+247         \}
+248         \textcolor{keywordflow}{catch}(std::exception & ex)\{
+249             std::cout << ex.what() << std::endl;
+250             s\_i.dump();
+251             TEST\_FAILED();
+252         \}
+253     \}
 \end{DoxyCode}
 \hypertarget{namespacestk__test_af617996279c5a7955ab644d545de7efc}{}\index{stk\+\_\+test@{stk\+\_\+test}!Test\+Swap@{Test\+Swap}}
 \index{Test\+Swap@{Test\+Swap}!stk\+\_\+test@{stk\+\_\+test}}
@@ -256,42 +256,42 @@
 
 Тестирование обмена содержимым стеков. 
 
-
+Given\+: Два стека типа int, заполненных разными известными количествомами известных элементов. When\+: Вызываем метод обмена элементами стеков, проверяем, что размеры стеков взаимно поменялись, а также то, что они взаимно обменялись элементами, находящимися на соответствующей глубине. Then\+: Все проверки и действия успешно завершаются без вызова исключений. 
 \begin{DoxyCode}
-226                    \{
-227         StackType<int> s\_i1, s\_i2;
-228         \textcolor{keyword}{const} \textcolor{keywordtype}{int} num\_of\_elements1 = 3, num\_of\_elements2 = 5;
-229         \textcolor{keywordflow}{try}\{
-230             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0; i<num\_of\_elements1; ++i)\{
-231                 s\_i1.push(i);
-232             \}
-233             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0; i<num\_of\_elements2; ++i)\{
-234                 s\_i2.push(i);
-235             \}
-236 
-237             s\_i1.swap(s\_i2);
-238 
-239             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=(num\_of\_elements2-1); i>=0; --i)\{
-240                 ASSERT\_TRUE(s\_i1.top()==i);
-241                 s\_i1.pop();
-242             \}
-243             ASSERT\_TRUE(s\_i1.empty());
-244 
-245             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=(num\_of\_elements1-1); i>=0; --i)\{
-246                 ASSERT\_TRUE(s\_i2.top()==i);
-247                 s\_i2.pop();
-248             \}
-249             ASSERT\_TRUE(s\_i2.empty());
-250 
-251             TEST\_PASSED();
-252         \}
-253         \textcolor{keywordflow}{catch}(std::exception & ex)\{
-254             std::cout << ex.what() << std::endl;
-255             s\_i1.dump();
-256             s\_i2.dump();
-257             TEST\_FAILED();
-258         \}
-259     \}
+261                    \{
+262         StackType<int> s\_i1, s\_i2;
+263         \textcolor{keyword}{const} \textcolor{keywordtype}{int} num\_of\_elements1 = 3, num\_of\_elements2 = 5;
+264         \textcolor{keywordflow}{try}\{
+265             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0; i<num\_of\_elements1; ++i)\{
+266                 s\_i1.push(i);
+267             \}
+268             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0; i<num\_of\_elements2; ++i)\{
+269                 s\_i2.push(i);
+270             \}
+271 
+272             s\_i1.swap(s\_i2);
+273 
+274             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=(num\_of\_elements2-1); i>=0; --i)\{
+275                 ASSERT\_TRUE(s\_i1.top()==i);
+276                 s\_i1.pop();
+277             \}
+278             ASSERT\_TRUE(s\_i1.empty());
+279 
+280             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=(num\_of\_elements1-1); i>=0; --i)\{
+281                 ASSERT\_TRUE(s\_i2.top()==i);
+282                 s\_i2.pop();
+283             \}
+284             ASSERT\_TRUE(s\_i2.empty());
+285 
+286             TEST\_PASSED();
+287         \}
+288         \textcolor{keywordflow}{catch}(std::exception & ex)\{
+289             std::cout << ex.what() << std::endl;
+290             s\_i1.dump();
+291             s\_i2.dump();
+292             TEST\_FAILED();
+293         \}
+294     \}
 \end{DoxyCode}
 \hypertarget{namespacestk__test_aadcc1a403c31c6f26df731492b32bb5e}{}\index{stk\+\_\+test@{stk\+\_\+test}!Test\+Top@{Test\+Top}}
 \index{Test\+Top@{Test\+Top}!stk\+\_\+test@{stk\+\_\+test}}
@@ -302,26 +302,26 @@
 )}\label{namespacestk__test_aadcc1a403c31c6f26df731492b32bb5e}
 
 
-Тестирование на получение ссылки на верхний элемент пустого стека. 
+Тестирование на получение ссылки на верхний элемент. 
 
-
+Given\+: Стек типа int с одним хранимым известным значением. When\+: Получаем ссылку на верхний элемент и сравниваем его с известным значением, удаляем из стека один элемент, проверяем стек на пустоту, получаем ссылку на следующий верхний элемент и выводим её содержимое. Then\+: Все действия и проверки успешно завершаются, кроме последнего получения ссылки на верхний элемент, при этом вызывается исключение с сообщением о работе с пустым стеком и выводится его содержимое. 
 \begin{DoxyCode}
-94                   \{
-95         StackType<int> s\_i;
-96         \textcolor{keyword}{const} \textcolor{keywordtype}{int} value = 1;
-97         \textcolor{keywordflow}{try}\{
-98             s\_i.push(value);
-99             ASSERT\_TRUE(s\_i.top() == 1);
-100             s\_i.pop();
-101             ASSERT\_TRUE(s\_i.size() == 0);
-102             \textcolor{keywordtype}{int} var = s\_i.top();
-103             std::cout << \textcolor{stringliteral}{"Top variable = "} << var << std::endl;
-104             TEST\_FAILED();
-105             s\_i.dump();
-106         \}
-107         \textcolor{keywordflow}{catch}(std::exception & ex)\{
-108             std::cout << ex.what() << std::endl;
-109             TEST\_PASSED();
-110         \}
-111     \}
+107                   \{
+108         StackType<int> s\_i;
+109         \textcolor{keyword}{const} \textcolor{keywordtype}{int} value = 1;
+110         \textcolor{keywordflow}{try}\{
+111             s\_i.push(value);
+112             ASSERT\_TRUE(s\_i.top() == 1);
+113             s\_i.pop();
+114             ASSERT\_TRUE(s\_i.size() == 0);
+115             \textcolor{keywordtype}{int} var = s\_i.top();
+116             std::cout << \textcolor{stringliteral}{"Top variable = "} << var << std::endl;
+117             TEST\_FAILED();
+118             s\_i.dump();
+119         \}
+120         \textcolor{keywordflow}{catch}(std::exception & ex)\{
+121             std::cout << ex.what() << std::endl;
+122             TEST\_PASSED();
+123         \}
+124     \}
 \end{DoxyCode}

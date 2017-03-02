@@ -95,15 +95,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 Функции</h2></td></tr>
 <tr class="memitem:a2d62ae6019345309a38d3a15ff28cc5d"><td class="memTemplParams" colspan="2">template&lt;template&lt; class T &gt; class StackType&gt; </td></tr>
 <tr class="memitem:a2d62ae6019345309a38d3a15ff28cc5d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacestk__test.html#a2d62ae6019345309a38d3a15ff28cc5d">TestPush</a> ()</td></tr>
-<tr class="memdesc:a2d62ae6019345309a38d3a15ff28cc5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тестирование на верное добавление одного элемента в стек переменных int.  <a href="#a2d62ae6019345309a38d3a15ff28cc5d">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:a2d62ae6019345309a38d3a15ff28cc5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тестирование на верное добавление одного элемента в стек.  <a href="#a2d62ae6019345309a38d3a15ff28cc5d">Подробнее...</a><br /></td></tr>
 <tr class="separator:a2d62ae6019345309a38d3a15ff28cc5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a359fc261443d7bdcd4d9bfa43ce9dc7d"><td class="memTemplParams" colspan="2">template&lt;template&lt; class T &gt; class StackType&gt; </td></tr>
 <tr class="memitem:a359fc261443d7bdcd4d9bfa43ce9dc7d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacestk__test.html#a359fc261443d7bdcd4d9bfa43ce9dc7d">TestPop</a> ()</td></tr>
-<tr class="memdesc:a359fc261443d7bdcd4d9bfa43ce9dc7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тестирование на удаление узла из пустого стека.  <a href="#a359fc261443d7bdcd4d9bfa43ce9dc7d">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:a359fc261443d7bdcd4d9bfa43ce9dc7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тестирование на удаление элемента с вершины стека.  <a href="#a359fc261443d7bdcd4d9bfa43ce9dc7d">Подробнее...</a><br /></td></tr>
 <tr class="separator:a359fc261443d7bdcd4d9bfa43ce9dc7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadcc1a403c31c6f26df731492b32bb5e"><td class="memTemplParams" colspan="2">template&lt;template&lt; class T &gt; class StackType&gt; </td></tr>
 <tr class="memitem:aadcc1a403c31c6f26df731492b32bb5e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacestk__test.html#aadcc1a403c31c6f26df731492b32bb5e">TestTop</a> ()</td></tr>
-<tr class="memdesc:aadcc1a403c31c6f26df731492b32bb5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тестирование на получение ссылки на верхний элемент пустого стека.  <a href="#aadcc1a403c31c6f26df731492b32bb5e">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:aadcc1a403c31c6f26df731492b32bb5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тестирование на получение ссылки на верхний элемент.  <a href="#aadcc1a403c31c6f26df731492b32bb5e">Подробнее...</a><br /></td></tr>
 <tr class="separator:aadcc1a403c31c6f26df731492b32bb5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0039c601a4cf946ebfaad9ef3af4e7f"><td class="memTemplParams" colspan="2">template&lt;template&lt; class T &gt; class StackType&gt; </td></tr>
 <tr class="memitem:aa0039c601a4cf946ebfaad9ef3af4e7f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacestk__test.html#aa0039c601a4cf946ebfaad9ef3af4e7f">TestCopyConstructor</a> ()</td></tr>
@@ -145,42 +145,43 @@ template&lt;template&lt; class T &gt; class StackType&gt; </div>
 </div><div class="memdoc">
 
 <p>Тестирование на правильную работу операции присваивания. </p>
-<div class="fragment"><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                                 {</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keyword">auto</span> num_of_elements1 = 5;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keyword">auto</span> num_of_elements2 = 3;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        StackType&lt;int&gt; s_i1;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">try</span>{</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i=0;i&lt;num_of_elements1;++i){</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                s_i1.push(i);</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            }</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        }</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">catch</span>(std::exception &amp; ex){</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            std::cout &lt;&lt; ex.what() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            s_i1.dump();</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        }</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        StackType&lt;int&gt; s_i2;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">try</span>{</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i=0;i&lt;num_of_elements2;++i){</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                s_i2.push(i);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            }</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            s_i2 = s_i1;                               </div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            ASSERT_TRUE(s_i1.size() == s_i2.size());</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">while</span>(s_i2.size()){</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                ASSERT_TRUE(s_i1.top() == s_i2.top());  </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                ASSERT_TRUE(&amp;s_i1.top() != &amp;s_i2.top()); </div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                s_i1.pop();</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                s_i2.pop();</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            }</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            ASSERT_TRUE(s_i1.empty());</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            TEST_PASSED();</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        }</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">catch</span>(std::exception &amp; ex){</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            std::cout &lt;&lt; ex.what() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            s_i1.dump();</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            s_i2.dump();</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            TEST_FAILED();</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        }</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    }</div>
+<p>Given: Два стека типа int, заполненных разными известными количествомами элементов. When: Совершаем присваивание второму стеку первого, проверяем что размеры данных массивов совпадают, последовательно проверяем, что элементы данных стеков, находящиеся на равной глубине имеют одинаковые данные, но хранятся по разным адресам в памяти. Then: Все проверки и действия успешно завершаются без вызова исключений. </p>
+<div class="fragment"><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                                 {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keyword">auto</span> num_of_elements1 = 5;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keyword">auto</span> num_of_elements2 = 3;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        StackType&lt;int&gt; s_i1;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordflow">try</span>{</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i=0;i&lt;num_of_elements1;++i){</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                s_i1.push(i);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">catch</span>(std::exception &amp; ex){</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            std::cout &lt;&lt; ex.what() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            s_i1.dump();</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        StackType&lt;int&gt; s_i2;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordflow">try</span>{</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i=0;i&lt;num_of_elements2;++i){</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                s_i2.push(i);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            s_i2 = s_i1;                               </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            ASSERT_TRUE(s_i1.size() == s_i2.size());</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="keywordflow">while</span>(s_i2.size()){</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                ASSERT_TRUE(s_i1.top() == s_i2.top());  </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                ASSERT_TRUE(&amp;s_i1.top() != &amp;s_i2.top()); </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                s_i1.pop();</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                s_i2.pop();</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            ASSERT_TRUE(s_i1.empty());</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            TEST_PASSED();</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordflow">catch</span>(std::exception &amp; ex){</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            std::cout &lt;&lt; ex.what() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            s_i1.dump();</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            s_i2.dump();</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            TEST_FAILED();</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        }</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -200,37 +201,38 @@ template&lt;template&lt; class T &gt; class StackType&gt; </div>
 </div><div class="memdoc">
 
 <p>Тестирование на правильную работу конструктора копирования. </p>
-<div class="fragment"><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                              {</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keyword">auto</span> num_of_elements = 5;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        StackType&lt;int&gt; s_i1;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">try</span>{</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i=0;i&lt;num_of_elements;++i){</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                s_i1.push(i);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">catch</span>(std::exception &amp; ex){</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            std::cout &lt;&lt; ex.what() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            s_i1.dump();</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        StackType&lt;int&gt; s_i2(s_i1);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">try</span>{</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            ASSERT_TRUE(s_i1.size() == s_i2.size());</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keywordflow">while</span>(s_i2.size()){</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                ASSERT_TRUE(s_i1.top() == s_i2.top());   </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                ASSERT_TRUE(&amp;s_i1.top() != &amp;s_i2.top()); </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                s_i1.pop();</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                s_i2.pop();</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            }</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            ASSERT_TRUE(s_i1.empty());</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            TEST_PASSED();</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        }</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">catch</span>(std::exception &amp; ex){</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            std::cout &lt;&lt; ex.what() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            s_i1.dump();</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            s_i2.dump();</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            TEST_FAILED();</div>
+<p>Given: Стек типа int, заполненный известным количеством элементов. When: Создаём новый стек на основе первого при помощи конструктора копирования, проверяем что размеры данных массивов совпадают, последовательно проверяем, что элементы данных стеков, находящиеся на равной глубине имеют одинаковые данные, но хранятся по разным адресам в памяти. Then: Все проверки и действия успешно завершаются без вызова исключений. </p>
+<div class="fragment"><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                              {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keyword">auto</span> num_of_elements = 5;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        StackType&lt;int&gt; s_i1;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">try</span>{</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i=0;i&lt;num_of_elements;++i){</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                s_i1.push(i);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordflow">catch</span>(std::exception &amp; ex){</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            std::cout &lt;&lt; ex.what() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            s_i1.dump();</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        }</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        StackType&lt;int&gt; s_i2(s_i1);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordflow">try</span>{</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            ASSERT_TRUE(s_i1.size() == s_i2.size());</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            <span class="keywordflow">while</span>(s_i2.size()){</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                ASSERT_TRUE(s_i1.top() == s_i2.top());   </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                ASSERT_TRUE(&amp;s_i1.top() != &amp;s_i2.top()); </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                s_i1.pop();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                s_i2.pop();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            ASSERT_TRUE(s_i1.empty());</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            TEST_PASSED();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">catch</span>(std::exception &amp; ex){</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            std::cout &lt;&lt; ex.what() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            s_i1.dump();</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            s_i2.dump();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            TEST_FAILED();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -250,21 +252,22 @@ template&lt;template&lt; class T &gt; class StackType&gt; </div>
 </div><div class="memdoc">
 
 <p>Тестирование проверки стека на пустоту. </p>
-<div class="fragment"><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                    {</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        StackType&lt;int&gt; s_i;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> push_num = 1;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">try</span>{</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            ASSERT_TRUE(s_i.empty());</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            s_i.push(push_num);</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            ASSERT_TRUE(!s_i.empty());</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            TEST_PASSED();</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        }</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">catch</span>(std::exception &amp; ex){</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            std::cout &lt;&lt; ex.what() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            s_i.dump();</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            TEST_FAILED();</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        }</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
+<p>Given: Пустой стек типа int. When: Проверяем стек на пустоту, кладём в стек один элемент типа int, проверяем что стек не пустой. Then: Все проиходящие проверки успешно завершаются без вызова исключений. </p>
+<div class="fragment"><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                    {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        StackType&lt;int&gt; s_i;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> push_num = 1;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keywordflow">try</span>{</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            ASSERT_TRUE(s_i.empty());</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            s_i.push(push_num);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            ASSERT_TRUE(!s_i.empty());</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            TEST_PASSED();</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        }</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">catch</span>(std::exception &amp; ex){</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            std::cout &lt;&lt; ex.what() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            s_i.dump();</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            TEST_FAILED();</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -283,23 +286,24 @@ template&lt;template&lt; class T &gt; class StackType&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Тестирование на удаление узла из пустого стека. </p>
-<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                  {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        StackType&lt;int&gt; s_i;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> value = 1;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">try</span>{</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            s_i.push(value);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            s_i.pop();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            ASSERT_TRUE(s_i.size() == 0);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            s_i.pop();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            TEST_FAILED();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            s_i.dump();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">catch</span>(std::exception &amp; ex){</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            std::cout &lt;&lt; ex.what() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            TEST_PASSED();</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<p>Тестирование на удаление элемента с вершины стека. </p>
+<p>Given: Стек типа int с одним хранимым значением. When: Удаляем из стека один элемент, проверяем стек на пустоту, удаляем из стека ещё один элемент. Then: Проверка на пустоту стека успешно завершается, но при последующем удалении элемента вызывается исключение с сообщением о работе с пустым стеком и выводится его содержимое. </p>
+<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                  {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        StackType&lt;int&gt; s_i;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> value = 1;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">try</span>{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            s_i.push(value);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            s_i.pop();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            ASSERT_TRUE(s_i.size() == 0);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            s_i.pop();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            TEST_FAILED();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            s_i.dump();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">catch</span>(std::exception &amp; ex){</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            std::cout &lt;&lt; ex.what() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            TEST_PASSED();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -318,23 +322,24 @@ template&lt;template&lt; class T &gt; class StackType&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Тестирование на верное добавление одного элемента в стек переменных int. </p>
-<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                   {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        StackType&lt;int&gt; s_i;                                                 </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">try</span>{                                                                                                </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            s_i.push(3802);                                         </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            ASSERT_TRUE(s_i.top() == 0xEDA);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            s_i.pop();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            ASSERT_TRUE(s_i.size() == 0);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            ASSERT_TRUE(s_i.empty());</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            TEST_PASSED();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }                                                               </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">catch</span>(std::exception &amp; ex){   </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            std::cout &lt;&lt; ex.what() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            s_i.dump();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            TEST_FAILED();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        } </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<p>Тестирование на верное добавление одного элемента в стек. </p>
+<p>Given: Пустой стек типа int. When: Кладём в стек число 3802, сравниваем число на вершине стека с числом 0xEDA, удаляем из стека один элемент, проверяем стек на пустоту. Then: Все действия со стеком и проиходящие проверки успешно завершаются без вызова исключений. </p>
+<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                   {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        StackType&lt;int&gt; s_i;                                                 </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">try</span>{                                                                                                </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            s_i.push(3802);                                         </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            ASSERT_TRUE(s_i.top() == 0xEDA);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            s_i.pop();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            ASSERT_TRUE(s_i.size() == 0);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            ASSERT_TRUE(s_i.empty());</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            TEST_PASSED();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }                                                               </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">catch</span>(std::exception &amp; ex){   </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            std::cout &lt;&lt; ex.what() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            s_i.dump();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            TEST_FAILED();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        } </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -354,23 +359,24 @@ template&lt;template&lt; class T &gt; class StackType&gt; </div>
 </div><div class="memdoc">
 
 <p>Тестирование получения размера стека. </p>
-<div class="fragment"><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                   {</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        StackType&lt;int&gt; s_i;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> num_of_elements = 3;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordflow">try</span>{</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            ASSERT_TRUE(s_i.size()==0);</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i=0; i&lt;num_of_elements; ++i){</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                s_i.push(i);</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            }</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            ASSERT_TRUE(s_i.size()==num_of_elements);</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            TEST_PASSED();</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        }</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordflow">catch</span>(std::exception &amp; ex){</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            std::cout &lt;&lt; ex.what() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            s_i.dump();</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            TEST_FAILED();</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        }</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    }</div>
+<p>Given: Пустой стек типа int, количество элементов для заполнения. When: Получаем размер стека и сравниваем его с нулём, кладём в стек данное количество элементов типа int, получаем размер стека и сравниваем его с известным количеством элементов. Then: Все проиходящие проверки успешно завершаются без вызова исключений. </p>
+<div class="fragment"><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                   {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        StackType&lt;int&gt; s_i;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> num_of_elements = 3;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordflow">try</span>{</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            ASSERT_TRUE(s_i.size()==0);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i=0; i&lt;num_of_elements; ++i){</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                s_i.push(i);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            ASSERT_TRUE(s_i.size()==num_of_elements);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            TEST_PASSED();</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keywordflow">catch</span>(std::exception &amp; ex){</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            std::cout &lt;&lt; ex.what() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            s_i.dump();</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            TEST_FAILED();</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        }</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -390,40 +396,41 @@ template&lt;template&lt; class T &gt; class StackType&gt; </div>
 </div><div class="memdoc">
 
 <p>Тестирование обмена содержимым стеков. </p>
-<div class="fragment"><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                   {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        StackType&lt;int&gt; s_i1, s_i2;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> num_of_elements1 = 3, num_of_elements2 = 5;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keywordflow">try</span>{</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i=0; i&lt;num_of_elements1; ++i){</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                s_i1.push(i);</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            }</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i=0; i&lt;num_of_elements2; ++i){</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                s_i2.push(i);</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            }</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            s_i1.swap(s_i2);</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i=(num_of_elements2-1); i&gt;=0; --i){</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                ASSERT_TRUE(s_i1.top()==i);</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                s_i1.pop();</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            }</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            ASSERT_TRUE(s_i1.empty());</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i=(num_of_elements1-1); i&gt;=0; --i){</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                ASSERT_TRUE(s_i2.top()==i);</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                s_i2.pop();</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            }</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            ASSERT_TRUE(s_i2.empty());</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            TEST_PASSED();</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        }</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordflow">catch</span>(std::exception &amp; ex){</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            std::cout &lt;&lt; ex.what() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            s_i1.dump();</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            s_i2.dump();</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            TEST_FAILED();</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        }</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    }</div>
+<p>Given: Два стека типа int, заполненных разными известными количествомами известных элементов. When: Вызываем метод обмена элементами стеков, проверяем, что размеры стеков взаимно поменялись, а также то, что они взаимно обменялись элементами, находящимися на соответствующей глубине. Then: Все проверки и действия успешно завершаются без вызова исключений. </p>
+<div class="fragment"><div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                   {</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        StackType&lt;int&gt; s_i1, s_i2;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> num_of_elements1 = 3, num_of_elements2 = 5;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keywordflow">try</span>{</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i=0; i&lt;num_of_elements1; ++i){</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                s_i1.push(i);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i=0; i&lt;num_of_elements2; ++i){</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                s_i2.push(i);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            }</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            s_i1.swap(s_i2);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i=(num_of_elements2-1); i&gt;=0; --i){</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                ASSERT_TRUE(s_i1.top()==i);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                s_i1.pop();</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            }</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            ASSERT_TRUE(s_i1.empty());</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i=(num_of_elements1-1); i&gt;=0; --i){</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                ASSERT_TRUE(s_i2.top()==i);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                s_i2.pop();</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            }</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            ASSERT_TRUE(s_i2.empty());</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            TEST_PASSED();</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        }</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordflow">catch</span>(std::exception &amp; ex){</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            std::cout &lt;&lt; ex.what() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            s_i1.dump();</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            s_i2.dump();</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            TEST_FAILED();</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        }</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -442,32 +449,33 @@ template&lt;template&lt; class T &gt; class StackType&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Тестирование на получение ссылки на верхний элемент пустого стека. </p>
-<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                  {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        StackType&lt;int&gt; s_i;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> value = 1;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">try</span>{</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            s_i.push(value);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            ASSERT_TRUE(s_i.top() == 1);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            s_i.pop();</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            ASSERT_TRUE(s_i.size() == 0);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordtype">int</span> var = s_i.top();</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Top variable = &quot;</span> &lt;&lt; var &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            TEST_FAILED();</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            s_i.dump();</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">catch</span>(std::exception &amp; ex){</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            std::cout &lt;&lt; ex.what() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            TEST_PASSED();</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
+<p>Тестирование на получение ссылки на верхний элемент. </p>
+<p>Given: Стек типа int с одним хранимым известным значением. When: Получаем ссылку на верхний элемент и сравниваем его с известным значением, удаляем из стека один элемент, проверяем стек на пустоту, получаем ссылку на следующий верхний элемент и выводим её содержимое. Then: Все действия и проверки успешно завершаются, кроме последнего получения ссылки на верхний элемент, при этом вызывается исключение с сообщением о работе с пустым стеком и выводится его содержимое. </p>
+<div class="fragment"><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                  {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        StackType&lt;int&gt; s_i;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> value = 1;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">try</span>{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            s_i.push(value);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            ASSERT_TRUE(s_i.top() == 1);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            s_i.pop();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            ASSERT_TRUE(s_i.size() == 0);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordtype">int</span> var = s_i.top();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Top variable = &quot;</span> &lt;&lt; var &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            TEST_FAILED();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            s_i.dump();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">catch</span>(std::exception &amp; ex){</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            std::cout &lt;&lt; ex.what() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            TEST_PASSED();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документация по Реализация стека. Последние изменения: Чт 2 Мар 2017 06:02:50. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+Документация по Реализация стека. Последние изменения: Чт 2 Мар 2017 23:36:35. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -14,11 +14,11 @@
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$template$<$ class T $>$ class Stack\+Type$>$ }\\void \hyperlink{namespacestk__test_a2d62ae6019345309a38d3a15ff28cc5d}{stk\+\_\+test\+::\+Test\+Push} ()
-\begin{DoxyCompactList}\small\item\em Тестирование на верное добавление одного элемента в стек переменных int. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Тестирование на верное добавление одного элемента в стек. \end{DoxyCompactList}\item 
 {\footnotesize template$<$template$<$ class T $>$ class Stack\+Type$>$ }\\void \hyperlink{namespacestk__test_a359fc261443d7bdcd4d9bfa43ce9dc7d}{stk\+\_\+test\+::\+Test\+Pop} ()
-\begin{DoxyCompactList}\small\item\em Тестирование на удаление узла из пустого стека. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Тестирование на удаление элемента с вершины стека. \end{DoxyCompactList}\item 
 {\footnotesize template$<$template$<$ class T $>$ class Stack\+Type$>$ }\\void \hyperlink{namespacestk__test_aadcc1a403c31c6f26df731492b32bb5e}{stk\+\_\+test\+::\+Test\+Top} ()
-\begin{DoxyCompactList}\small\item\em Тестирование на получение ссылки на верхний элемент пустого стека. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Тестирование на получение ссылки на верхний элемент. \end{DoxyCompactList}\item 
 {\footnotesize template$<$template$<$ class T $>$ class Stack\+Type$>$ }\\void \hyperlink{namespacestk__test_aa0039c601a4cf946ebfaad9ef3af4e7f}{stk\+\_\+test\+::\+Test\+Copy\+Constructor} ()
 \begin{DoxyCompactList}\small\item\em Тестирование на правильную работу конструктора копирования. \end{DoxyCompactList}\item 
 {\footnotesize template$<$template$<$ class T $>$ class Stack\+Type$>$ }\\void \hyperlink{namespacestk__test_a3ba77d093637ee2f396e752cea61aee0}{stk\+\_\+test\+::\+Test\+Assignment\+Operator} ()
@@ -58,27 +58,27 @@ int \hyperlink{main__file_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 
 Вывод в консоль отчёта об утечках памяти. 
 \begin{DoxyCode}
-264           \{
-266     INIT\_CRT\_MEM\_CHECK();
-267 
-270     void (* tests[])() = \{stk\_test::TestPush<stk::StackAsList>, stk\_test::TestPop<stk::StackAsList>,    \(\backslash\)
-271         stk\_test::TestTop<stk::StackAsList>, stk\_test::TestCopyConstructor<stk::StackAsList>,           \(\backslash\)
-272         stk\_test::TestAssignmentOperator<stk::StackAsList>, stk\_test::TestEmpty<stk::StackAsList>,      \(\backslash\)
-273         stk\_test::TestSize<stk::StackAsList>, stk\_test::TestSwap<stk::StackAsList>,                     \(\backslash\)
-274                                                                                                         \(\backslash\)
-275         stk\_test::TestPush<stk::StackAsMass>, stk\_test::TestPop<stk::StackAsMass>,                      \(\backslash\)
-276         stk\_test::TestTop<stk::StackAsMass>, stk\_test::TestCopyConstructor<stk::StackAsMass>,           \(\backslash\)
-277         stk\_test::TestAssignmentOperator<stk::StackAsMass>, stk\_test::TestEmpty<stk::StackAsMass>,      \(\backslash\)
-278         stk\_test::TestSize<stk::StackAsMass>, stk\_test::TestSwap<stk::StackAsMass>,                     \(\backslash\)
-279     \};
-280 
-281     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} test: tests)\{
-282         (*test)();
-283     \}
-284 
-286     CRT\_SET\_REPORT();
-287 
-288     system(\textcolor{stringliteral}{"PAUSE"});
-289     \textcolor{keywordflow}{return} 0;
-290 \}
+299           \{
+301     INIT\_CRT\_MEM\_CHECK();
+302 
+305     void (* tests[])() = \{stk\_test::TestPush<stk::StackAsList>, stk\_test::TestPop<stk::StackAsList>,    \(\backslash\)
+306         stk\_test::TestTop<stk::StackAsList>, stk\_test::TestCopyConstructor<stk::StackAsList>,           \(\backslash\)
+307         stk\_test::TestAssignmentOperator<stk::StackAsList>, stk\_test::TestEmpty<stk::StackAsList>,      \(\backslash\)
+308         stk\_test::TestSize<stk::StackAsList>, stk\_test::TestSwap<stk::StackAsList>,                     \(\backslash\)
+309                                                                                                         \(\backslash\)
+310         stk\_test::TestPush<stk::StackAsMass>, stk\_test::TestPop<stk::StackAsMass>,                      \(\backslash\)
+311         stk\_test::TestTop<stk::StackAsMass>, stk\_test::TestCopyConstructor<stk::StackAsMass>,           \(\backslash\)
+312         stk\_test::TestAssignmentOperator<stk::StackAsMass>, stk\_test::TestEmpty<stk::StackAsMass>,      \(\backslash\)
+313         stk\_test::TestSize<stk::StackAsMass>, stk\_test::TestSwap<stk::StackAsMass>,                     \(\backslash\)
+314     \};
+315 
+316     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} test: tests)\{
+317         (*test)();
+318     \}
+319 
+321     CRT\_SET\_REPORT();
+322 
+323     system(\textcolor{stringliteral}{"PAUSE"});
+324     \textcolor{keywordflow}{return} 0;
+325 \}
 \end{DoxyCode}
